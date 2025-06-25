@@ -45,7 +45,7 @@ const Desktop: React.FC = () => {
     },
     {
       id: 'skills',
-      title: 'My Skills',
+      title: 'Skills',
       component: SkillsWindow,
       isOpen: false,
       isMinimized: false,
