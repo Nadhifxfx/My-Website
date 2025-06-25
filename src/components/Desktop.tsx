@@ -67,7 +67,7 @@ const Desktop: React.FC = () => {
     },
     {
       id: 'projects',
-      title: 'My Projects',
+      title: 'Projects',
       component: PortfolioWindow,
       isOpen: false,
       isMinimized: false,
@@ -216,7 +216,7 @@ const Desktop: React.FC = () => {
     { id: 'profile', label: 'Profile', icon: User },
     { id: 'skills', label: 'Skills', icon: Monitor },
     { id: 'education', label: 'Education', icon: BookOpen },
-    { id: 'projects', label: 'Porojects', icon: FolderOpen },
+    { id: 'projects', label: 'Projects', icon: FolderOpen },
     { id: 'certificates', label: 'Certificates', icon: Award },
     { id: 'contact', label: 'Contact Me', icon: Mail }
   ];
