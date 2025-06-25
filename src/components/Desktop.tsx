@@ -34,7 +34,7 @@ const Desktop: React.FC = () => {
   const [windows, setWindows] = useState<WindowState[]>([
     {
       id: 'profile',
-      title: 'My Profile',
+      title: 'Profile',
       component: ProfileWindow,
       isOpen: false,
       isMinimized: false,
@@ -66,8 +66,8 @@ const Desktop: React.FC = () => {
       isAnimating: false
     },
     {
-      id: 'portfolio',
-      title: 'My Portfolio',
+      id: 'projects',
+      title: 'My Projects',
       component: PortfolioWindow,
       isOpen: false,
       isMinimized: false,
