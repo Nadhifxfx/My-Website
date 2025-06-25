@@ -65,13 +65,12 @@ const PortfolioWindow: React.FC = () => {
     },
     { 
       id: '6',
-      title: 'AFTER MOVIE UEC 2023',
-      description: 'Creative music video edit with cinematic transitions, beat sync, and story-driven cuts using Adobe Premiere & After Effects.',
-      technologies: ['Capcut', 'Color Grading'],
-      image: 'UEC 2023.jpg',
-      youtubeUrl: 'https://youtu.be/X8Gwa-Pyqmc?feature=shared',
-      instagramUrl: 'https://instagram.com/example2',
-      category: 'Video Editor'
+      title: 'Unofficial Website Byon Combat',
+      description: 'Unofficial website for Byon Combat, featuring a modern design, responsive layout, and interactive elements.',
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      image: 'Byon.png',
+      githubUrl: 'https://byon-combat.vercel.app/',
+      category: 'Programmer'
     },
      { 
       id: '7',
