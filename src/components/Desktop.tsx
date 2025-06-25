@@ -213,10 +213,10 @@ const Desktop: React.FC = () => {
   };
 
   const startMenuItems = [
-    { id: 'profile', label: 'My Profile', icon: User },
+    { id: 'profile', label: 'Profile', icon: User },
     { id: 'skills', label: 'Skills', icon: Monitor },
     { id: 'education', label: 'Education', icon: BookOpen },
-    { id: 'portfolio', label: 'Portfolio', icon: FolderOpen },
+    { id: 'projects', label: 'Porojects', icon: FolderOpen },
     { id: 'certificates', label: 'Certificates', icon: Award },
     { id: 'contact', label: 'Contact Me', icon: Mail }
   ];
