@@ -52,11 +52,16 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
         <div className="text-center animate-pulse">
           <div className="w-24 h-24 mx-auto mb-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center border-4 border-white border-opacity-30">
             <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-yellow-500 rounded-lg"></div>
+          <img 
+          src="/Profile.png" 
+          alt="Profile" 
+          className="w-full h-full object-cover rounded-full" 
+          />
           </div>
           <h1 className="text-4xl font-bold text-white mb-2" style={{ fontFamily: 'Tahoma, Verdana, sans-serif' }}>
             Welcome
           </h1>
-          <p className="text-xl text-blue-100">Nadhif Website</p>
+          <p className="text-xl text-blue-100">Nadhif Fathur Rahman</p>
         </div>
       </div>
     );

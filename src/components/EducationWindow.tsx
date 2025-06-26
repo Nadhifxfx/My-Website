@@ -19,8 +19,9 @@ const EducationWindow: React.FC = () => {
       year: '2022-2025',
       highlights: [
         'Specialized in Machine Learning and AI',
-        'Graduate Teaching Assistant for Data Structures',
-        'Published research on distributed systems'
+        'Studied web development using Html, React and Node.js',
+        'Built simple games using Godot and Construck',
+        'Learned Deep Learning concepts with Roboflow',
       ]
     },
     {
@@ -29,18 +30,18 @@ const EducationWindow: React.FC = () => {
       location: 'Sidoarjo',
       year: '2018-2021',
       highlights: [
-        'Summa Cum Laude graduate',
-        'President of Computer Science Society',
-        'Winner of Annual Hackathon 2018'
+        'Created a short film for final project and school competitions',
+        'Joined the broadcasting extracurricular club and produced digital content',
+        'Experienced in graphic design, video editing, and animation',
       ]
     }
   ];
 
   const certifications = [
-    'AWS Certified Solutions Architect',
+    'Multimedia Training Program',
     'Google Cloud Professional Developer',
-    'MongoDB Certified Developer',
-    'Scrum Master Certification'
+    'Building a .NET ChatBot',
+    'Expertise Competency from PT. Indo Bismar Surabaya'
   ];
 
   return (
