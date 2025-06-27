@@ -78,11 +78,9 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
             <Monitor size={32} className="text-white" />
           </div>
         </div>
-        
         <h1 className="text-5xl font-bold text-white mb-2 drop-shadow-lg">
           Loading
         </h1>
-        <p className="text-xl text-blue-100 drop-shadow-md">Nadhif Website</p>
       </div>
 
       {/* Loading Animation */}

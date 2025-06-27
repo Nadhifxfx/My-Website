@@ -92,7 +92,7 @@ const InteractiveGreeting: React.FC = () => {
 
         {/* Tombol interaktif */}
         <div className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-white font-bold text-sm shadow-lg select-none">
-          ✨ Double-click icon atau tekan Start menu ✨
+          ✨ Double-click the icon or press the Start menu located at the bottom ✨
         </div>
 
         {/* Floating Icons */}

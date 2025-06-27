@@ -68,26 +68,26 @@ const WelcomeDialog: React.FC<WelcomeDialogProps> = ({ onClose }) => {
           {/* Welcome Message */}
           <div className="text-center mb-6">
             <h2 className="text-xl font-bold text-gray-800 mb-2">
-              Selamat Datang di Website Saya!
+              Welcome to my Website!
             </h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              Halo! Terima kasih telah mengunjungi website personal saya. 
-              Saya Nadhif Fathur Rahman, seorang Pengangguran dengan pengalaman 5+ tahun 
-              dalam menerima Job Freelance.
+              Hello! Thank you for visiting my personal website. 
+              I am Nadhif Fathur Rahman, an unemployed person with over 5 years of experience 
+              in accepting freelance jobs.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed">
-              Silahkan kalian bisa mulai untuk Jelajahi berbagai fitur di desktop untuk melihat profil, keahlian, 
-              pendidikan, portfolio, sertifikat, dan cara menghubungi saya.
+             Please feel free to explore the various features on the desktop to view my profile, skills, 
+            education, portfolio, certificates, and how to contact me. cara menghubungi saya.
             </p>
           </div>
 
           {/* Quick Navigation */}
           <div className="bg-gray-50 p-4 rounded border border-gray-300 mb-4">
-            <h3 className="font-bold text-gray-700 text-sm mb-2">Navigasi Cepat:</h3>
+            <h3 className="font-bold text-gray-700 text-sm mb-2">Quick Navigation:</h3>
             <div className="grid grid-cols-2 gap-2 text-xs">
               <div className="flex items-center space-x-1">
                 <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <span>Klik "Start" untuk menu</span>
+                <span>Click “Start” for the menu</span>
               </div>
               <div className="flex items-center space-x-1">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
@@ -95,7 +95,7 @@ const WelcomeDialog: React.FC<WelcomeDialogProps> = ({ onClose }) => {
               </div>
               <div className="flex items-center space-x-1">
                 <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                <span>Gunakan taskbar bawah</span>
+                <span>Use the bottom taskbar</span>
               </div>
               <div className="flex items-center space-x-1">
                 <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
