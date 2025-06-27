@@ -158,11 +158,11 @@ const StartMenu: React.FC<StartMenuProps> = ({ items, onItemClick, onClose }) =>
                 <Power size={24} className="text-red-600" />
               </div>
               <div>
-                <h2 className="text-lg font-bold text-gray-800">Konfirmasi Shutdown</h2>
-                <p className="text-sm text-gray-600">Website akan ditutup</p>
+                <h2 className="text-lg font-bold text-gray-800">Shutdown Confirmation</h2>
+                <p className="text-sm text-gray-600">The website will be closed</p>
               </div>
             </div>
-            <p className="mb-6 text-gray-700">Apakah Anda yakin ingin menutup tab ini?</p>
+            <p className="mb-6 text-gray-700">Are you sure you want to close this tab?</p>
             <div className="flex justify-end space-x-3">
               <button
                 onClick={handleCancelShutdown}
