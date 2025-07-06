@@ -13,8 +13,8 @@ interface Education {
 const EducationWindow: React.FC = () => {
   const education: Education[] = [
     {
-      degree: 'Inofrmatika',
-      institution: 'Universitas Nahdlatul Ulama',
+      degree: 'Informatika',
+      institution: 'Nahdlatul Ulama University Sidoarjo',
       location: 'Sidoarjo',
       year: '2022-2025',
       highlights: [

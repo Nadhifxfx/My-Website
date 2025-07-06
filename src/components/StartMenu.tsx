@@ -174,7 +174,7 @@ const StartMenu: React.FC<StartMenuProps> = ({ items, onItemClick, onClose }) =>
                 onClick={handleConfirmShutdown}
                 className="px-6 py-2 rounded-lg bg-red-500 hover:bg-red-600 text-white font-medium transition-all transform hover:scale-105 active:scale-95 shadow-lg"
               >
-                Tapi Bohong
+                Same
               </button>
             </div>
           </div>

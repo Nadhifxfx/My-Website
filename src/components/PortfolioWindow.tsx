@@ -18,159 +18,159 @@ interface Project {
 
 const PortfolioWindow: React.FC = () => {
   const projects: Project[] = [
-    {
-      id: '1',
-      title: 'Film kelulusan angkatan XVII 2021',
-      description: 'A graduation film capturing the moments and memories of the XVII Class of 2021.',
-      technologies: ['Adobe Premiere Pro', 'Adobe After Effects'],
-      image: 'smartsda.png',
-      youtubeUrl: 'https://youtube.com/example',
-      category: 'Video Editor'
-    },
-    {
-      id: '2',
-      title: 'INACOM Logo Concept',
-      description: 'A conceptual logo design for INACOM with modern and minimalistic style.',
-      technologies: ['Adobe Photoshop', 'Adobe Illustrator'],
-      image: 'Inacom.jpg',
-      behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
-      category: 'Graphic Designer'
-    },
-    {
-      id: '3',
-      title: 'Program Investasi - Bank Indonesia',
-      description: 'A one-minute video competition fot educating viewers on the role of Rupiah as a store of value and investment.',
-      technologies: ['Adobe Premiere Pro', 'Color Grading'],
-      image: 'Bank Indonesia.png',
-      instagramUrl: 'https://www.instagram.com/p/CW5lSYkrABF/?utm_source=ig_web_copy_link&igsh=MXFkaXZxcnJ6c2J5Ng==',
-      category: 'Video Editor'
-    },
-    {
-      id: '4',
-      title: 'NDComps10 – Modern Football Fan Website UI',
-      description: 'A modern UI design for a football fan website focused on NDComps10.',
-      technologies: ['Figma', 'Adobe Photoshop'],
-      image: 'NDcomps10.jpg',
-      dribbbleUrl: 'https://dribbble.com/shots/25922166-NDComps10-Modern-Football-Fan-Website-UI',
-      category: 'Graphic Designer'
-    },
-    {
-      id: '5',
-      title: 'Website ND10',
-      description: 'A personal website presenting information and projects under the ND10 brand.',
-      technologies: ['HTML', 'CSS', 'JavaScript'],
-      image: 'Web ND10.png',
-      githubUrl: 'http://nadhifxfx.github.io/Website-ND10/',
-      category: 'Programmer'
-    },
-    { 
-      id: '6',
-      title: 'Unofficial Website Byon Combat',
-      description: 'An unofficial website for Byon Combat showcasing products and brand visuals.',
-      technologies: ['HTML', 'CSS', 'JavaScript'],
-      image: 'Byon.png',
-      githubUrl: 'https://byon-combat.vercel.app/',
-      category: 'Programmer'
-    },
-    { 
-      id: '7',
-      title: 'Gamified & Qur’an Learning App UI/UX',
-      description: 'A UI design concept for an app combining gamification with learning the Qur’an.',
-      technologies: ['Figma', 'Canva'],
-      image: 'TEXT GEN.png',
-      dribbbleUrl: 'https://dribbble.com/shots/25921769-Coffee-Shop-Modern-Login-Menu-Design',
-      category: 'Graphic Designer'
-    },
-    { 
-      id: '8',
-      title: 'Website Getuk Pisang Sahira',
-      description: 'A website for promoting and selling Sahira’s traditional Getuk Pisang.',
-      technologies: ['HTML', 'CSS', 'JavaScript'],
-      image: 'Web Sahira.png',
-      githubUrl: 'https://nadhifxfx.github.io/Getuk-Pisang-Sahira/',
-      category: 'Programmer'
-    },
-    { 
-      id: '9',
-      title: 'AFTER MOVIE UEC 2023',
-      description: 'An aftermovie highlighting the activities and excitement of UEC 2023.',
-      technologies: ['Capcut'],
-      image: 'UEC 2023.jpg',
-      youtubeUrl: 'https://youtu.be/X8Gwa-Pyqmc?feature=shared',
-      category: 'Video Editor'
-    },
-    { 
-      id: '10',
-      title: 'Ahmed Abdelkader',
-      description: 'A highlight video featuring Ahmed Abdelkader’s performances.',
-      technologies: ['Premiere Pro'],
-      image: 'Abdelkader.png',
-      liveUrl: 'https://drive.google.com/file/d/1LJF5ntnFcEmYHgH2QH1PCuZ8vHg134tc/view?usp=sharing',
-      category: 'Video Editor'
-    },
-    { 
-      id: '11',
-      title: 'Kokolo Williams',
-      description: 'A highlight video showcasing Nkoko Williams in action.',
-      technologies: ['Premiere Pro'],
-      image: 'Kokolo.png',
-      liveUrl: 'https://drive.google.com/file/d/1KFTpgym7UqbwIU20E98JeOev-q59epH_/view?usp=drive_link',
-      category: 'Video Editor'
-    },
-    { 
-      id: '12',
-      title: 'Remy Vita',
-      description: 'A video edit featuring moments of Remy Vita.',
-      technologies: ['Premiere Pro'],
-      image: 'Vita.png',
-      liveUrl: 'https://drive.google.com/file/d/1RFPNhWFl7oapXNVfatEXU54VdzVANs-j/view?usp=sharing',
-      category: 'Video Editor'
-    },
-    {
-      id: '13',
-      title: 'Aktivitas Olahraga - CITRA GARDEN',
-      description: 'Fun Video edit showcasing sports activities at Citra Garden.',
-      technologies: ['Premiere Pro'],
-      image: 'Olahraga.png',
-      instagramUrl: 'https://www.instagram.com/tv/CfNUe-bh_1c/?utm_source=ig_web_copy_link&igsh=MWV1dTNzYXp5eWcyeA==',
-      category: 'Video Editor'
-    },
-    {
-      id: '14',
-      title: 'Kemerdekaan di Tengah Pandemi ',
-      description: 'A video edit celebrating Indonesia\'s Independence Day during the pandemic.',
-      technologies: ['Premiere Pro'],
-      image: 'Kemerdekaan.png',
-      liveUrl: 'https://drive.google.com/file/d/1P-S78sw6T8Ka-3VcK8nAu2XFpJl1pYj3/view?usp=sharing',
-      category: 'Video Editor'
-    },
-    {
-      id: '15',
-      title: 'Infographic Competition',
-      description: 'An infographic design for a competition, showcasing creativity and design skills.',
-      technologies: ['Adobe Photoshop'],
-      image: 'merdeka.png',
-      behanceUrl: 'https://www.behance.net/nadhifxfx',
-      category: 'Graphic Designer'
-    },
-      {
-      id: '16',
-      title: 'Brazilians Next Gen ● Danza Kuduro',
-      description: 'A video edit featuring the next generation of Brazilian footballers set to the energetic track "Danza Kuduro.',
-      technologies: ['Adobe Photoshop','Adobe Premier Pro'],
-      image: 'danza.jpg',
-      youtubeUrl: 'https://youtu.be/2HDLx6-HarY?si=8w2mlOmy5djnl7nt',
-      category: 'Video Editor'
-    },
-     {
-      id: '16',
-      title: 'Workshop INACOM 2024',
-      description: 'a Workshop event organized by INACOM, focusing on various aspects of technology and design.',
-      technologies: ['Capcut'],
-      image: 'workshop.png',
-      instagramUrl: 'https://www.instagram.com/reel/C_IWqnjvjoF/?utm_source=ig_web_copy_link&igsh=MTNhcmVxbG1oNGcyNA==',
-      category: 'Video Editor'
-    },
+  {
+    id: '1',
+    title: 'Graduation Film Class XVII 2021',
+    description: 'A graduation film capturing the moments and memories of the 2021 graduating class of Antartika 2 Vocational High School.',
+    technologies: ['Adobe Premiere Pro', 'Adobe After Effects'],
+    image: 'smartsda.png',
+    youtubeUrl: 'https://youtube.com/example',
+    category: 'Video Editor'
+  },
+  {
+    id: '2',
+    title: 'INACOM Modern Logo Concept',
+    description: 'A conceptual modern and minimalistic logo design for INACOM.',
+    technologies: ['Adobe Photoshop', 'Adobe Illustrator'],
+    image: 'Inacom.jpg',
+    behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+    category: 'Graphic Designer'
+  },
+  {
+    id: '3',
+    title: 'Bank Indonesia Investment Program',
+    description: 'A one-minute competition video educating viewers on the Rupiah’s role as a store of value and investment.',
+    technologies: ['Adobe Premiere Pro', 'Color Grading'],
+    image: 'Bank Indonesia.png',
+    instagramUrl: 'https://www.instagram.com/p/CW5lSYkrABF/?utm_source=ig_web_copy_link&igsh=MXFkaXZxcnJ6c2J5Ng==',
+    category: 'Video Editor'
+  },
+  {
+    id: '4',
+    title: 'NDComps10 Football Fan Website UI',
+    description: 'A modern UI design for a football fan website dedicated to NDComps10.',
+    technologies: ['Figma', 'Adobe Photoshop'],
+    image: 'NDcomps10.jpg',
+    dribbbleUrl: 'https://dribbble.com/shots/25922166-NDComps10-Modern-Football-Fan-Website-UI',
+    category: 'Graphic Designer'
+  },
+  {
+    id: '5',
+    title: 'ND10 Personal Website',
+    description: 'A personal website presenting information and projects under the ND10 brand.',
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    image: 'Web ND10.png',
+    githubUrl: 'http://nadhifxfx.github.io/Website-ND10/',
+    category: 'Programmer'
+  },
+  {
+    id: '6',
+    title: 'Byon Combat Unofficial Website',
+    description: 'An unofficial website for Byon Combat showcasing its products and brand visuals.',
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    image: 'Byon.png',
+    githubUrl: 'https://byon-combat.vercel.app/',
+    category: 'Programmer'
+  },
+  {
+    id: '7',
+    title: 'Gamified Qur’an Learning App UI/UX',
+    description: 'A UI/UX design concept for an app that combines gamification elements with learning the Qur’an.',
+    technologies: ['Figma', 'Canva'],
+    image: 'TEXT GEN.png',
+    dribbbleUrl: 'https://dribbble.com/shots/25921769-Coffee-Shop-Modern-Login-Menu-Design',
+    category: 'Graphic Designer'
+  },
+  {
+    id: '8',
+    title: 'Getuk Pisang Sahira Website',
+    description: 'A promotional website for Sahira’s traditional Getuk Pisang products.',
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    image: 'Web Sahira.png',
+    githubUrl: 'https://nadhifxfx.github.io/Getuk-Pisang-Sahira/',
+    category: 'Programmer'
+  },
+  {
+    id: '9',
+    title: 'UEC 2023 Aftermovie',
+    description: 'An aftermovie highlighting the activities and excitement of the UEC 2023 event.',
+    technologies: ['Capcut'],
+    image: 'UEC 2023.jpg',
+    youtubeUrl: 'https://youtu.be/X8Gwa-Pyqmc?feature=shared',
+    category: 'Video Editor'
+  },
+  {
+    id: '10',
+    title: 'Ahmed Abdelkader Football Highlights',
+    description: 'highlight video featuring Ahmed Abdelkader football performances.',
+    technologies: ['Adobe Premiere Pro'],
+    image: 'Abdelkader.png',
+    liveUrl: 'https://drive.google.com/file/d/1LJF5ntnFcEmYHgH2QH1PCuZ8vHg134tc/view?usp=sharing',
+    category: 'Video Editor'
+  },
+  {
+    id: '11',
+    title: 'Kokolo Williams Football Highlights',
+    description: 'highlight video showcasing Kokolo Williams in action on the field.',
+    technologies: ['Adobe Premiere Pro'],
+    image: 'Kokolo.png',
+    liveUrl: 'https://drive.google.com/file/d/1KFTpgym7UqbwIU20E98JeOev-q59epH_/view?usp=drive_link',
+    category: 'Video Editor'
+  },
+  {
+    id: '12',
+    title: 'Remy Vita Football Highlights',
+    description: 'highlight video featuring Remy Vita football performances.',
+    technologies: ['Adobe Premiere Pro'],
+    image: 'Vita.png',
+    liveUrl: 'https://drive.google.com/file/d/1RFPNhWFl7oapXNVfatEXU54VdzVANs-j/view?usp=sharing',
+    category: 'Video Editor'
+  },
+  {
+    id: '13',
+    title: 'Sports Activities at Citra Garden',
+    description: 'A fun video edit showcasing various sports activities at Citra Garden.',
+    technologies: ['Adobe Premiere Pro'],
+    image: 'Olahraga.png',
+    instagramUrl: 'https://www.instagram.com/tv/CfNUe-bh_1c/?utm_source=ig_web_copy_link&igsh=MWV1dTNzYXp5eWcyeA==',
+    category: 'Video Editor'
+  },
+  {
+    id: '14',
+    title: 'Independence Day Celebration',
+    description: 'A creative video celebrating Indonesia Independence Day amid the pandemic.',
+    technologies: ['Adobe Premiere Pro'],
+    image: 'Kemerdekaan.png',
+    liveUrl: 'https://drive.google.com/file/d/1P-S78sw6T8Ka-3VcK8nAu2XFpJl1pYj3/view?usp=sharing',
+    category: 'Video Editor'
+  },
+  {
+    id: '15',
+    title: 'Independence Day - Infographic Poster',
+    description: 'Infographic poster design created for a competition, showcasing creativity and design skills with the theme “Indonesia Journey to Independence.”',
+    technologies: ['Adobe Photoshop'],
+    image: 'merdeka.png',
+    behanceUrl: 'https://www.behance.net/nadhifxfx',
+    category: 'Graphic Designer'
+  },
+  {
+    id: '16',
+    title: 'Brazilians Next Gen Edit',
+    description: 'A video edit featuring the next generation of Brazilian footballers set to the energetic track "Danza Kuduro", which has garnered over 5 million views.',
+    technologies: ['Adobe Photoshop', 'Adobe Premiere Pro'],
+    image: 'danza.jpg',
+    youtubeUrl: 'https://youtu.be/2HDLx6-HarY?si=8w2mlOmy5djnl7nt',
+    category: 'Video Editor'
+  },
+  {
+    id: '17',
+    title: 'INACOM 2024 Workshop Recap',
+    description: 'A video recap  highlights and moments from the INACOM 2024 Workshop Event.',
+    technologies: ['Capcut'],
+    image: 'workshop.png',
+    instagramUrl: 'https://www.instagram.com/reel/C_IWqnjvjoF/?utm_source=ig_web_copy_link&igsh=MTNhcmVxbG1oNGcyNA==',
+    category: 'Video Editor'
+  },
   ];
 
 
