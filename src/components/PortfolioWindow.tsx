@@ -129,9 +129,9 @@ const PortfolioWindow: React.FC = () => {
     {
       id: '13',
       title: 'Aktivitas Olahraga - CITRA GARDEN',
-      description: 'AFun Video Contest sing sports activities at Citra Garden.',
+      description: 'Fun Video edit showcasing sports activities at Citra Garden.',
       technologies: ['Premiere Pro'],
-      image: 'vita.png',
+      image: 'Olahraga.png',
       instagramUrl: 'https://www.instagram.com/tv/CfNUe-bh_1c/?utm_source=ig_web_copy_link&igsh=MWV1dTNzYXp5eWcyeA==',
       category: 'Video Editor'
     },
@@ -146,11 +146,29 @@ const PortfolioWindow: React.FC = () => {
     },
     {
       id: '15',
-      title: 'Thumbnail Video Youtube',
-      description: 'A video edit featuring moments of Remy Vita.',
+      title: 'Infographic Competition',
+      description: 'An infographic design for a competition, showcasing creativity and design skills.',
       technologies: ['Adobe Photoshop'],
-      image: 'tumnail.png',
-      liveUrl: 'https://drive.google.com/file/d/1RFPNhWFl7oapXNVfatEXU54VdzVANs-j/view?usp=sharing',
+      image: 'merdeka.png',
+      behanceUrl: 'https://www.behance.net/nadhifxfx',
+      category: 'Graphic Designer'
+    },
+      {
+      id: '16',
+      title: 'Brazilians Next Gen ● Danza Kuduro',
+      description: 'A video edit featuring the next generation of Brazilian footballers set to the energetic track "Danza Kuduro.',
+      technologies: ['Adobe Photoshop','Adobe Premier Pro'],
+      image: 'danza.jpg',
+      youtubeUrl: 'https://youtu.be/2HDLx6-HarY?si=8w2mlOmy5djnl7nt',
+      category: 'Video Editor'
+    },
+     {
+      id: '16',
+      title: 'Workshop INACOM 2024',
+      description: 'a Workshop event organized by INACOM, focusing on various aspects of technology and design.',
+      technologies: ['Capcut'],
+      image: 'workshop.png',
+      instagramUrl: 'https://www.instagram.com/reel/C_IWqnjvjoF/?utm_source=ig_web_copy_link&igsh=MTNhcmVxbG1oNGcyNA==',
       category: 'Video Editor'
     },
   ];
