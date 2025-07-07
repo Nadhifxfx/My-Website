@@ -168,7 +168,7 @@ const StartMenu: React.FC<StartMenuProps> = ({ items, onItemClick, onClose }) =>
                 onClick={handleCancelShutdown}
                 className="px-6 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium transition-all transform hover:scale-105 active:scale-95"
               >
-                Batal
+                Cancel
               </button>
               <button
                 onClick={handleConfirmShutdown}

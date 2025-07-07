@@ -39,7 +39,7 @@ const EducationWindow: React.FC = () => {
 
   const certifications = [
     'Multimedia Training Program',
-    'Google Cloud Professional Developer',
+    'Multimedia Visualization Processing – BNSP',
     'Building a .NET ChatBot',
     'Expertise Competency from PT. Indo Bismar Surabaya'
   ];
