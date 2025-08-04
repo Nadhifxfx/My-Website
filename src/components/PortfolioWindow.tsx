@@ -173,8 +173,8 @@ const PortfolioWindow: React.FC = () => {
   },
   {
     id: '18',
-    title: 'INACOM 2024 Workshop Recap',
-    description: 'A video recap  highlights and moments from the INACOM 2024 Workshop Event.',
+    title: 'Football Poster Design',
+    description: 'A poster design showcasing a football player (Ronaldo & Messi).',
     technologies: ['Adobe Photoshop'],
     image: 'Poster goat.jpg',
     behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
@@ -182,8 +182,8 @@ const PortfolioWindow: React.FC = () => {
   },
   {
     id: '19',
-    title: 'INACOM 2024 Workshop Recap',
-    description: 'A video recap  highlights and moments from the INACOM 2024 Workshop Event.',
+    title: 'University Poster Design',
+    description: 'A poster design for a university event showcasing creativity and design skills.',
     technologies: ['Adobe Photoshop'],
     image: 'Poster Kampus.jpg',
     behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
