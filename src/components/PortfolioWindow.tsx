@@ -171,6 +171,24 @@ const PortfolioWindow: React.FC = () => {
     instagramUrl: 'https://www.instagram.com/reel/C_IWqnjvjoF/?utm_source=ig_web_copy_link&igsh=MTNhcmVxbG1oNGcyNA==',
     category: 'Video Editor'
   },
+  {
+    id: '18',
+    title: 'INACOM 2024 Workshop Recap',
+    description: 'A video recap  highlights and moments from the INACOM 2024 Workshop Event.',
+    technologies: ['Adobe Photoshop'],
+    image: 'Poster goat.jpg',
+    behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+    category: 'Video Editor'
+  },
+  {
+    id: '19',
+    title: 'INACOM 2024 Workshop Recap',
+    description: 'A video recap  highlights and moments from the INACOM 2024 Workshop Event.',
+    technologies: ['Adobe Photoshop'],
+    image: 'Poster Kampus.jpg',
+    behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+    category: 'Video Editor'
+  },
   ];
 
 
