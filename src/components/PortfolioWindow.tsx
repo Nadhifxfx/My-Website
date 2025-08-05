@@ -178,17 +178,26 @@ const PortfolioWindow: React.FC = () => {
     technologies: ['Adobe Photoshop'],
     image: 'Poster goat.jpg',
     behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
-    category: 'Video Editor'
+    category: 'Graphic Designer'
   },
   {
-    id: '19',
-    title: 'University Poster Design',
-    description: 'A poster design for a university event showcasing creativity and design skills.',
-    technologies: ['Adobe Photoshop'],
-    image: 'Poster Kampus.jpg',
-    behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
-    category: 'Video Editor'
+  id: '19',
+  title: 'University Poster Design',
+  description: 'A creative poster designed for a university event, highlighting both visual appeal and communication clarity. This project demonstrates strong design fundamentals using Adobe Photoshop to engage a student audience.',
+  technologies: ['Adobe Photoshop'],
+  image: 'Poster Kampus.jpg',
+  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+  category: 'Graphic Designer'
   },
+  {
+  id: '20',
+  title: 'University Poster Design',
+  description: 'Building on the same creative direction, this second poster was developed for another campus event, maintaining a cohesive visual identity while emphasizing impactful messaging through polished graphic elements.',
+  technologies: ['Adobe Photoshop'],
+  image: 'cyc poster.jpg',
+  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+  category: 'Graphic Designer'
+  }
   ];
 
 
