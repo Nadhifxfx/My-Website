@@ -182,7 +182,7 @@ const PortfolioWindow: React.FC = () => {
   },
   {
   id: '19',
-  title: 'University Poster Design',
+  title: 'GOAT Rivalry – Messi vs Ronaldo Tribute Poster',
   description: 'A creative poster designed for a university event, highlighting both visual appeal and communication clarity. This project demonstrates strong design fundamentals using Adobe Photoshop to engage a student audience.',
   technologies: ['Adobe Photoshop'],
   image: 'Poster Kampus.jpg',
@@ -197,7 +197,79 @@ const PortfolioWindow: React.FC = () => {
   image: 'cyc poster.jpg',
   behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
   category: 'Graphic Designer'
-  }
+  },
+  {
+  id: '21',
+  title: 'DILEMA – Short Film',
+  description: 'A sleek and modern announcement poster celebrating the achievement of Universitas Nahdlatul Ulama Sidoarjo students who won the Silver Medal at the International Young Moslem Inventor Award 2024.',
+  technologies: ['Adobe Photoshop'],
+  image: 'DILEMA.png',
+  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+  category: 'Video Editor'
+  },
+  {
+  id: '22',
+  title: 'Silver Medal Announcement – IYMI Award 2024 Poster',
+  description: 'A sleek and modern announcement poster celebrating the achievement of Universitas Nahdlatul Ulama Sidoarjo students who won the Silver Medal at the International Young Moslem Inventor Award 2024.',
+  technologies: ['Adobe Photoshop'],
+  image: 'Poster kritik.jpg',
+  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+  category: 'Graphic Designer'
+  },
+  {
+  id: '23',
+  title: 'Silver Medal Announcement – IYMI Award 2024 Poster',
+  description: '.',
+  technologies: ['Adobe Photoshop'],
+  image: 'cyc poster.jpg',
+  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+  category: 'Graphic Designer'
+  },
+    {
+  id: '24',
+  title: 'Silver Medal Announcement – IYMI Award 2024 Poster',
+  description: '.',
+  technologies: ['Adobe Photoshop'],
+  image: 'cyc poster.jpg',
+  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+  category: 'Graphic Designer'
+  },
+    {
+  id: '25',
+  title: '',
+  description: '.',
+  technologies: ['Adobe Photoshop'],
+  image: 'cyc poster.jpg',
+  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+  category: 'Graphic Designer'
+  },
+    {
+  id: '26',
+  title: 'Silver Medal Announcement – IYMI Award 2024 Poster',
+  description: '.',
+  technologies: ['Adobe Photoshop'],
+  image: 'poster uec.jpg',
+  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+  category: 'Graphic Designer'
+  },
+    {
+  id: '27',
+  title: 'Silver Medal Announcement – IYMI Award 2024 Poster',
+  description: '.',
+  technologies: ['Adobe Photoshop'],
+  image: 'poster compe.jpg',
+  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+  category: 'Graphic Designer'
+  },
+    {
+  id: '28',
+  title: 'Silver Medal Announcement – IYMI Award 2024 Poster',
+  description: '.',
+  technologies: ['Adobe Photoshop'],
+  image: 'BANNER MTS.jpg',
+  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+  category: 'Graphic Designer'
+  },
   ];
 
 
