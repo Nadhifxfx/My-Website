@@ -209,15 +209,6 @@ const PortfolioWindow: React.FC = () => {
   },
     {
   id: '22',
-  title: '',
-  description: '.',
-  technologies: ['Adobe Photoshop'],
-  image: 'cyc poster.jpg',
-  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
-  category: 'Graphic Designer'
-  },
-    {
-  id: '23',
   title: 'Silver Medal Announcement – IYMI Award 2024 Poster',
   description: '.',
   technologies: ['Adobe Photoshop'],
@@ -226,7 +217,7 @@ const PortfolioWindow: React.FC = () => {
   category: 'Graphic Designer'
   },
     {
-  id: '24',
+  id: '23',
   title: 'Silver Medal Announcement – IYMI Award 2024 Poster',
   description: '.',
   technologies: ['Adobe Photoshop'],
@@ -235,7 +226,7 @@ const PortfolioWindow: React.FC = () => {
   category: 'Graphic Designer'
   },
     {
-  id: '25',
+  id: '24',
   title: 'Silver Medal Announcement – IYMI Award 2024 Poster',
   description: '.',
   technologies: ['Adobe Photoshop'],
