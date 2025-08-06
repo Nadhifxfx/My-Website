@@ -207,35 +207,8 @@ const PortfolioWindow: React.FC = () => {
   behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
   category: 'Video Editor'
   },
-  {
+    {
   id: '22',
-  title: 'Silver Medal Announcement – IYMI Award 2024 Poster',
-  description: 'A sleek and modern announcement poster celebrating the achievement of Universitas Nahdlatul Ulama Sidoarjo students who won the Silver Medal at the International Young Moslem Inventor Award 2024.',
-  technologies: ['Adobe Photoshop'],
-  image: 'Poster kritik.jpg',
-  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
-  category: 'Graphic Designer'
-  },
-  {
-  id: '23',
-  title: 'Silver Medal Announcement – IYMI Award 2024 Poster',
-  description: '.',
-  technologies: ['Adobe Photoshop'],
-  image: 'cyc poster.jpg',
-  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
-  category: 'Graphic Designer'
-  },
-    {
-  id: '24',
-  title: 'Silver Medal Announcement – IYMI Award 2024 Poster',
-  description: '.',
-  technologies: ['Adobe Photoshop'],
-  image: 'cyc poster.jpg',
-  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
-  category: 'Graphic Designer'
-  },
-    {
-  id: '25',
   title: '',
   description: '.',
   technologies: ['Adobe Photoshop'],
@@ -244,7 +217,7 @@ const PortfolioWindow: React.FC = () => {
   category: 'Graphic Designer'
   },
     {
-  id: '26',
+  id: '23',
   title: 'Silver Medal Announcement – IYMI Award 2024 Poster',
   description: '.',
   technologies: ['Adobe Photoshop'],
@@ -253,7 +226,7 @@ const PortfolioWindow: React.FC = () => {
   category: 'Graphic Designer'
   },
     {
-  id: '27',
+  id: '24',
   title: 'Silver Medal Announcement – IYMI Award 2024 Poster',
   description: '.',
   technologies: ['Adobe Photoshop'],
@@ -262,7 +235,7 @@ const PortfolioWindow: React.FC = () => {
   category: 'Graphic Designer'
   },
     {
-  id: '28',
+  id: '25',
   title: 'Silver Medal Announcement – IYMI Award 2024 Poster',
   description: '.',
   technologies: ['Adobe Photoshop'],
@@ -271,9 +244,6 @@ const PortfolioWindow: React.FC = () => {
   category: 'Graphic Designer'
   },
   ];
-
-
-
 
   const [selectedCategory, setSelectedCategory] = React.useState<string>('All');
   const categories = ['All', ...Array.from(new Set(projects.map(p => p.category)))];
