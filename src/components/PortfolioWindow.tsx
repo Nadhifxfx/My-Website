@@ -192,7 +192,7 @@ const PortfolioWindow: React.FC = () => {
   {
   id: '20',
   title: 'Choose Your Character – Football Poster Design',
-  description: 'This vibrant and energetic poster blends pop-culture gaming aesthetics with world football icons, presenting a "character selection" theme inspired by classic video games. Featuring standout players like Cristiano Ronaldo, Lionel Messi, Antoine Griezmann, Lautaro Martínez, and more, the design invites viewers to engage with the personalities and styles of modern football legends. Bold typography and torn paper textures create a dynamic layout, evoking excitement and interactivity while showcasing strong digital compositing and visual storytelling skills.',
+  description: 'A bold and dynamic poster inspired by video game character selection screens, featuring top football icons like Ronaldo, Messi, Griezmann, and more. The design combines striking typography and layered textures to capture the energy and personality of each player.',
   technologies: ['Adobe Photoshop'],
   image: 'cyc poster.jpg',
   behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
