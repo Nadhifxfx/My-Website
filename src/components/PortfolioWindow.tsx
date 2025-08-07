@@ -182,15 +182,6 @@ const PortfolioWindow: React.FC = () => {
   },
   {
   id: '19',
-  title: 'University Poster Design',
-  description: 'Building on the same creative direction, this second poster was developed for another campus event, maintaining a cohesive visual identity while emphasizing impactful messaging through polished graphic elements.',
-  technologies: ['Adobe Photoshop'],
-  image: 'cyc poster.jpg',
-  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
-  category: 'Graphic Designer'
-  },
-  {
-  id: '20',
   title: 'DILEMA – Short Film',
   description: 'A sleek and modern announcement poster celebrating the achievement of Universitas Nahdlatul Ulama Sidoarjo students who won the Silver Medal at the International Young Moslem Inventor Award 2024.',
   technologies: ['Adobe Photoshop'],
@@ -199,7 +190,7 @@ const PortfolioWindow: React.FC = () => {
   category: 'Video Editor'
   },
   {
-  id: '21',
+  id: '20',
   title: 'Choose Your Character – Football Poster Design',
   description: 'This vibrant and energetic poster blends pop-culture gaming aesthetics with world football icons, presenting a "character selection" theme inspired by classic video games. Featuring standout players like Cristiano Ronaldo, Lionel Messi, Antoine Griezmann, Lautaro Martínez, and more, the design invites viewers to engage with the personalities and styles of modern football legends. Bold typography and torn paper textures create a dynamic layout, evoking excitement and interactivity while showcasing strong digital compositing and visual storytelling skills.',
   technologies: ['Adobe Photoshop'],
@@ -208,7 +199,7 @@ const PortfolioWindow: React.FC = () => {
   category: 'Graphic Designer'
 },
 {
-  id: '22',
+  id: '21',
   title: 'Silver Medal Announcement – IYMI Award 2024 Poster',
   description: 'A sleek and modern announcement poster celebrating the achievement of Universitas Nahdlatul Ulama Sidoarjo students who won the Silver Medal at the International Young Moslem Inventor Award 2024.',
   technologies: ['Adobe Photoshop'],
