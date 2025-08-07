@@ -174,7 +174,7 @@ const PortfolioWindow: React.FC = () => {
   {
     id: '18',
     title: 'GOAT Rivalry – Messi vs Ronaldo Tribute Poster',
-    description: 'A poster design showcasing a football player (Ronaldo & Messi).',
+    description: 'A dynamic and emotionally charged sports poster that pays tribute to the legendary rivalry between Lionel Messi and Cristiano Ronaldo. This design features a dual-tone composition, visually contrasting their football legacies with rich red and blue tones. The piece captures their journey through different clubs and international careers, offering a nostalgic and powerful visual story for football fans.',
     technologies: ['Adobe Photoshop'],
     image: 'Poster goat.jpg',
     behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
@@ -182,15 +182,6 @@ const PortfolioWindow: React.FC = () => {
   },
   {
   id: '19',
-  title: 'GOAT Rivalry – Messi vs Ronaldo Tribute Poster',
-  description: 'A creative poster designed for a university event, highlighting both visual appeal and communication clarity. This project demonstrates strong design fundamentals using Adobe Photoshop to engage a student audience.',
-  technologies: ['Adobe Photoshop'],
-  image: 'Poster Kampus.jpg',
-  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
-  category: 'Graphic Designer'
-  },
-  {
-  id: '20',
   title: 'University Poster Design',
   description: 'Building on the same creative direction, this second poster was developed for another campus event, maintaining a cohesive visual identity while emphasizing impactful messaging through polished graphic elements.',
   technologies: ['Adobe Photoshop'],
@@ -199,7 +190,7 @@ const PortfolioWindow: React.FC = () => {
   category: 'Graphic Designer'
   },
   {
-  id: '21',
+  id: '20',
   title: 'DILEMA – Short Film',
   description: 'A sleek and modern announcement poster celebrating the achievement of Universitas Nahdlatul Ulama Sidoarjo students who won the Silver Medal at the International Young Moslem Inventor Award 2024.',
   technologies: ['Adobe Photoshop'],
@@ -207,30 +198,21 @@ const PortfolioWindow: React.FC = () => {
   behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
   category: 'Video Editor'
   },
-    {
+  {
+  id: '21',
+  title: 'Choose Your Character – Football Poster Design',
+  description: 'This vibrant and energetic poster blends pop-culture gaming aesthetics with world football icons, presenting a "character selection" theme inspired by classic video games. Featuring standout players like Cristiano Ronaldo, Lionel Messi, Antoine Griezmann, Lautaro Martínez, and more, the design invites viewers to engage with the personalities and styles of modern football legends. Bold typography and torn paper textures create a dynamic layout, evoking excitement and interactivity while showcasing strong digital compositing and visual storytelling skills.',
+  technologies: ['Adobe Photoshop'],
+  image: 'cyc poster.jpg',
+  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+  category: 'Graphic Designer'
+},
+{
   id: '22',
   title: 'Silver Medal Announcement – IYMI Award 2024 Poster',
-  description: '.',
-  technologies: ['Adobe Photoshop'],
-  image: 'poster uec.jpg',
-  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
-  category: 'Graphic Designer'
-  },
-    {
-  id: '23',
-  title: 'Silver Medal Announcement – IYMI Award 2024 Poster',
-  description: '.',
+  description: 'A sleek and modern announcement poster celebrating the achievement of Universitas Nahdlatul Ulama Sidoarjo students who won the Silver Medal at the International Young Moslem Inventor Award 2024.',
   technologies: ['Adobe Photoshop'],
   image: 'poster compe.jpg',
-  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
-  category: 'Graphic Designer'
-  },
-    {
-  id: '24',
-  title: 'Silver Medal Announcement – IYMI Award 2024 Poster',
-  description: '.',
-  technologies: ['Adobe Photoshop'],
-  image: 'BANNER MTS.jpg',
   behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
   category: 'Graphic Designer'
   },
