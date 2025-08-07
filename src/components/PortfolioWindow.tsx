@@ -40,7 +40,7 @@ const PortfolioWindow: React.FC = () => {
     id: '3',
     title: 'Bank Indonesia Investment Program',
     description: 'A one-minute competition video educating viewers on the Rupiah’s role as a store of value and investment.',
-    technologies: ['Adobe Premiere Pro', 'Color Grading'],
+    technologies: ['Adobe Premiere Pro'],
     image: 'Bank Indonesia.png',
     instagramUrl: 'https://www.instagram.com/p/CW5lSYkrABF/?utm_source=ig_web_copy_link&igsh=MXFkaXZxcnJ6c2J5Ng==',
     category: 'Video Editor'
@@ -174,7 +174,7 @@ const PortfolioWindow: React.FC = () => {
   {
     id: '18',
     title: 'GOAT Rivalry – Messi vs Ronaldo Tribute Poster',
-    description: 'A dynamic and emotionally charged sports poster that pays tribute to the legendary rivalry between Lionel Messi and Cristiano Ronaldo. This design features a dual-tone composition, visually contrasting their football legacies with rich red and blue tones. The piece captures their journey through different clubs and international careers, offering a nostalgic and powerful visual story for football fans.',
+    description: 'A dynamic and emotionally charged sports poster that pays tribute to the legendary rivalry between Lionel Messi and Cristiano Ronaldo.',
     technologies: ['Adobe Photoshop'],
     image: 'Poster goat.jpg',
     behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
@@ -183,7 +183,7 @@ const PortfolioWindow: React.FC = () => {
   {
   id: '19',
   title: 'DILEMA – Short Film',
-  description: 'A sleek and modern announcement poster celebrating the achievement of Universitas Nahdlatul Ulama Sidoarjo students who won the Silver Medal at the International Young Moslem Inventor Award 2024.',
+  description: 'A short film about long-buried love that finally finds its way when courage grows amid bullying at Antartika 2 Vocational School.',
   technologies: ['Adobe Photoshop'],
   image: 'DILEMA.png',
   behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
@@ -207,7 +207,34 @@ const PortfolioWindow: React.FC = () => {
   behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
   category: 'Graphic Designer'
   },
-  ];
+  {
+  id: '22',
+  title: 'Video Commercial for Weal Dental',
+  description: 'A sleek and modern video commercial promoting Weal Dental, highlighting their services and expertise in dental care.',
+  technologies: ['Capcut'],
+  image: 'Weal Dental.jpg',
+  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+  category: 'Graphic Designer'
+  },
+  {
+  id: '23',
+  title: 'BANNER MTS',
+  description: 'A sleek and modern announcement poster celebrating the achievement of Universitas Nahdlatul Ulama Sidoarjo students who won the Silver Medal at the International Young Moslem Inventor Award 2024.',
+  technologies: ['Adobe Photoshop'],
+  image: 'BANNER MTS.jpg',
+  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+  category: 'Graphic Designer'
+  },
+  {
+  id: '24',
+  title: 'KRITIK TIF Poster',
+  description: 'A visually engaging poster created for a university event, using retro computer aesthetics and bold typography to convey the theme "Suara Mahasiswa Merajut Universitas Maju". The design incorporates pixel fonts, neon contrasts, and a nostalgic interface to evoke early digital culture—effectively attracting the target student demographic.',
+  technologies: ['Adobe Photoshop'],
+  image: 'Poster kritik.jpg',
+  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+  category: 'Graphic Designer'
+  },
+];
 
   const [selectedCategory, setSelectedCategory] = React.useState<string>('All');
   const categories = ['All', ...Array.from(new Set(projects.map(p => p.category)))];
