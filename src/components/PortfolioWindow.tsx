@@ -173,7 +173,7 @@ const PortfolioWindow: React.FC = () => {
   },
   {
     id: '18',
-    title: 'Football Poster Design',
+    title: 'GOAT Rivalry – Messi vs Ronaldo Tribute Poster',
     description: 'A poster design showcasing a football player (Ronaldo & Messi).',
     technologies: ['Adobe Photoshop'],
     image: 'Poster goat.jpg',
