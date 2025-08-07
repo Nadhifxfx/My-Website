@@ -212,7 +212,7 @@ const PortfolioWindow: React.FC = () => {
   title: 'Video Commercial for Weal Dental',
   description: 'A sleek and modern video commercial promoting Weal Dental, highlighting their services and expertise in dental care.',
   technologies: ['Capcut'],
-  image: 'Weal Dental.jpg',
+  image: 'Weal Dental.png',
   behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
   category: 'Graphic Designer'
   },
