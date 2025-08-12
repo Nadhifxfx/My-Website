@@ -77,7 +77,7 @@ const WelcomeDialog: React.FC<WelcomeDialogProps> = ({ onClose }) => {
             </p>
             <p className="text-gray-600 text-sm leading-relaxed">
              Please feel free to explore the various features on the desktop to view my profile, skills, 
-             education, portfolio, certificates, and how to contact me. cara menghubungi saya.
+             education, portfolio, certificates, and how to contact me.
             </p>
           </div>
 
