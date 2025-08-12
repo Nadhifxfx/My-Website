@@ -237,10 +237,10 @@ const PortfolioWindow: React.FC = () => {
   {
   id: '25',
   title: 'URBAN STYLE AT URBAN HOME - CITRALAND DRIYOREJO',
-  description: 'A visually engaging poster created for a university event, using retro computer aesthetics and bold typography to convey the theme "Suara Mahasiswa Merajut Universitas Maju". The design incorporates pixel fonts, neon contrasts, and a nostalgic interface to evoke early digital culture—effectively attracting the target student demographic.',
+  description: 'A promotional video themed around urban lifestyle for an event at Urban Home Citraland Driyorejo, highlighting modern and trendy lifestyles.',
   technologies: ['Adobe Premiere Pro'],
   image: 'Citraland.png',
-  instagramUrl: 'https://www.instagram.com/tv/CVUuIAll5B0/?utm_source=ig_web_copy_link&igsh=MW9tejRnNm1lNDFrZQ==',
+  instagramUrl: 'https://www.instagram.com/reel/CVIm5Ehs_zd/?utm_source=ig_web_copy_link&igsh=MXZiOHNjb3dtMTU2eQ==',
   category: 'Video Editor'
   },
    {
@@ -249,16 +249,16 @@ const PortfolioWindow: React.FC = () => {
   description: 'A visually engaging poster created for a university event, using retro computer aesthetics and bold typography to convey the theme "Suara Mahasiswa Merajut Universitas Maju". The design incorporates pixel fonts, neon contrasts, and a nostalgic interface to evoke early digital culture—effectively attracting the target student demographic.',
   technologies: ['Figma'],
   image: 'Rumah Putih Coffe.jpeg',
-  dribbbleUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+  dribbbleUrl: 'https://dribbble.com/shots/25921769-Coffee-Shop-Modern-Login-Menu-Design?utm_source=Clipboard_Shot&utm_campaign=Nadhifxfx&utm_content=Coffee%20Shop%20%E2%80%93%20Modern%20Login%20%26%20Menu%20Design&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=Nadhifxfx&utm_content=Coffee%20Shop%20%E2%80%93%20Modern%20Login%20%26%20Menu%20Design&utm_medium=Social_Share',
   category: 'Graphic Designer'
   },
    {
   id: '27',
   title: 'Migrasi TV Digital',
-  description: 'A visually engaging poster created for a university event, using retro computer aesthetics and bold typography to convey the theme "Suara Mahasiswa Merajut Universitas Maju". The design incorporates pixel fonts, neon contrasts, and a nostalgic interface to evoke early digital culture—effectively attracting the target student demographic.',
+  description: 'Educational video about the migration of television broadcasts from analog to digital, presented with clear and easy-to-understand visuals.',
   technologies: ['Adobe Premiere Pro'],
   image: 'Migrasi TV.png',
-  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+  liveUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
   category: 'Video Editor'
   },
    {
@@ -267,7 +267,7 @@ const PortfolioWindow: React.FC = () => {
     description: 'Design and development of an informative, responsive, and accessible website for Madrasah Tsanawiyah..',
     technologies: ['Visual Studio Code'],
     image: 'WEB MTS.png',
-    behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+    githubUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
     category: 'Programmer'
   },
   {
@@ -276,7 +276,7 @@ const PortfolioWindow: React.FC = () => {
     description: 'YouTube thumbnail designs that attract attention and visually reflect the content of the video.',
     technologies: ['Adobe Photoshop'],
     image: 'tumnail.png',
-    behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+    instagramUrl: 'https://www.instagram.com/reel/CXeHkoeFL_W/?utm_source=ig_web_copy_link&igsh=MXVnZGtyd3BrYmdqMA==',
     category: 'Graphic Designer'
   },
   {
@@ -285,7 +285,7 @@ const PortfolioWindow: React.FC = () => {
     description: 'A motivational video encouraging young people to use their time productively for a better future.',
     technologies: ['Adobe Premiere Pro'],
     image: 'Produktif.png',
-    behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+    instagramUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
     category: 'Video Editor'
   }
 ];
