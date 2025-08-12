@@ -21,7 +21,7 @@ const PortfolioWindow: React.FC = () => {
   {
     id: '1',
     title: 'Graduation Film Class XVII 2021',
-    description: 'A graduation film capturing the moments and memories of the 2021 graduating class of Antartika 2 Vocational High School.',
+    description: 'Graduation film capturing the moments and memories of the 2021 graduating class of Antartika 2 Vocational High School.',
     technologies: ['Adobe Premiere Pro', 'Adobe After Effects'],
     image: 'smartsda.png',
     youtubeUrl: 'https://youtube.com/example',
@@ -30,7 +30,7 @@ const PortfolioWindow: React.FC = () => {
   {
     id: '2',
     title: 'INACOM Modern Logo Concept',
-    description: 'A conceptual modern and minimalistic logo design for INACOM.',
+    description: 'Conceptual modern and minimalistic logo design for INACOM.',
     technologies: ['Adobe Photoshop', 'Adobe Illustrator'],
     image: 'Inacom.jpg',
     behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
@@ -39,7 +39,7 @@ const PortfolioWindow: React.FC = () => {
   {
     id: '3',
     title: 'Bank Indonesia Investment Program',
-    description: 'A one-minute competition video educating viewers on the Rupiah’s role as a store of value and investment.',
+    description: 'One-minute competition video educating viewers on the Rupiah’s role as a store of value and investment.',
     technologies: ['Adobe Premiere Pro'],
     image: 'Bank Indonesia.png',
     instagramUrl: 'https://www.instagram.com/p/CW5lSYkrABF/?utm_source=ig_web_copy_link&igsh=MXFkaXZxcnJ6c2J5Ng==',
@@ -48,7 +48,7 @@ const PortfolioWindow: React.FC = () => {
   {
     id: '4',
     title: 'NDComps10 Football Fan Website UI',
-    description: 'A modern UI design for a football fan website dedicated to NDComps10.',
+    description: 'Modern UI design for a football fan website dedicated to NDComps10.',
     technologies: ['Figma', 'Adobe Photoshop'],
     image: 'NDcomps10.jpg',
     dribbbleUrl: 'https://dribbble.com/shots/25922166-NDComps10-Modern-Football-Fan-Website-UI',
@@ -56,9 +56,9 @@ const PortfolioWindow: React.FC = () => {
   },
   {
     id: '5',
-    title: 'ND10 Personal Website',
-    description: 'A personal website presenting information and projects under the ND10 brand.',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
+    title: 'ND10 Portofolio Website',
+    description: 'Personal website presenting information and projects under the ND10 brand.',
+    technologies: ['Visual Studio Code'],
     image: 'Web ND10.png',
     githubUrl: 'http://nadhifxfx.github.io/Website-ND10/',
     category: 'Programmer'
@@ -66,8 +66,8 @@ const PortfolioWindow: React.FC = () => {
   {
     id: '6',
     title: 'Byon Combat Unofficial Website',
-    description: 'An unofficial website for Byon Combat showcasing its products and brand visuals.',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
+    description: 'Unofficial website for Byon Combat showcasing its products and brand visuals.',
+    technologies: ['Visual Studio Code'],
     image: 'Byon.png',
     githubUrl: 'https://byon-combat.vercel.app/',
     category: 'Programmer'
@@ -75,7 +75,7 @@ const PortfolioWindow: React.FC = () => {
   {
     id: '7',
     title: 'Gamified Qur’an Learning App UI/UX',
-    description: 'A UI/UX design concept for an app that combines gamification elements with learning the Qur’an.',
+    description: 'UI/UX design concept for an app that combines gamification elements with learning the Qur’an.',
     technologies: ['Figma', 'Canva'],
     image: 'TEXT GEN.png',
     dribbbleUrl: 'https://dribbble.com/shots/25921769-Coffee-Shop-Modern-Login-Menu-Design',
@@ -84,25 +84,25 @@ const PortfolioWindow: React.FC = () => {
   {
     id: '8',
     title: 'Getuk Pisang Sahira Website',
-    description: 'A promotional website for Sahira’s traditional Getuk Pisang products.',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
+    description: 'Website for Sahira’s traditional Getuk Pisang products.',
+    technologies: ['Visual Studio Code'],
     image: 'Web Sahira.png',
     githubUrl: 'https://nadhifxfx.github.io/Getuk-Pisang-Sahira/',
     category: 'Programmer'
   },
   {
     id: '9',
-    title: 'UEC 2023 Aftermovie',
-    description: 'An aftermovie highlighting the activities and excitement of the UEC 2023 event.',
+    title: 'UEC 2024 Aftermovie',
+    description: 'Aftermovie highlighting the activities and excitement of the UEC 2024 event.',
     technologies: ['Capcut'],
-    image: 'UEC 2023.jpg',
+    image: 'UEC 2024.jpg',
     youtubeUrl: 'https://youtu.be/X8Gwa-Pyqmc?feature=shared',
     category: 'Video Editor'
   },
   {
     id: '10',
     title: 'Ahmed Abdelkader Football Highlights',
-    description: 'highlight video featuring Ahmed Abdelkader football performances.',
+    description: 'Highlight video featuring Ahmed Abdelkader football performances.',
     technologies: ['Adobe Premiere Pro'],
     image: 'Abdelkader.png',
     liveUrl: 'https://drive.google.com/file/d/1LJF5ntnFcEmYHgH2QH1PCuZ8vHg134tc/view?usp=sharing',
@@ -111,7 +111,7 @@ const PortfolioWindow: React.FC = () => {
   {
     id: '11',
     title: 'Kokolo Williams Football Highlights',
-    description: 'highlight video showcasing Kokolo Williams in action on the field.',
+    description: 'Highlight video showcasing Kokolo Williams in action on the field.',
     technologies: ['Adobe Premiere Pro'],
     image: 'Kokolo.png',
     liveUrl: 'https://drive.google.com/file/d/1KFTpgym7UqbwIU20E98JeOev-q59epH_/view?usp=drive_link',
@@ -120,7 +120,7 @@ const PortfolioWindow: React.FC = () => {
   {
     id: '12',
     title: 'Remy Vita Football Highlights',
-    description: 'highlight video featuring Remy Vita football performances.',
+    description: 'Highlight video featuring Remy Vita football performances.',
     technologies: ['Adobe Premiere Pro'],
     image: 'Vita.png',
     liveUrl: 'https://drive.google.com/file/d/1RFPNhWFl7oapXNVfatEXU54VdzVANs-j/view?usp=sharing',
@@ -129,7 +129,7 @@ const PortfolioWindow: React.FC = () => {
   {
     id: '13',
     title: 'Sports Activities at Citra Garden',
-    description: 'A fun video edit showcasing various sports activities at Citra Garden.',
+    description: 'Fun video edit showcasing various sports activities at Citra Garden.',
     technologies: ['Adobe Premiere Pro'],
     image: 'Olahraga.png',
     instagramUrl: 'https://www.instagram.com/tv/CfNUe-bh_1c/?utm_source=ig_web_copy_link&igsh=MWV1dTNzYXp5eWcyeA==',
@@ -138,7 +138,7 @@ const PortfolioWindow: React.FC = () => {
   {
     id: '14',
     title: 'Independence Day Celebration',
-    description: 'A creative video celebrating Indonesia Independence Day amid the pandemic.',
+    description: 'Creative video celebrating Indonesia Independence Day amid the pandemic.',
     technologies: ['Adobe Premiere Pro'],
     image: 'Kemerdekaan.png',
     liveUrl: 'https://drive.google.com/file/d/1P-S78sw6T8Ka-3VcK8nAu2XFpJl1pYj3/view?usp=sharing',
@@ -156,7 +156,7 @@ const PortfolioWindow: React.FC = () => {
   {
     id: '16',
     title: 'Brazilians Next Gen Edit',
-    description: 'A video edit featuring the next generation of Brazilian footballers set to the energetic track "Danza Kuduro", which has garnered over 5 million views.',
+    description: 'Video edit featuring the next generation of Brazilian footballers set to the energetic track "Danza Kuduro", which has garnered over 5 million views.',
     technologies: ['Adobe Photoshop', 'Adobe Premiere Pro'],
     image: 'danza.jpg',
     youtubeUrl: 'https://youtu.be/2HDLx6-HarY?si=8w2mlOmy5djnl7nt',
@@ -165,7 +165,7 @@ const PortfolioWindow: React.FC = () => {
   {
     id: '17',
     title: 'INACOM 2024 Workshop Recap',
-    description: 'A video recap  highlights and moments from the INACOM 2024 Workshop Event.',
+    description: 'Video recap  highlights and moments from the INACOM 2024 Workshop Event.',
     technologies: ['Capcut'],
     image: 'workshop.png',
     instagramUrl: 'https://www.instagram.com/reel/C_IWqnjvjoF/?utm_source=ig_web_copy_link&igsh=MTNhcmVxbG1oNGcyNA==',
@@ -174,7 +174,7 @@ const PortfolioWindow: React.FC = () => {
   {
     id: '18',
     title: 'GOAT Rivalry – Messi vs Ronaldo Tribute Poster',
-    description: 'A dynamic and emotionally charged sports poster that pays tribute to the legendary rivalry between Lionel Messi and Cristiano Ronaldo.',
+    description: 'Dynamic and emotionally charged sports poster that pays tribute to the legendary rivalry between Lionel Messi and Cristiano Ronaldo.',
     technologies: ['Adobe Photoshop'],
     image: 'Poster goat.jpg',
     behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
@@ -183,16 +183,16 @@ const PortfolioWindow: React.FC = () => {
   {
   id: '19',
   title: 'DILEMA – Short Film',
-  description: 'A short film about long-buried love that finally finds its way when courage grows amid bullying at Antartika 2 Vocational School.',
+  description: 'Short film about long-buried love that finally finds its way when courage grows amid bullying at Antartika 2 Vocational School.',
   technologies: ['Adobe Photoshop'],
   image: 'DILEMA.png',
-  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+  youtubeUrl: 'https://youtube.com/example',
   category: 'Video Editor'
   },
   {
   id: '20',
   title: 'Choose Your Character – Football Poster Design',
-  description: 'A bold and dynamic poster inspired by video game character selection screens, featuring top football icons like Ronaldo, Messi, Griezmann, and more. The design combines striking typography and layered textures to capture the energy and personality of each player.',
+  description: 'A bold and dynamic poster inspired by video game character selection screens, featuring top football icons like Ronaldo, Messi, Griezmann, and more.',
   technologies: ['Adobe Photoshop'],
   image: 'cyc poster.jpg',
   behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
@@ -201,7 +201,7 @@ const PortfolioWindow: React.FC = () => {
 {
   id: '21',
   title: 'Silver Medal Announcement – IYMI Award 2024 Poster',
-  description: 'A sleek and modern announcement poster celebrating the achievement of Universitas Nahdlatul Ulama Sidoarjo students who won the Silver Medal at the International Young Moslem Inventor Award 2024.',
+  description: 'Announcement poster celebrating the achievement of Universitas Nahdlatul Ulama Sidoarjo students who won the Silver Medal at the International Young Moslem Inventor Award 2024.',
   technologies: ['Adobe Photoshop'],
   image: 'poster compe.jpg',
   behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
@@ -209,33 +209,86 @@ const PortfolioWindow: React.FC = () => {
   },
   {
   id: '22',
-  title: 'Video Commercial for Weal Dental',
-  description: 'A sleek and modern video commercial promoting Weal Dental, highlighting their services and expertise in dental care.',
+  title: 'Weal Dental',
+  description: 'Video commercial promoting Weal Dental, highlighting their services and expertise in dental care.',
   technologies: ['Capcut'],
   image: 'Weal Dental.png',
-  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
-  category: 'Graphic Designer'
+  liveUrl: 'https://drive.google.com/file/d/1RNAY7ewpj0gQIaLNe_T0WXK_5Y2ACqLo/view?usp=sharing',
+  category: 'Video Editor'
   },
   {
-  id: '23',
-  title: 'BANNER MTS',
-  description: 'A sleek and modern announcement poster celebrating the achievement of Universitas Nahdlatul Ulama Sidoarjo students who won the Silver Medal at the International Young Moslem Inventor Award 2024.',
-  technologies: ['Adobe Photoshop'],
-  image: 'BANNER MTS.jpg',
-  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
-  category: 'Graphic Designer'
+  id: "23",
+  title: 'BANNER MTS - Wisata Religi',
+  description: 'Informative and elegant banner design for the Religious Tourism event at Pondok Pesantren Roudlotul Quran 2 with the theme “Pilgrimage to the Saints of East Java.',
+  technologies: ['Canva'],
+  image: "BANNER MTS.jpg",
+  behanceUrl: "https://www.behance.net/gallery/180597019/INACOM-Logo-Concept",
+  category: "Graphic Designer"
   },
   {
   id: '24',
   title: 'KRITIK TIF Poster',
-  description: 'A visually engaging poster created for a university event, using retro computer aesthetics and bold typography to convey the theme "Suara Mahasiswa Merajut Universitas Maju". The design incorporates pixel fonts, neon contrasts, and a nostalgic interface to evoke early digital culture—effectively attracting the target student demographic.',
+  description: 'A visually engaging poster created for a university event, using retro computer aesthetics and bold typography to convey the theme "Suara Mahasiswa Merajut Universitas Maju.',
   technologies: ['Adobe Photoshop'],
   image: 'Poster kritik.jpg',
   behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
   category: 'Graphic Designer'
   },
+  {
+  id: '25',
+  title: 'URBAN STYLE AT URBAN HOME - CITRALAND DRIYOREJO',
+  description: 'A visually engaging poster created for a university event, using retro computer aesthetics and bold typography to convey the theme "Suara Mahasiswa Merajut Universitas Maju". The design incorporates pixel fonts, neon contrasts, and a nostalgic interface to evoke early digital culture—effectively attracting the target student demographic.',
+  technologies: ['Adobe Premiere Pro'],
+  image: 'Citraland.png',
+  instagramUrl: 'https://www.instagram.com/tv/CVUuIAll5B0/?utm_source=ig_web_copy_link&igsh=MW9tejRnNm1lNDFrZQ==',
+  category: 'Video Editor'
+  },
+   {
+  id: '26',
+  title: 'Rumah Putih Coffee',
+  description: 'A visually engaging poster created for a university event, using retro computer aesthetics and bold typography to convey the theme "Suara Mahasiswa Merajut Universitas Maju". The design incorporates pixel fonts, neon contrasts, and a nostalgic interface to evoke early digital culture—effectively attracting the target student demographic.',
+  technologies: ['Figma'],
+  image: 'Rumah Putih Coffe.jpeg',
+  dribbbleUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+  category: 'Graphic Designer'
+  },
+   {
+  id: '27',
+  title: 'Migrasi TV Digital',
+  description: 'A visually engaging poster created for a university event, using retro computer aesthetics and bold typography to convey the theme "Suara Mahasiswa Merajut Universitas Maju". The design incorporates pixel fonts, neon contrasts, and a nostalgic interface to evoke early digital culture—effectively attracting the target student demographic.',
+  technologies: ['Adobe Premiere Pro'],
+  image: 'Migrasi TV.png',
+  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+  category: 'Video Editor'
+  },
+   {
+    id: '28',
+    title: 'Website Profil MTS',
+    description: 'Design and development of an informative, responsive, and accessible website for Madrasah Tsanawiyah..',
+    technologies: ['Visual Studio Code'],
+    image: 'WEB MTS.png',
+    behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+    category: 'Programmer'
+  },
+  {
+    id: '29',
+    title: 'Thumbnail Video Youtube',
+    description: 'YouTube thumbnail designs that attract attention and visually reflect the content of the video.',
+    technologies: ['Adobe Photoshop'],
+    image: 'tumnail.png',
+    behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+    category: 'Graphic Designer'
+  },
+  {
+    id: '30',
+    title: 'Video Produktif Guna Masa Depan',
+    description: 'A motivational video encouraging young people to use their time productively for a better future.',
+    technologies: ['Adobe Premiere Pro'],
+    image: 'Produktif.png',
+    behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+    category: 'Video Editor'
+  }
 ];
-
   const [selectedCategory, setSelectedCategory] = React.useState<string>('All');
   const categories = ['All', ...Array.from(new Set(projects.map(p => p.category)))];
   const filteredProjects = selectedCategory === 'All' ? projects : projects.filter(p => p.category === selectedCategory);
