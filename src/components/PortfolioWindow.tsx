@@ -246,7 +246,7 @@ const PortfolioWindow: React.FC = () => {
    {
   id: '26',
   title: 'Rumah Putih Coffee',
-  description: 'A visually engaging poster created for a university event, using retro computer aesthetics and bold typography to convey the theme "Suara Mahasiswa Merajut Universitas Maju". The design incorporates pixel fonts, neon contrasts, and a nostalgic interface to evoke early digital culture—effectively attracting the target student demographic.',
+  description: 'UI/UX for Rumah Putih Coffee, featuring a warm and aesthetic atmosphere to attract coffee lovers.',
   technologies: ['Figma'],
   image: 'Rumah Putih Coffe.jpeg',
   dribbbleUrl: 'https://dribbble.com/shots/25921769-Coffee-Shop-Modern-Login-Menu-Design?utm_source=Clipboard_Shot&utm_campaign=Nadhifxfx&utm_content=Coffee%20Shop%20%E2%80%93%20Modern%20Login%20%26%20Menu%20Design&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=Nadhifxfx&utm_content=Coffee%20Shop%20%E2%80%93%20Modern%20Login%20%26%20Menu%20Design&utm_medium=Social_Share',
@@ -281,7 +281,7 @@ const PortfolioWindow: React.FC = () => {
   },
   {
     id: '30',
-    title: 'Video Produktif Guna Masa Depan',
+    title: 'Produktif Guna Masa Depan',
     description: 'A motivational video encouraging young people to use their time productively for a better future.',
     technologies: ['Adobe Premiere Pro'],
     image: 'Produktif.png',
