@@ -287,7 +287,25 @@ const PortfolioWindow: React.FC = () => {
     image: 'Produktif.png',
     instagramUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
     category: 'Video Editor'
-  }
+  },
+  {
+    id: '31',
+    title: 'Poster UEC 2023',
+    description: 'A poster design for the UEC 2023 event, featuring vibrant colors and dynamic layouts to attract attention.',
+    technologies: ['Adobe Photoshop'],
+    image: 'poster uec.jpg',
+    behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+    category: 'Graphic Designer'
+  },
+  {
+    id: '32',
+    title: 'Lifestyle at Citra Garden Sidoarjo',
+    description: 'A poster design showcasing the lifestyle and amenities at Citra Garden Sidoarjo.',
+    technologies: ['Adobe Premiere Pro'],
+    image: 'Lifestyle.png',
+    behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
+    category: 'Video Editor'
+  },
 ];
   const [selectedCategory, setSelectedCategory] = React.useState<string>('All');
   const categories = ['All', ...Array.from(new Set(projects.map(p => p.category)))];
