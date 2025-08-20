@@ -236,7 +236,7 @@ const PortfolioWindow: React.FC = () => {
   },
   {
   id: '25',
-  title: 'URBAN STYLE AT URBAN HOME - CITRALAND DRIYOREJO',
+  title: 'Urban Style at Urban Home - CITRALAND DRIYOREJO',
   description: 'A promotional video themed around urban lifestyle for an event at Urban Home Citraland Driyorejo, highlighting modern and trendy lifestyles.',
   technologies: ['Adobe Premiere Pro'],
   image: 'Citraland.png',
@@ -263,8 +263,8 @@ const PortfolioWindow: React.FC = () => {
   },
    {
     id: '28',
-    title: 'Website Profil MTS',
-    description: 'Design and development of an informative, responsive, and accessible website for Madrasah Tsanawiyah..',
+    title: 'Website Profil Pondok Pesantren',
+    description: 'Design and development of an informative, responsive, and accessible website for Pondok Pesantren.',
     technologies: ['Visual Studio Code'],
     image: 'WEB MTS.png',
     githubUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
