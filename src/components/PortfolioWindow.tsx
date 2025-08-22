@@ -326,7 +326,7 @@ const PortfolioWindow: React.FC = () => {
       <div className="text-center mb-6">
         <h2 className="text-xl font-bold text-gray-800 flex items-center justify-center space-x-2 mt-5">
           <Folder className="text-purple-600" />
-          <span>My Projects</span>
+          <span>Projects</span>
         </h2>
         <p className="text-gray-600 text-sm mt-2">A collection of my recent projects and work</p>
 

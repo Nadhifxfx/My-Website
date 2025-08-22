@@ -51,7 +51,7 @@ const SkillsWindow: React.FC = () => {
   return (
     <div className="p-6 h-full overflow-auto bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-xl font-bold text-gray-800 mb-6 text-center">My Skills & Expertise</h2>
+        <h2 className="text-xl font-bold text-gray-800 mb-6 text-center">Skills</h2>
         
         {categories.map((category) => (
           <div key={category.name} className="mb-6">
