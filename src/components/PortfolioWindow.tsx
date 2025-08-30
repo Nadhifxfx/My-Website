@@ -47,7 +47,7 @@ const PortfolioWindow: React.FC = () => {
   },
   {
     id: '4',
-    title: 'NDComps10 Football Fan Website UI',
+    title: 'NDComps10 Football Website UI',
     description: 'Modern UI design for a football fan website dedicated to NDComps10.',
     technologies: ['Figma', 'Adobe Photoshop'],
     image: 'NDcomps10.jpg',
@@ -55,13 +55,13 @@ const PortfolioWindow: React.FC = () => {
     category: 'Graphic Designer'
   },
   {
-    id: '5',
-    title: 'ND10 Portofolio Website',
-    description: 'Personal website presenting information and projects under the ND10 brand.',
-    technologies: ['Visual Studio Code'],
-    image: 'Web ND10.png',
-    githubUrl: 'http://nadhifxfx.github.io/Website-ND10/',
-    category: 'Programmer'
+  id: "5",
+  title: "Agrifest Instagram Feed Design",
+  description: "A visually cohesive Instagram feed design for Agrifest, featuring event highlights and engaging visual storytelling to attract attendees.",
+  technologies: ["Adobe Photoshop", "Canva"],
+  image: "Agrifest.png",
+  behanceUrl: "https://www.behance.net/gallery/180597019/INACOM-Logo-Concept",
+  category: "Graphic Designer"
   },
   {
     id: '6',
@@ -137,7 +137,7 @@ const PortfolioWindow: React.FC = () => {
   },
   {
     id: '14',
-    title: 'Independence Day Celebration',
+    title: 'Independence amid the Pandemic',
     description: 'Creative video celebrating Indonesia Independence Day amid the pandemic.',
     technologies: ['Adobe Premiere Pro'],
     image: 'Kemerdekaan.png',
@@ -173,7 +173,7 @@ const PortfolioWindow: React.FC = () => {
   },
   {
     id: '18',
-    title: 'GOAT Rivalry – Messi vs Ronaldo Tribute Poster',
+    title: 'Messi & Ronaldo Tribute Poster',
     description: 'Dynamic and emotionally charged sports poster that pays tribute to the legendary rivalry between Lionel Messi and Cristiano Ronaldo.',
     technologies: ['Adobe Photoshop'],
     image: 'Poster goat.jpg',
@@ -218,94 +218,160 @@ const PortfolioWindow: React.FC = () => {
   },
   {
   id: "23",
-  title: 'BANNER MTS - Wisata Religi',
-  description: 'Informative and elegant banner design for the Religious Tourism event at Pondok Pesantren Roudlotul Quran 2 with the theme “Pilgrimage to the Saints of East Java.',
-  technologies: ['Canva'],
+  title: "Religious Tourism Banner",
+  description: "An informative and elegant banner design for the Religious Tourism event at Pondok Pesantren Roudlotul Quran 2, themed 'Pilgrimage to the Saints of East Java.'",
+  technologies: ["Canva"],
   image: "BANNER MTS.jpg",
   behanceUrl: "https://www.behance.net/gallery/180597019/INACOM-Logo-Concept",
   category: "Graphic Designer"
-  },
-  {
-  id: '24',
-  title: 'KRITIK TIF Poster',
-  description: 'A visually engaging poster created for a university event, using retro computer aesthetics and bold typography to convey the theme "Suara Mahasiswa Merajut Universitas Maju.',
-  technologies: ['Adobe Photoshop'],
-  image: 'Poster kritik.jpg',
-  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
-  category: 'Graphic Designer'
-  },
-  {
-  id: '25',
-  title: 'Urban Style at Urban Home - CITRALAND DRIYOREJO',
-  description: 'A promotional video themed around urban lifestyle for an event at Urban Home Citraland Driyorejo, highlighting modern and trendy lifestyles.',
-  technologies: ['Adobe Premiere Pro'],
-  image: 'Citraland.png',
-  instagramUrl: 'https://www.instagram.com/reel/CVIm5Ehs_zd/?utm_source=ig_web_copy_link&igsh=MXZiOHNjb3dtMTU2eQ==',
-  category: 'Video Editor'
-  },
-   {
-  id: '26',
-  title: 'Rumah Putih Coffee',
-  description: 'UI/UX for Rumah Putih Coffee, featuring a warm and aesthetic atmosphere to attract coffee lovers.',
-  technologies: ['Figma'],
-  image: 'Rumah Putih Coffe.jpeg',
-  dribbbleUrl: 'https://dribbble.com/shots/25921769-Coffee-Shop-Modern-Login-Menu-Design?utm_source=Clipboard_Shot&utm_campaign=Nadhifxfx&utm_content=Coffee%20Shop%20%E2%80%93%20Modern%20Login%20%26%20Menu%20Design&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=Nadhifxfx&utm_content=Coffee%20Shop%20%E2%80%93%20Modern%20Login%20%26%20Menu%20Design&utm_medium=Social_Share',
-  category: 'Graphic Designer'
-  },
-   {
-  id: '27',
-  title: 'Migrasi TV Digital',
-  description: 'Educational video about the migration of television broadcasts from analog to digital, presented with clear and easy-to-understand visuals.',
-  technologies: ['Adobe Premiere Pro'],
-  image: 'Migrasi TV.png',
-  liveUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
-  category: 'Video Editor'
-  },
-   {
-    id: '28',
-    title: 'Website Profil Pondok Pesantren',
-    description: 'Design and development of an informative, responsive, and accessible website for Pondok Pesantren.',
-    technologies: ['Visual Studio Code'],
-    image: 'WEB MTS.png',
-    githubUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
-    category: 'Programmer'
-  },
-  {
-    id: '29',
-    title: 'Thumbnail Video Youtube',
-    description: 'YouTube thumbnail designs that attract attention and visually reflect the content of the video.',
-    technologies: ['Adobe Photoshop'],
-    image: 'tumnail.png',
-    instagramUrl: 'https://www.instagram.com/reel/CXeHkoeFL_W/?utm_source=ig_web_copy_link&igsh=MXVnZGtyd3BrYmdqMA==',
-    category: 'Graphic Designer'
-  },
-  {
-    id: '30',
-    title: 'Produktif Guna Masa Depan',
-    description: 'A motivational video encouraging young people to use their time productively for a better future.',
-    technologies: ['Adobe Premiere Pro'],
-    image: 'Produktif.png',
-    instagramUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
-    category: 'Video Editor'
-  },
-  {
-    id: '31',
-    title: 'Poster UEC 2023',
-    description: 'A poster design for the UEC 2023 event, featuring vibrant colors and dynamic layouts to attract attention.',
-    technologies: ['Adobe Photoshop'],
-    image: 'poster uec.jpg',
-    behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
-    category: 'Graphic Designer'
-  },
-  {
-    id: '32',
-    title: 'Lifestyle at Citra Garden Sidoarjo',
-    description: 'A poster design showcasing the lifestyle and amenities at Citra Garden Sidoarjo.',
-    technologies: ['Adobe Premiere Pro'],
-    image: 'Lifestyle.png',
-    behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
-    category: 'Video Editor'
-  },
+},
+{
+  id: "24",
+  title: "KRITIK TIF Poster",
+  description: "A visually striking poster created for a university event, featuring retro computer aesthetics and bold typography to highlight the theme 'Students' Voices Weaving a Better University.'",
+  technologies: ["Adobe Photoshop"],
+  image: "Poster kritik.jpg",
+  behanceUrl: "https://www.behance.net/gallery/180597019/INACOM-Logo-Concept",
+  category: "Graphic Designer"
+},
+{
+  id: "25",
+  title: "Urban Style at Urban Home",
+  description: "A promotional video highlighting modern urban lifestyles, created for an event at Urban Home Citraland Driyorejo.",
+  technologies: ["Adobe Premiere Pro"],
+  image: "Citraland.png",
+  instagramUrl: "https://www.instagram.com/reel/CVIm5Ehs_zd/?utm_source=ig_web_copy_link&igsh=MXZiOHNjb3dtMTU2eQ==",
+  category: "Video Editor"
+},
+{
+  id: "26",
+  title: "Rumah Putih Coffee UI/UX",
+  description: "A warm and aesthetic UI/UX design for Rumah Putih Coffee, aimed at attracting coffee enthusiasts and creating a cozy experience.",
+  technologies: ["Figma"],
+  image: "Rumah Putih Coffe.jpeg",
+  dribbbleUrl: "https://dribbble.com/shots/25921769-Coffee-Shop-Modern-Login-Menu-Design?utm_source=Clipboard_Shot&utm_campaign=Nadhifxfx&utm_content=Coffee%20Shop%20%E2%80%93%20Modern%20Login%20%26%20Menu%20Design&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=Nadhifxfx&utm_content=Coffee%20Shop%20%E2%80%93%20Modern%20Login%20%26%20Menu%20Design&utm_medium=Social_Share",
+  category: "Graphic Designer"
+},
+{
+  id: "27",
+  title: "Digital TV Migration Video",
+  description: "An educational video explaining the transition from analog to digital television broadcasting with clear and easy-to-follow visuals.",
+  technologies: ["Adobe Premiere Pro"],
+  image: "Migrasi TV.png",
+  liveUrl: "https://www.behance.net/gallery/180597019/INACOM-Logo-Concept",
+  category: "Video Editor"
+},
+{
+  id: "28",
+  title: "Pondok Pesantren Profile Website",
+  description: "Design and development of a responsive, informative, and user-friendly website for Pondok Pesantren.",
+  technologies: ["Visual Studio Code"],
+  image: "WEB MTS.png",
+  githubUrl: "https://www.behance.net/gallery/180597019/INACOM-Logo-Concept",
+  category: "Programmer"
+},
+{
+  id: "29",
+  title: "YouTube Video Thumbnails",
+  description: "Eye-catching YouTube thumbnail designs that visually represent the video content and attract viewers' attention.",
+  technologies: ["Adobe Photoshop"],
+  image: "tumnail.png",
+  instagramUrl: "https://www.instagram.com/reel/CXeHkoeFL_W/?utm_source=ig_web_copy_link&igsh=MXVnZGtyd3BrYmdqMA==",
+  category: "Graphic Designer"
+},
+{
+  id: "30",
+  title: "Chasing Dreams",
+  description: "A motivational video encouraging young people to spend their time productively and build a brighter future.",
+  technologies: ["Adobe Premiere Pro"],
+  image: "Produktif.png",
+  instagramUrl: "https://www.behance.net/gallery/180597019/INACOM-Logo-Concept",
+  category: "Video Editor"
+},
+{
+  id: "31",
+  title: "UEC 2023 Poster",
+  description: "A bold and dynamic poster design created for the UEC 2023 event, aimed at capturing attention and boosting event participation.",
+  technologies: ["Adobe Photoshop"],
+  image: "poster uec.jpg",
+  behanceUrl: "https://www.behance.net/gallery/180597019/INACOM-Logo-Concept",
+  category: "Graphic Designer"
+},
+{
+  id: "32",
+  title: "Web-based Point of Sale System",
+  description: "A web-based point of sale (POS) system designed to simplify transactions and improve sales management efficiency.",
+  technologies: ["Visual Studio Code"],
+  image: "Web Kasir.jpg",
+  githubUrl: "https://github.com/Nadhifxfx",
+  category: "Programmer"
+},
+{
+  id: "33",
+  title: "Village Profile Website",
+  description: "A village profile website showcasing local culture, history, and community life in a user-friendly and engaging way.",
+  technologies: ["Visual Studio Code"],
+  image: "Web Desa.png",
+  githubUrl: "https://www.behance.net/gallery/180597019/INACOM-Logo-Concept",
+  category: "Programmer"
+},
+{
+  id: "34",
+  title: "ND10 Portfolio Website",
+  description: "A personal portfolio website built under the ND10 brand, featuring projects, skills, and contact information in a clean, responsive layout.",
+  technologies: ["Visual Studio Code"],
+  image: "Web ND10.png",
+  githubUrl: "http://nadhifxfx.github.io/Website-ND10/",
+  category: "Programmer"
+},
+{
+  id: "35",
+  title: "Vancy Studio UI Design",
+  description: "A modern and visually appealing UI design for Vancy Studio, focused on effectively showcasing creative projects and services.",
+  technologies: ["Figma"],
+  image: "Vancy UI.png",
+  dribbbleUrl: "https://dribbble.com/shots/180597019/INACOM-Logo-Concept",
+  category: "Graphic Designer"
+},
+{
+  id: "36",
+  title: "ND10 YouTube Banner",
+  description: "A custom YouTube banner designed for ND10, aligning with the channel’s branding and visually engaging for viewers.",
+  technologies: ["Adobe Photoshop"],
+  image: "Banner ND10.jpg",
+  dribbbleUrl: "https://dribbble.com/shots/180597019/INACOM-Logo-Concept",
+  category: "Graphic Designer"
+},
+{
+  id: "37",
+  title: "IEC Instagram Feed Design",
+  description: "A cohesive Instagram feed design for IEC, created to reflect the organization’s identity and connect with its audience effectively.",
+  technologies: ["Adobe Photoshop"],
+  image: "IEC.png",
+  dribbbleUrl: "https://dribbble.com/shots/180597019/INACOM-Logo-Concept",
+  category: "Graphic Designer"
+},
+{
+  id: "38",
+  title: "HIMATIF Instagram Feed Design",
+  description: "A visually cohesive Instagram feed design for HIMATIF, highlighting events and activities with engaging visual storytelling.",
+  technologies: ["Adobe Photoshop", "Canva"],
+  image: "HIMATIF.png",
+  dribbbleUrl: "https://dribbble.com/shots/180597019/INACOM-Logo-Concept",
+  category: "Graphic Designer"
+},
+{
+  id: "39",
+   title: "Lifestyle at Citra Garden Sidoarjo",
+  description: "A lifestyle video highlighting the facilities, community, and atmosphere of Citra Garden Sidoarjo.",
+  technologies: ["Adobe Premiere Pro"],
+  image: "Lifestyle.png",
+  instagramUrl: "https://www.instagram.com/reel/CVIm5Ehs_zd/?utm_source=ig_web_copy_link&igsh=MXZiOHNjb3dtMTU2eQ==",
+  category: "Video Editor"
+}
+
+
+
 ];
   const [selectedCategory, setSelectedCategory] = React.useState<string>('All');
   const categories = ['All', ...Array.from(new Set(projects.map(p => p.category)))];
