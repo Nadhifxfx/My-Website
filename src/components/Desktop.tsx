@@ -6,6 +6,7 @@ import AnimatedWallpaper from './AnimatedWallpaper';
 import InteractiveGreeting from './InteractiveGreeting';
 import LoadingScreen from './LoadingScreen';
 import WelcomeDialog from './WelcomeDialog';
+import ChatBot from './ChatBot';
 import ProfileWindow from './ProfileWindow';
 import SkillsWindow from './SkillsWindow';
 import EducationWindow from './EducationWindow';
@@ -258,6 +259,9 @@ const Desktop: React.FC = () => {
           ))}
         </div>
       </div>
+
+      {/* ChatBot Component */}
+      <ChatBot />
 
       {/* Windows - All fullscreen */}
       {windows.map((window) => (
