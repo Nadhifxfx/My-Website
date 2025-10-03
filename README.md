@@ -1,6 +1,6 @@
 # 🌐 PIJAR Music Event Website
 
-![Preview](./preview.png)
+![Preview](<img width="677" height="496" alt="image" src="https://github.com/user-attachments/assets/2d67b5a2-1b0f-4265-a059-332214a31ded" />)
 
 > Website resmi **PIJAR Music Event** – konser amal dengan fitur **beli tiket** dan **donasi**, dirancang untuk generasi milenial pecinta musik & kegiatan sosial.  
 
