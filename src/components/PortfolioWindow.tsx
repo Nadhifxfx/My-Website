@@ -263,11 +263,11 @@ const PortfolioWindow: React.FC = () => {
 },
 {
   id: "28",
-  title: "Pondok Pesantren Profile Website",
+  title: "Yayasan Profile Website",
   description: "Design and development of a responsive, informative, and user-friendly website for Pondok Pesantren.",
   technologies: ["Visual Studio Code"],
   image: "WEB MTS.png",
-  githubUrl: "https://www.behance.net/gallery/180597019/INACOM-Logo-Concept",
+  githubUrl: "https://mtstahfidhroudlotulquran.sch.id/",
   category: "Programmer"
 },
 {
@@ -312,7 +312,7 @@ const PortfolioWindow: React.FC = () => {
   description: "A village profile website showcasing local culture, history, and community life in a user-friendly and engaging way.",
   technologies: ["Visual Studio Code"],
   image: "Web Desa.png",
-  githubUrl: "https://www.behance.net/gallery/180597019/INACOM-Logo-Concept",
+  githubUrl: "https://wonokarang.projekfilkom.com/",
   category: "Programmer"
 },
 {

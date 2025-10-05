@@ -58,7 +58,7 @@ const InteractiveGreeting: React.FC = () => {
         onClick={handleGreetingClick}
       >
         {/* Teks utama */}
-        <h1 className="text-7xl font-bold text-white mb-4 select-none"
+        <h1 className="text-5xl font-bold text-white mb-4 select-none"
           style={{
             fontFamily: 'Tahoma, Verdana, sans-serif',
             textShadow: '0 0 20px rgba(255,255,255,0.5), 0 0 40px rgba(255,255,255,0.8)'
@@ -76,8 +76,8 @@ const InteractiveGreeting: React.FC = () => {
           <span className="inline-block animate-bounce" style={{ animationDelay: '0.8s' }}>l</span>
           <span className="inline-block animate-bounce" style={{ animationDelay: '0.9s' }}>d</span>
           <span className="inline-block animate-bounce mx-2" style={{ animationDelay: '0.0s' }}></span>
-          <span className="inline-block animate-bounce" style={{ animationDelay: '1.0s' }}>!</span>
-          <span className="inline-block animate-bounce mx-2" style={{ animationDelay: '0.4s' }}>👋</span>
+          <span className="inline-block animate-bounce" style={{ animationDelay: '1.0s' }}>👋</span>
+       
         </h1>
 
         {/* Subtitle dengan gradasi dan animasi */}

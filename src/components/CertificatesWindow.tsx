@@ -205,7 +205,7 @@ const CertificatesWindow: React.FC = () => {
               <div className="text-2xl font-bold text-green-600">2024</div>
               <div className="text-xs text-gray-600">Latest Year</div>
             </div>
-            yyyyy<div>
+            <div>
               <div className="text-2xl font-bold text-purple-600">100%</div>
               <div className="text-xs text-gray-600">Verified</div>
             </div>
