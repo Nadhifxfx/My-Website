@@ -16,7 +16,7 @@
 ---
 
 ## 📸 Preview
-Tampilan utama website:  
+Tampilan project dalam website:  
 
 <img width="1919" height="912" alt="Screenshot 2025-08-31 213951" src="https://github.com/user-attachments/assets/fe1475c3-8c13-49cd-97f9-8d7c7d64c3cf" />
 
