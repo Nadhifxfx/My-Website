@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Award, Calendar, ExternalLink } from 'lucide-react';
+import { Award, Calendar, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Certificate {
   id: string;
@@ -108,11 +108,46 @@ const CertificatesWindow: React.FC = () => {
 
   const categories = [...new Set(certificates.map((cert) => cert.category))];
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const certificatesPerPage = 6;
 
   const filteredCertificates =
     selectedCategory === 'All'
       ? certificates
       : certificates.filter((cert) => cert.category === selectedCategory);
+
+  const totalPages = Math.ceil(filteredCertificates.length / certificatesPerPage);
+  const startIndex = (currentPage - 1) * certificatesPerPage;
+  const endIndex = startIndex + certificatesPerPage;
+  const currentCertificates = filteredCertificates.slice(startIndex, endIndex);
+
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category);
+    setCurrentPage(1);
+  };
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const getPageNumbers = () => {
+    const maxVisiblePages = 5;
+    const pages: number[] = [];
+
+    let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+    let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+
+    if (endPage - startPage + 1 < maxVisiblePages) {
+      startPage = Math.max(1, endPage - maxVisiblePages + 1);
+    }
+
+    for (let i = startPage; i <= endPage; i++) {
+      pages.push(i);
+    }
+
+    return pages;
+  };
 
   return (
     <div className="p-6 h-full overflow-auto bg-gradient-to-b from-yellow-50 to-white">
@@ -128,7 +163,7 @@ const CertificatesWindow: React.FC = () => {
         {/* Category Filter */}
         <div className="mb-6 flex flex-wrap gap-2 justify-center">
           <button
-            onClick={() => setSelectedCategory('All')}
+            onClick={() => handleCategoryChange('All')}
             className={`px-4 py-2 rounded-full text-sm font-medium border-2 shadow-sm ${
               selectedCategory === 'All'
                 ? 'bg-blue-500 text-white border-blue-600'
@@ -140,7 +175,7 @@ const CertificatesWindow: React.FC = () => {
           {categories.map((category) => (
             <button
               key={category}
-              onClick={() => setSelectedCategory(category)}
+              onClick={() => handleCategoryChange(category)}
               className={`px-4 py-2 rounded-full text-sm font-medium border-2 shadow-sm ${
                 selectedCategory === category
                   ? 'bg-blue-500 text-white border-blue-600'
@@ -154,7 +189,7 @@ const CertificatesWindow: React.FC = () => {
 
         {/* Certificates Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredCertificates.map((cert) => (
+          {currentCertificates.map((cert) => (
             <div key={cert.id} className="bg-white rounded-lg border-2 border-gray-300 shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
               <div className="h-32 bg-gradient-to-br from-yellow-100 to-orange-100 flex items-center justify-center border-b-2 border-gray-200">
                 <div className="w-16 h-16 bg-white rounded-full border-4 border-yellow-400 flex items-center justify-center shadow-lg">
@@ -188,6 +223,53 @@ const CertificatesWindow: React.FC = () => {
             </div>
           ))}
         </div>
+
+        {/* Pagination Controls */}
+        {totalPages > 1 && (
+          <div className="flex items-center justify-center gap-2 mt-8 mb-8 flex-wrap">
+            <button
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+              className={`flex items-center space-x-1 px-4 py-2 rounded text-sm font-medium border-2 shadow-sm transition-colors ${
+                currentPage === 1
+                  ? 'bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed'
+                  : 'bg-white text-gray-700 border-gray-300 hover:bg-yellow-50'
+              }`}
+            >
+              <ChevronLeft size={16} />
+              <span>Prev</span>
+            </button>
+
+            <div className="flex gap-1 flex-wrap justify-center">
+              {getPageNumbers().map((page) => (
+                <button
+                  key={page}
+                  onClick={() => handlePageChange(page)}
+                  className={`px-3 py-2 rounded text-sm font-medium border-2 shadow-sm transition-colors ${
+                    currentPage === page
+                      ? 'bg-blue-500 text-white border-blue-600'
+                      : 'bg-white text-gray-700 border-gray-300 hover:bg-yellow-50'
+                  }`}
+                >
+                  {page}
+                </button>
+              ))}
+            </div>
+
+            <button
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className={`flex items-center space-x-1 px-4 py-2 rounded text-sm font-medium border-2 shadow-sm transition-colors ${
+                currentPage === totalPages
+                  ? 'bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed'
+                  : 'bg-white text-gray-700 border-gray-300 hover:bg-yellow-50'
+              }`}
+            >
+              <span>Next</span>
+              <ChevronRight size={16} />
+            </button>
+          </div>
+        )}
 
         {/* Summary Stats */}
         <div className="mt-8 bg-white p-6 rounded-lg border-2 border-gray-300 shadow-lg">

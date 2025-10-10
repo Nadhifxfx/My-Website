@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Github, Folder, Youtube, Tag, Instagram, Dribbble } from 'lucide-react';
+import { ExternalLink, Github, Folder, Youtube, Tag, Instagram, Dribbble, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Project {
   id: string;
@@ -374,8 +374,26 @@ const PortfolioWindow: React.FC = () => {
 
 ];
   const [selectedCategory, setSelectedCategory] = React.useState<string>('All');
+  const [currentPage, setCurrentPage] = React.useState<number>(1);
+  const projectsPerPage = 9;
+
   const categories = ['All', ...Array.from(new Set(projects.map(p => p.category)))];
   const filteredProjects = selectedCategory === 'All' ? projects : projects.filter(p => p.category === selectedCategory);
+
+  const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
+  const startIndex = (currentPage - 1) * projectsPerPage;
+  const endIndex = startIndex + projectsPerPage;
+  const currentProjects = filteredProjects.slice(startIndex, endIndex);
+
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category);
+    setCurrentPage(1);
+  };
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const getCategoryCounts = () => {
     const counts: { [key: string]: number } = {};
@@ -401,7 +419,7 @@ const PortfolioWindow: React.FC = () => {
           {categories.map((category) => (
             <button
               key={category}
-              onClick={() => setSelectedCategory(category)}
+              onClick={() => handleCategoryChange(category)}
               className={`px-4 py-2 rounded-full text-sm font-medium border-2 shadow-sm ${
                 selectedCategory === category
                   ? 'bg-blue-500 text-white border-blue-600'
@@ -415,7 +433,7 @@ const PortfolioWindow: React.FC = () => {
 
         {/* Project Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {filteredProjects.map((project) => (
+          {currentProjects.map((project) => (
             <div key={project.id} className="bg-white rounded-xl border border-gray-200 shadow-md hover:shadow-lg transition-all">
               <div className="relative w-full h-48 bg-gray-100 overflow-hidden">
                 <img
@@ -496,6 +514,53 @@ const PortfolioWindow: React.FC = () => {
             </div>
           ))}
         </div>
+
+        {/* Pagination Controls */}
+        {totalPages > 1 && (
+          <div className="flex items-center justify-center gap-2 mt-8">
+            <button
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+              className={`flex items-center space-x-1 px-4 py-2 rounded text-sm font-medium border-2 shadow-sm transition-colors ${
+                currentPage === 1
+                  ? 'bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed'
+                  : 'bg-white text-gray-700 border-gray-300 hover:bg-purple-50'
+              }`}
+            >
+              <ChevronLeft size={16} />
+              <span>Prev</span>
+            </button>
+
+            <div className="flex gap-1">
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                <button
+                  key={page}
+                  onClick={() => handlePageChange(page)}
+                  className={`px-3 py-2 rounded text-sm font-medium border-2 shadow-sm transition-colors ${
+                    currentPage === page
+                      ? 'bg-blue-500 text-white border-blue-600'
+                      : 'bg-white text-gray-700 border-gray-300 hover:bg-purple-50'
+                  }`}
+                >
+                  {page}
+                </button>
+              ))}
+            </div>
+
+            <button
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className={`flex items-center space-x-1 px-4 py-2 rounded text-sm font-medium border-2 shadow-sm transition-colors ${
+                currentPage === totalPages
+                  ? 'bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed'
+                  : 'bg-white text-gray-700 border-gray-300 hover:bg-purple-50'
+              }`}
+            >
+              <span>Next</span>
+              <ChevronRight size={16} />
+            </button>
+          </div>
+        )}
 
         {/* Category Statistics */}
         <div className="mt-8 bg-white p-6 rounded-lg border-2 border-gray-300 shadow-lg">
