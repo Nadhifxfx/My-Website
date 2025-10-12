@@ -108,7 +108,7 @@ const CertificatesWindow: React.FC = () => {
       id: '11',
       title: 'Code Generation and Optimization Using IBM Granite',
       issuer: 'Hacktiv8 with IBM SkillsBuild',
-      date: 'August 2022',
+      date: 'August 2025',
       verifyUrl: 'https://drive.google.com/file/d/1cIKOKIWvlMhE7recA5b9FKyRhUuHTTGA/view?usp=sharing',
       image: 'https://drive.google.com/uc?export=view&id=1cIKOKIWvlMhE7recA5b9FKyRhUuHTTGA',
       category: 'Course',
