@@ -24,7 +24,6 @@ const PortfolioWindow: React.FC = () => {
     description: 'Graduation film capturing the moments and memories of the 2021 graduating class of Antartika 2 Vocational High School.',
     technologies: ['Adobe Premiere Pro', 'Adobe After Effects'],
     image: 'smartsda.png',
-    youtubeUrl: 'https://youtube.com/example',
     category: 'Video Editor'
   },
   {
@@ -60,7 +59,6 @@ const PortfolioWindow: React.FC = () => {
   description: "A visually cohesive Instagram feed design for Agrifest, featuring event highlights and engaging visual storytelling to attract attendees.",
   technologies: ["Adobe Photoshop", "Canva"],
   image: "Agrifest.png",
-  behanceUrl: "https://www.behance.net/gallery/180597019/INACOM-Logo-Concept",
   category: "Graphic Designer"
   },
   {
@@ -186,7 +184,6 @@ const PortfolioWindow: React.FC = () => {
   description: 'Short film about long-buried love that finally finds its way when courage grows amid bullying at Antartika 2 Vocational School.',
   technologies: ['Adobe Photoshop'],
   image: 'DILEMA.png',
-  youtubeUrl: 'https://youtube.com/example',
   category: 'Video Editor'
   },
   {
@@ -195,7 +192,6 @@ const PortfolioWindow: React.FC = () => {
   description: 'A bold and dynamic poster inspired by video game character selection screens, featuring top football icons like Ronaldo, Messi, Griezmann, and more.',
   technologies: ['Adobe Photoshop'],
   image: 'cyc poster.jpg',
-  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
   category: 'Graphic Designer'
 },
 {
@@ -204,7 +200,6 @@ const PortfolioWindow: React.FC = () => {
   description: 'Announcement poster celebrating the achievement of Universitas Nahdlatul Ulama Sidoarjo students who won the Silver Medal at the International Young Moslem Inventor Award 2024.',
   technologies: ['Adobe Photoshop'],
   image: 'poster compe.jpg',
-  behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
   category: 'Graphic Designer'
   },
   {
@@ -222,7 +217,6 @@ const PortfolioWindow: React.FC = () => {
   description: "An informative and elegant banner design for the Religious Tourism event at Pondok Pesantren Roudlotul Quran 2, themed 'Pilgrimage to the Saints of East Java.'",
   technologies: ["Canva"],
   image: "BANNER MTS.jpg",
-  behanceUrl: "https://www.behance.net/gallery/180597019/INACOM-Logo-Concept",
   category: "Graphic Designer"
 },
 {
@@ -231,7 +225,6 @@ const PortfolioWindow: React.FC = () => {
   description: "A visually striking poster created for a university event, featuring retro computer aesthetics and bold typography to highlight the theme 'Students' Voices Weaving a Better University.'",
   technologies: ["Adobe Photoshop"],
   image: "Poster kritik.jpg",
-  behanceUrl: "https://www.behance.net/gallery/180597019/INACOM-Logo-Concept",
   category: "Graphic Designer"
 },
 {
@@ -266,7 +259,7 @@ const PortfolioWindow: React.FC = () => {
   title: "Yayasan Profile Website",
   description: "Design and development of a responsive, informative, and user-friendly website for Pondok Pesantren.",
   technologies: ["Visual Studio Code"],
-  image: "WEB MTS.png",
+  image: "Web Yayasan.png",
   githubUrl: "https://mtstahfidhroudlotulquran.sch.id/",
   category: "Programmer"
 },
@@ -311,7 +304,7 @@ const PortfolioWindow: React.FC = () => {
   title: "Village Profile Website",
   description: "A village profile website showcasing local culture, history, and community life in a user-friendly and engaging way.",
   technologies: ["Visual Studio Code"],
-  image: "Web Desa.png",
+  image: "Web Profil Desa.png",
   githubUrl: "https://wonokarang.projekfilkom.com/",
   category: "Programmer"
 },
@@ -368,7 +361,57 @@ const PortfolioWindow: React.FC = () => {
   image: "Lifestyle.png",
   instagramUrl: "https://www.instagram.com/reel/CVIm5Ehs_zd/?utm_source=ig_web_copy_link&igsh=MXZiOHNjb3dtMTU2eQ==",
   category: "Video Editor"
-}
+},
+{
+  id: "40",
+   title: "Thumbnail Football Rewind",
+  description: "A visually engaging thumbnail design for a football rewind video, capturing key moments and excitement of the matches.",
+  technologies: ["Adobe Photoshop"],
+  image: "bola rewind.jpeg",
+  category: "Graphic Designer"
+},
+{
+  id: "41",
+   title: "Lionel Messi ● The Greatest | Ballon D'or Winner 2021",
+  description: "A tribute video collaboration with rdprods celebrating Lionel Messi's illustrious career and his achievement of winning the 2021 Ballon d'Or.",
+  technologies: ["Adobe Premiere Pro"],
+  image: "Messi Collab.png",
+  youtubeUrl: "https://youtu.be/S26N6CZ7CQw?si=z0pvScf45mTsvopf",
+  category: "Video Editor"
+},
+{
+  id: "42",
+   title: "Choose your character series #4",
+  description: "Video collaboration edit with barcanation featuring top football players like Messi & Griezmann inspired by video game character selection screens.",
+  technologies: ["Adobe Premiere Pro"],
+  image: "Collab Abi.png",
+  instagramUrl: "https://www.instagram.com/p/CK3taHkg72I/?utm_source=ig_web_copy_link&igsh=c2o2cjhxaXFmdW4y", 
+  category: "Video Editor"
+},
+{
+  id: "43",
+   title: "Guidebook Cover",
+  description: "A visually engaging cover design for the Guidebook.",
+  technologies: ["Adobe Photoshop"],
+  image: "Buku KKN.jpg",
+  category: "Graphic Designer"
+},
+{
+  id: "44",
+   title: "Lewandowski Greatest Alive thumbnail",
+  description: "A visually engaging thumbnail design for a video celebrating Robert Lewandowski's career and achievements.",
+  technologies: ["Adobe Photoshop"],
+  image: "Lewa goat.jpeg",
+  category: "Graphic Designer"
+},
+{
+  id: "45",
+   title: "ID Card LKMMTD 2025",
+  description: "A visually engaging ID card design for LKMMTD committee.",
+  technologies: ["Adobe Photoshop"],
+  image: "id card lkmmtd.jpg",
+  category: "Graphic Designer"
+},
 
 
 
@@ -404,6 +447,33 @@ const PortfolioWindow: React.FC = () => {
   };
 
   const categoryCounts = getCategoryCounts();
+
+  const getPageNumbers = () => {
+    const maxVisible = 5;
+    const pages: number[] = [];
+
+    if (totalPages <= maxVisible) {
+      for (let i = 1; i <= totalPages; i++) {
+        pages.push(i);
+      }
+    } else {
+      if (currentPage <= 3) {
+        for (let i = 1; i <= maxVisible; i++) {
+          pages.push(i);
+        }
+      } else if (currentPage >= totalPages - 2) {
+        for (let i = totalPages - maxVisible + 1; i <= totalPages; i++) {
+          pages.push(i);
+        }
+      } else {
+        for (let i = currentPage - 2; i <= currentPage + 2; i++) {
+          pages.push(i);
+        }
+      }
+    }
+
+    return pages;
+  };
 
   return (
     <div className="max-w-6xl mx-auto">
@@ -532,7 +602,7 @@ const PortfolioWindow: React.FC = () => {
             </button>
 
             <div className="flex gap-1">
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              {getPageNumbers().map((page) => (
                 <button
                   key={page}
                   onClick={() => handlePageChange(page)}
