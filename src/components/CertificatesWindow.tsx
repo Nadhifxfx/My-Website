@@ -16,6 +16,15 @@ const CertificatesWindow: React.FC = () => {
   const certificates: Certificate[] = [
     {
       id: '1',
+      title: 'Code Generation and Optimization Using IBM Granite',
+      issuer: 'Hacktiv8 with IBM SkillsBuild',
+      date: 'August 2025',
+      verifyUrl: 'https://drive.google.com/file/d/1cIKOKIWvlMhE7recA5b9FKyRhUuHTTGA/view?usp=sharing',
+      image: 'https://drive.google.com/uc?export=view&id=1cIKOKIWvlMhE7recA5b9FKyRhUuHTTGA',
+      category: 'Course',
+    },
+    {
+      id: '2',
       title: 'Building a .NET ChatBot',
       issuer: 'Staya.Dev',
       date: 'March 2024',
@@ -24,7 +33,7 @@ const CertificatesWindow: React.FC = () => {
       category: 'Class',
     },
     {
-      id: '2',
+      id: '3',
       title: 'AI Powered Code Generation',
       issuer: 'Staya.Dev',
       date: 'January 2024',
@@ -33,7 +42,7 @@ const CertificatesWindow: React.FC = () => {
       category: 'Class',
     },
     {
-      id: '3',
+      id: '4',
       title: 'Frontend (Kelola paketmu dengan npm)',
       issuer: 'Dev Coach',
       date: 'November 2022',
@@ -42,7 +51,7 @@ const CertificatesWindow: React.FC = () => {
       category: 'Class',
     },
     {
-      id: '4',
+      id: '5',
       title: 'Backend (Meningkatkan performa rest api dengan cache)',
       issuer: 'Dev Coach',
       date: 'September 2022',
@@ -51,7 +60,7 @@ const CertificatesWindow: React.FC = () => {
       category: 'Class',
     },
     {
-      id: '5',
+      id: '6',
       title: 'UI/UX Design website with Figma',
       issuer: 'BuildWithAngga',
       date: 'July 2022',
@@ -60,7 +69,7 @@ const CertificatesWindow: React.FC = () => {
       category: 'Course',
     },
     {
-      id: '6',
+      id: '7',
       title: 'Sertifikat Karirnex Bootcamp Excel 2',
       issuer: 'Karirnex',
       date: 'May 2022',
@@ -69,7 +78,7 @@ const CertificatesWindow: React.FC = () => {
       category: 'Course',
     },
     {
-      id: '7',
+      id: '8',
       title: 'Content Creator Class Participants',
       issuer: 'Hipwee x Kominfo',
       date: 'March 2022',
@@ -78,7 +87,7 @@ const CertificatesWindow: React.FC = () => {
       category: 'Class',
     },
     {
-      id: '8',
+      id: '9',
       title: '2nd Winner of Instagram Reels Contest',
       issuer: 'CitraLand Driyorejo CBD',
       date: 'October 2021',
@@ -87,7 +96,7 @@ const CertificatesWindow: React.FC = () => {
       category: 'Competition',
     },
     {
-      id: '9',
+      id: '10',
       title: 'Creative Video Competition Participants',
       issuer: 'PPIM UIN Jakarta',
       date: 'September 2021',
@@ -96,22 +105,13 @@ const CertificatesWindow: React.FC = () => {
       category: 'Competition',
     },
     {
-      id: '10',
+      id: '11',
       title: 'Finalist Video Contest Competition',
       issuer: 'CitraGarden Sidoarjo',
       date: 'June 2022',
       verifyUrl: 'https://drive.google.com/file/d/1NAW66izTinVlFZC_kZ2R5PY9HrhWaObq/view?usp=drive_link',
       image: 'https://drive.google.com/uc?export=view&id=1NAW66izTinVlFZC_kZ2R5PY9HrhWaObq',
       category: 'Competition',
-    },
-     {
-      id: '11',
-      title: 'Code Generation and Optimization Using IBM Granite',
-      issuer: 'Hacktiv8 with IBM SkillsBuild',
-      date: 'August 2025',
-      verifyUrl: 'https://drive.google.com/file/d/1cIKOKIWvlMhE7recA5b9FKyRhUuHTTGA/view?usp=sharing',
-      image: 'https://drive.google.com/uc?export=view&id=1cIKOKIWvlMhE7recA5b9FKyRhUuHTTGA',
-      category: 'Course',
     },
   ];
 
