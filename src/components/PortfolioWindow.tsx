@@ -412,6 +412,49 @@ const PortfolioWindow: React.FC = () => {
   image: "id card lkmmtd.jpg",
   category: "Graphic Designer"
 },
+{
+  id: "46",
+   title: "Cristiano Ronaldo ● This One's For You | UEFA EURO 2016",
+  description: "A visually engaging thumbnail design for a video celebrating Cristiano Ronaldo's career and achievements.",
+  technologies: ["Adobe Premiere Pro"],
+  image: "Ronaldo Euro 16.png",
+  youtubeUrl: "https://youtu.be/N52m1t4ApRo?si=MKMzdH2HpaJp3H7i",
+  category: "Video Editor"
+},
+{
+  id: "47",
+   title: "Neymar & Messi ● Perfect 10 | Brazil & Argentina Skills and Goals",
+  description: "A visually engaging thumbnail design for a video celebrating Neymar & Messi's skills and goals.",
+  technologies: ["Adobe Premiere Pro"],
+  image: "Neymessi Perfect 10.png",
+  youtubeUrl: "https://youtu.be/9thiXWA8bAU?si=Cm2NrMDjIrkFCS9y",
+  category: "Video Editor"
+},
+{
+  id: "48",
+   title: "Lewandowski Greatest Alive thumbnail",
+  description: "A visually engaging thumbnail design for a video celebrating Robert Lewandowski's career and achievements.",
+  technologies: ["Adobe Photoshop"],
+  image: "Lewa goat.jpeg",
+  category: "Graphic Designer"
+},
+{
+  id: "49",
+   title: "Lewandowski Greatest Alive thumbnail",
+  description: "A visually engaging thumbnail design for a video celebrating Robert Lewandowski's career and achievements.",
+  technologies: ["Adobe Photoshop"],
+  image: "Lewa goat.jpeg",
+  category: "Graphic Designer"
+},
+{
+  id: "50",
+   title: "Lewandowski Greatest Alive thumbnail",
+  description: "A visually engaging thumbnail design for a video celebrating Robert Lewandowski's career and achievements.",
+  technologies: ["Adobe Photoshop"],
+  image: "Lewa goat.jpeg",
+  category: "Graphic Designer"
+}
+
 
 
 
