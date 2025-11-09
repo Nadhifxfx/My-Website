@@ -432,11 +432,11 @@ const PortfolioWindow: React.FC = () => {
 },
 {
   id: "48",
-   title: "Lewandowski Greatest Alive thumbnail",
-  description: "A visually engaging thumbnail design for a video celebrating Robert Lewandowski's career and achievements.",
-  technologies: ["Adobe Photoshop"],
-  image: "Lewa goat.jpeg",
-  category: "Graphic Designer"
+   title: "Aksara Harapan Website",
+  description: "A visually engaging website design for Aksara Harapan.",
+  technologies: ["Visual Studio Code"],
+  image: "AksaraHarapan.png",
+  category: "Programmer"
 },
 {
   id: "49",
