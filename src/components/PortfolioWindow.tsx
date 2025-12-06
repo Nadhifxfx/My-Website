@@ -440,10 +440,10 @@ const PortfolioWindow: React.FC = () => {
 },
 {
   id: "49",
-   title: "Lewandowski Greatest Alive thumbnail",
-  description: "A visually engaging thumbnail design for a video celebrating Robert Lewandowski's career and achievements.",
+   title: "BANNER SSC 2025",
+  description: "Design of a banner for SSC 2025 event.",
   technologies: ["Adobe Photoshop"],
-  image: "Lewa goat.jpeg",
+  image: "BANNER SSC.png",
   category: "Graphic Designer"
 },
 {
