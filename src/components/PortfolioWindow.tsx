@@ -310,11 +310,11 @@ const PortfolioWindow: React.FC = () => {
 },
 {
   id: "34",
-  title: "ND10 Portfolio Website",
+  title: "Website ND10",
   description: "A personal portfolio website built under the ND10 brand, featuring projects, skills, and contact information in a clean, responsive layout.",
   technologies: ["Visual Studio Code"],
   image: "Web ND10.png",
-  githubUrl: "http://nadhifxfx.github.io/Website-ND10/",
+  githubUrl: "https://ndcomps10.vercel.app/",
   category: "Programmer"
 },
 {
@@ -454,9 +454,6 @@ const PortfolioWindow: React.FC = () => {
   image: "Lewa goat.jpeg",
   category: "Graphic Designer"
 }
-
-
-
 
 ];
   const [selectedCategory, setSelectedCategory] = React.useState<string>('All');
