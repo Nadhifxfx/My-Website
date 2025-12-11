@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Monitor, User, BookOpen, FolderOpen, Award, Mail, Clock } from 'lucide-react';
+import { Monitor, User, BookOpen, FolderOpen, Award, Mail, Clock, MessageCircle } from 'lucide-react';
 import Window from './Window';
 import StartMenu from './StartMenu';
 import AnimatedWallpaper from './AnimatedWallpaper';
@@ -27,7 +27,14 @@ interface WindowState {
 }
 
 const Desktop: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  // Check if this is the first visit in this session
+  const [isLoading, setIsLoading] = useState(() => {
+    const hasVisited = sessionStorage.getItem('hasVisitedThisSession');
+    if (hasVisited) {
+      return false; // Skip loading screen on refresh
+    }
+    return true; // Show loading screen on first visit
+  });
   const [showWelcome, setShowWelcome] = useState(false);
   const [showGreeting, setShowGreeting] = useState(true);
   const [time, setTime] = useState(new Date());
@@ -90,8 +97,19 @@ const Desktop: React.FC = () => {
     },
     {
       id: 'contact',
-      title: 'Contact Me',
+      title: 'Contact',
       component: ContactWindow,
+      isOpen: false,
+      isMinimized: false,
+      position: { x: 0, y: 0 },
+      size: { width: 0, height: 0 },
+      zIndex: 1,
+      isAnimating: false
+    },
+    {
+      id: 'faq',
+      title: 'FAQ Assistant',
+      component: ChatBot,
       isOpen: false,
       isMinimized: false,
       position: { x: 0, y: 0 },
@@ -112,6 +130,8 @@ const Desktop: React.FC = () => {
 
   const handleLoadingComplete = () => {
     setIsLoading(false);
+    // Mark that user has visited in this session
+    sessionStorage.setItem('hasVisitedThisSession', 'true');
     // Show welcome dialog after loading is complete
     setTimeout(() => {
       setShowWelcome(true);
@@ -219,7 +239,8 @@ const Desktop: React.FC = () => {
     { id: 'education', label: 'Education', icon: BookOpen },
     { id: 'projects', label: 'Projects', icon: FolderOpen },
     { id: 'certificates', label: 'Certificates', icon: Award },
-    { id: 'contact', label: 'Contact Me', icon: Mail }
+    { id: 'contact', label: 'Contact', icon: Mail },
+    { id: 'faq', label: 'FAQ Assistant', icon: MessageCircle }
   ];
 
   // Show loading screen first
@@ -244,7 +265,7 @@ const Desktop: React.FC = () => {
       {/* Desktop Icons - Hidden on mobile */}
       <div className="absolute top-4 left-4 hidden md:block z-10">
         <div className="space-y-4">
-          {startMenuItems.slice(0, 5).map((item) => (
+          {startMenuItems.slice(0, 6).map((item) => (
             <div key={item.id}
                  className="flex flex-col items-center cursor-pointer group w-20 transition-all duration-200 hover:scale-105"
                  data-window-id={item.id}
@@ -259,9 +280,6 @@ const Desktop: React.FC = () => {
           ))}
         </div>
       </div>
-
-      {/* ChatBot Component */}
-      <ChatBot />
 
       {/* Windows - All fullscreen */}
       {windows.map((window) => (

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { MessageCircle, X, Send, Bot, User } from 'lucide-react';
+import { Send, Bot, User } from 'lucide-react';
 
 interface Message {
   id: string;
@@ -9,7 +9,6 @@ interface Message {
 }
 
 const ChatBot: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
@@ -99,124 +98,128 @@ const ChatBot: React.FC = () => {
     }
   };
 
+  const suggestedQuestions = [
+    "Tell me about Nadhif's skills",
+    "What projects has he worked on?",
+    "What certifications does he have?",
+    "How can I contact him?",
+    "What's his experience?"
+  ];
+
   return (
-    <>
-      {/* Floating Chat Button */}
-      <div className="fixed bottom-20 right-6 z-50">
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className={`w-14 h-14 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 active:scale-95 flex items-center justify-center border-2 ${
-            isOpen 
-              ? 'bg-red-500 hover:bg-red-600 border-red-600' 
-              : 'bg-blue-500 hover:bg-blue-600 border-blue-600 animate-pulse'
-          }`}
-        >
-          {isOpen ? (
-            <X size={24} className="text-white" />
-          ) : (
-            <MessageCircle size={24} className="text-white" />
-          )}
-        </button>
+    <div className="h-full flex flex-col bg-gradient-to-b from-blue-50 to-white">
+      {/* Header */}
+      <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-4 border-b-2 border-blue-300 shadow-lg">
+        <div className="flex items-center space-x-3">
+          <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg">
+            <Bot className="text-blue-600" size={24} />
+          </div>
+          <div>
+            <h2 className="text-lg font-bold">FAQ Assistant</h2>
+            <p className="text-xs text-blue-100">Ask me anything about Nadhif</p>
+          </div>
+        </div>
       </div>
 
-      {/* Chat Popup Window */}
-      {isOpen && (
-        <div className="fixed bottom-36 right-6 z-50 w-80 h-96 bg-white rounded-lg border-2 border-gray-300 shadow-xl animate-slide-up">
-          {/* Header */}
-          <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3 rounded-t-lg border-b-2 border-blue-600">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-2">
-                <Bot size={20} />
-                <span className="font-bold text-sm">FAQ Assistant</span>
+      {/* Messages Area */}
+      <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50">
+        {messages.map((message) => (
+          <div
+            key={message.id}
+            className={`flex ${message.isBot ? 'justify-start' : 'justify-end'}`}
+          >
+            <div className={`flex items-start space-x-2 max-w-[75%] ${
+              message.isBot ? '' : 'flex-row-reverse space-x-reverse'
+            }`}>
+              <div
+                className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 shadow-md ${
+                  message.isBot
+                    ? 'bg-blue-500'
+                    : 'bg-gray-500'
+                }`}
+              >
+                {message.isBot ? (
+                  <Bot size={16} className="text-white" />
+                ) : (
+                  <User size={16} className="text-white" />
+                )}
               </div>
-              <button
-                onClick={() => setIsOpen(false)}
-                className="hover:bg-blue-700 p-1 rounded transition-colors"
+              <div
+                className={`p-3 rounded-lg text-sm shadow-md border-2 ${
+                  message.isBot
+                    ? 'bg-white border-gray-200 text-gray-800'
+                    : 'bg-blue-500 border-blue-600 text-white'
+                }`}
               >
-                <X size={16} />
-              </button>
+                <p className="leading-relaxed whitespace-pre-wrap">{message.text}</p>
+                <p className={`text-xs mt-1 ${message.isBot ? 'text-gray-500' : 'text-blue-100'}`}>
+                  {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                </p>
+              </div>
             </div>
           </div>
-
-          {/* Messages Area */}
-          <div className="flex-1 overflow-y-auto p-3 h-72 bg-gray-50">
-            <div className="space-y-3">
-              {messages.map((message) => (
-                <div
-                  key={message.id}
-                  className={`flex ${message.isBot ? 'justify-start' : 'justify-end'}`}
-                >
-                  <div className="flex items-start space-x-2 max-w-xs">
-                    {message.isBot && (
-                      <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                        <Bot size={12} className="text-white" />
-                      </div>
-                    )}
-                    <div
-                      className={`p-3 rounded-lg text-sm shadow-sm border ${
-                        message.isBot
-                          ? 'bg-white border-gray-200 text-gray-800'
-                          : 'bg-blue-500 border-blue-600 text-white'
-                      }`}
-                    >
-                      <p className="leading-relaxed">{message.text}</p>
-                      <p className={`text-xs mt-1 ${message.isBot ? 'text-gray-500' : 'text-blue-100'}`}>
-                        {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                      </p>
-                    </div>
-                    {!message.isBot && (
-                      <div className="w-6 h-6 bg-gray-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                        <User size={12} className="text-white" />
-                      </div>
-                    )}
-                  </div>
+        ))}
+        
+        {isLoading && (
+          <div className="flex justify-start">
+            <div className="flex items-start space-x-2 max-w-[75%]">
+              <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
+                <Bot size={16} className="text-white" />
+              </div>
+              <div className="bg-white border-2 border-gray-200 p-3 rounded-lg text-sm shadow-md">
+                <div className="flex space-x-1">
+                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                 </div>
-              ))}
-              
-              {isLoading && (
-                <div className="flex justify-start">
-                  <div className="flex items-start space-x-2 max-w-xs">
-                    <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <Bot size={12} className="text-white" />
-                    </div>
-                    <div className="bg-white border border-gray-200 p-3 rounded-lg text-sm shadow-sm">
-                      <div className="flex space-x-1">
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-              <div ref={messagesEndRef} />
+              </div>
             </div>
           </div>
+        )}
+        <div ref={messagesEndRef} />
+      </div>
 
-          {/* Input Area */}
-          <div className="p-3 border-t-2 border-gray-200 bg-white rounded-b-lg">
-            <div className="flex space-x-2">
-              <input
-                type="text"
-                value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
-                onKeyPress={handleKeyPress}
-                placeholder="Ask me anything about Nadhif..."
-                className="flex-1 p-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                disabled={isLoading}
-              />
+      {/* Suggested Questions */}
+      {messages.length === 1 && (
+        <div className="px-4 pb-2 bg-white border-t border-gray-200">
+          <p className="text-xs text-gray-600 mb-2 font-medium">Try asking:</p>
+          <div className="flex flex-wrap gap-2">
+            {suggestedQuestions.map((question, index) => (
               <button
-                onClick={handleSendMessage}
-                disabled={!inputValue.trim() || isLoading}
-                className="bg-blue-500 hover:bg-blue-600 disabled:bg-gray-400 text-white p-2 rounded-md transition-colors border border-blue-600 shadow-sm transform hover:scale-105 active:scale-95 disabled:transform-none"
+                key={index}
+                onClick={() => setInputValue(question)}
+                className="text-xs bg-blue-50 border border-blue-300 text-blue-700 px-3 py-1 rounded-full hover:bg-blue-100 transition-colors shadow-sm"
               >
-                <Send size={16} />
+                {question}
               </button>
-            </div>
+            ))}
           </div>
         </div>
       )}
-    </>
+
+      {/* Input Area */}
+      <div className="p-4 border-t-2 border-gray-200 bg-white shadow-lg">
+        <div className="flex space-x-2">
+          <input
+            type="text"
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            onKeyPress={handleKeyPress}
+            placeholder="Ask me anything about Nadhif..."
+            className="flex-1 p-3 border-2 border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            disabled={isLoading}
+          />
+          <button
+            onClick={handleSendMessage}
+            disabled={!inputValue.trim() || isLoading}
+            className="bg-blue-500 hover:bg-blue-600 disabled:bg-gray-400 text-white px-4 py-3 rounded-lg transition-colors shadow-md transform hover:scale-105 active:scale-95 disabled:transform-none flex items-center justify-center"
+          >
+            <Send size={18} />
+          </button>
+        </div>
+        <p className="text-xs text-gray-500 mt-2">Press Enter to send</p>
+      </div>
+    </div>
   );
 };
 
