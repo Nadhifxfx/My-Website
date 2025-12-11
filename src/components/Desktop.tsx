@@ -265,7 +265,7 @@ const Desktop: React.FC = () => {
       {/* Desktop Icons - Hidden on mobile */}
       <div className="absolute top-4 left-4 hidden md:block z-10">
         <div className="space-y-4">
-          {startMenuItems.slice(0, 6).map((item) => (
+          {startMenuItems.slice(0, 7).map((item) => (
             <div key={item.id}
                  className="flex flex-col items-center cursor-pointer group w-20 transition-all duration-200 hover:scale-105"
                  data-window-id={item.id}
