@@ -436,6 +436,7 @@ const PortfolioWindow: React.FC = () => {
   description: "A visually engaging website design for Aksara Harapan.",
   technologies: ["Visual Studio Code"],
   image: "AksaraHarapan.png",
+  githubUrl: "https://aksara-harapan.vercel.app/",
   category: "Programmer"
 },
 {
