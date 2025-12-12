@@ -36,18 +36,29 @@ const Desktop: React.FC = () => {
     return true; // Show loading screen on first visit
   });
   const [showWelcome, setShowWelcome] = useState(false);
-  const [showGreeting, setShowGreeting] = useState(true);
+  const [showGreeting, setShowGreeting] = useState(() => {
+    // Check if any windows were open before
+    const savedState = localStorage.getItem('windowsState');
+    if (savedState) {
+      const parsedState = JSON.parse(savedState);
+      const hasOpenWindows = parsedState.some((w: WindowState) => w.isOpen);
+      return !hasOpenWindows; // Hide greeting if windows were open
+    }
+    return true;
+  });
   const [time, setTime] = useState(new Date());
   const [isStartMenuOpen, setIsStartMenuOpen] = useState(false);
-  const [windows, setWindows] = useState<WindowState[]>([
+  
+  // Default windows configuration
+  const defaultWindows: WindowState[] = [
     {
       id: 'profile',
       title: 'Profile',
       component: ProfileWindow,
       isOpen: false,
       isMinimized: false,
-      position: { x: 0, y: 0 }, // Not used in fullscreen mode
-      size: { width: 0, height: 0 }, // Not used in fullscreen mode
+      position: { x: 0, y: 0 },
+      size: { width: 0, height: 0 },
       zIndex: 1,
       isAnimating: false
     },
@@ -117,9 +128,55 @@ const Desktop: React.FC = () => {
       zIndex: 1,
       isAnimating: false
     }
-  ]);
+  ];
 
-  const maxZIndex = useRef(10);
+  // Restore windows state from localStorage
+  const [windows, setWindows] = useState<WindowState[]>(() => {
+    const savedState = localStorage.getItem('windowsState');
+    if (savedState) {
+      const parsedState = JSON.parse(savedState);
+      // Merge saved state with default windows to restore components
+      return defaultWindows.map(defaultWindow => {
+        const savedWindow = parsedState.find((w: WindowState) => w.id === defaultWindow.id);
+        if (savedWindow) {
+          return {
+            ...defaultWindow,
+            isOpen: savedWindow.isOpen,
+            isMinimized: savedWindow.isMinimized,
+            zIndex: savedWindow.zIndex,
+            position: savedWindow.position,
+            size: savedWindow.size
+          };
+        }
+        return defaultWindow;
+      });
+    }
+    return defaultWindows;
+  });
+
+  const maxZIndex = useRef((() => {
+    // Restore maxZIndex from localStorage if available
+    const savedState = localStorage.getItem('windowsState');
+    if (savedState) {
+      const parsedState = JSON.parse(savedState);
+      const maxZ = Math.max(...parsedState.map((w: WindowState) => w.zIndex), 10);
+      return maxZ;
+    }
+    return 10;
+  })());
+
+  // Save windows state to localStorage whenever it changes
+  useEffect(() => {
+    const stateToSave = windows.map(({ id, isOpen, isMinimized, position, size, zIndex }) => ({
+      id,
+      isOpen,
+      isMinimized,
+      position,
+      size,
+      zIndex
+    }));
+    localStorage.setItem('windowsState', JSON.stringify(stateToSave));
+  }, [windows]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -263,7 +320,7 @@ const Desktop: React.FC = () => {
       )}
 
       {/* Desktop Icons - Hidden on mobile */}
-      <div className="absolute top-4 left-4 hidden md:block z-10">
+      <div className="absolute top-4 left-4 hidden md:block z-0">
         <div className="space-y-4">
           {startMenuItems.slice(0, 7).map((item) => (
             <div key={item.id}
