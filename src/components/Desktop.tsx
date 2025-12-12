@@ -108,7 +108,7 @@ const Desktop: React.FC = () => {
     },
     {
       id: 'faq',
-      title: 'FAQ Assistant',
+      title: 'FAQ',
       component: ChatBot,
       isOpen: false,
       isMinimized: false,
@@ -240,7 +240,7 @@ const Desktop: React.FC = () => {
     { id: 'projects', label: 'Projects', icon: FolderOpen },
     { id: 'certificates', label: 'Certificates', icon: Award },
     { id: 'contact', label: 'Contact', icon: Mail },
-    { id: 'faq', label: 'FAQ Assistant', icon: MessageCircle }
+    { id: 'faq', label: 'FAQ', icon: MessageCircle }
   ];
 
   // Show loading screen first
