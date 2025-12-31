@@ -72,8 +72,8 @@ const PortfolioWindow: React.FC = () => {
   },
   {
     id: '7',
-    title: 'Gamified Qur’an Learning App UI/UX',
-    description: 'UI/UX design concept for an app that combines gamification elements with learning the Qur’an.',
+    title: 'Gamified Quran Learning App UI/UX',
+    description: 'Modern and intuitive UI/UX design concept for a Qur\'an learning application that integrates gamification elements to make learning more engaging and interactive.',
     technologies: ['Figma', 'Canva'],
     image: 'TEXT GEN.png',
     dribbbleUrl: 'https://dribbble.com/shots/25921769-Coffee-Shop-Modern-Login-Menu-Design',
@@ -82,7 +82,7 @@ const PortfolioWindow: React.FC = () => {
   {
     id: '8',
     title: 'Getuk Pisang Sahira Website',
-    description: 'Website for Sahira’s traditional Getuk Pisang products.',
+    description: 'A responsive website showcasing Sahira\'s traditional Getuk Pisang (banana-based Indonesian snack) products, featuring product catalog, ordering information, and business details.',
     technologies: ['Visual Studio Code'],
     image: 'Web Sahira.png',
     githubUrl: 'https://nadhifxfx.github.io/Getuk-Pisang-Sahira/',
@@ -100,7 +100,7 @@ const PortfolioWindow: React.FC = () => {
   {
     id: '10',
     title: 'Ahmed Abdelkader Football Highlights',
-    description: 'Highlight video featuring Ahmed Abdelkader football performances.',
+    description: 'Professional football highlight reel showcasing Ahmed Abdelkader\'s best skills, goals, and performances on the field, edited with dynamic cuts and energetic transitions.',
     technologies: ['Adobe Premiere Pro'],
     image: 'Abdelkader.png',
     liveUrl: 'https://drive.google.com/file/d/1LJF5ntnFcEmYHgH2QH1PCuZ8vHg134tc/view?usp=sharing',
@@ -109,7 +109,7 @@ const PortfolioWindow: React.FC = () => {
   {
     id: '11',
     title: 'Kokolo Williams Football Highlights',
-    description: 'Highlight video showcasing Kokolo Williams in action on the field.',
+    description: 'Dynamic highlight video capturing Kokolo Williams\' exceptional football skills, dribbling abilities, and match performances with cinematic editing and music synchronization.',
     technologies: ['Adobe Premiere Pro'],
     image: 'Kokolo.png',
     liveUrl: 'https://drive.google.com/file/d/1KFTpgym7UqbwIU20E98JeOev-q59epH_/view?usp=drive_link',
@@ -118,7 +118,7 @@ const PortfolioWindow: React.FC = () => {
   {
     id: '12',
     title: 'Remy Vita Football Highlights',
-    description: 'Highlight video featuring Remy Vita football performances.',
+    description: 'Professional football showcase video featuring Remy Vita\'s standout moments, including goals, assists, and key plays, edited with smooth transitions and impactful visual effects.',
     technologies: ['Adobe Premiere Pro'],
     image: 'Vita.png',
     liveUrl: 'https://drive.google.com/file/d/1RFPNhWFl7oapXNVfatEXU54VdzVANs-j/view?usp=sharing',
@@ -136,7 +136,7 @@ const PortfolioWindow: React.FC = () => {
   {
     id: '14',
     title: 'Independence amid the Pandemic',
-    description: 'Creative video celebrating Indonesia Independence Day amid the pandemic.',
+    description: 'Creative video celebrating Indonesia\'s Independence Day during the COVID-19 pandemic, showcasing the spirit of unity and resilience while adapting to new normals.',
     technologies: ['Adobe Premiere Pro'],
     image: 'Kemerdekaan.png',
     liveUrl: 'https://drive.google.com/file/d/1P-S78sw6T8Ka-3VcK8nAu2XFpJl1pYj3/view?usp=sharing',
@@ -145,7 +145,7 @@ const PortfolioWindow: React.FC = () => {
   {
     id: '15',
     title: 'Independence Day - Infographic Poster',
-    description: 'Infographic poster design created for a competition, showcasing creativity and design skills with the theme “Indonesia Journey to Independence.”',
+    description: 'Competition-winning infographic poster design visualizing Indonesia\'s journey to independence with creative storytelling, combining historical facts and modern design aesthetics.',
     technologies: ['Adobe Photoshop'],
     image: 'merdeka.png',
     behanceUrl: 'https://www.behance.net/nadhifxfx',
@@ -163,7 +163,7 @@ const PortfolioWindow: React.FC = () => {
   {
     id: '17',
     title: 'INACOM 2024 Workshop Recap',
-    description: 'Video recap  highlights and moments from the INACOM 2024 Workshop Event.',
+    description: 'Engaging recap video capturing the highlights and memorable moments from the INACOM 2024 Workshop Event, featuring participant activities and key learning sessions.',
     technologies: ['Capcut'],
     image: 'workshop.png',
     instagramUrl: 'https://www.instagram.com/reel/C_IWqnjvjoF/?utm_source=ig_web_copy_link&igsh=MTNhcmVxbG1oNGcyNA==',
@@ -181,8 +181,8 @@ const PortfolioWindow: React.FC = () => {
   {
   id: '19',
   title: 'DILEMA – Short Film',
-  description: 'Short film about long-buried love that finally finds its way when courage grows amid bullying at Antartika 2 Vocational School.',
-  technologies: ['Adobe Photoshop'],
+  description: 'An emotional short film telling the story of hidden love that resurfaces when courage emerges amidst bullying challenges at Antartika 2 Vocational School, exploring themes of bravery and acceptance.',
+  technologies: ['Adobe Premiere Pro'],
   image: 'DILEMA.png',
   category: 'Video Editor'
   },
@@ -205,7 +205,7 @@ const PortfolioWindow: React.FC = () => {
   {
   id: '22',
   title: 'Weal Dental',
-  description: 'Video commercial promoting Weal Dental, highlighting their services and expertise in dental care.',
+  description: 'Professional promotional video showcasing Weal Dental comprehensive dental care services, modern facilities, and expert team, designed to build trust and attract new patients.',
   technologies: ['Capcut'],
   image: 'Weal Dental.png',
   liveUrl: 'https://drive.google.com/file/d/1RNAY7ewpj0gQIaLNe_T0WXK_5Y2ACqLo/view?usp=sharing',
@@ -222,7 +222,7 @@ const PortfolioWindow: React.FC = () => {
 {
   id: "24",
   title: "KRITIK TIF Poster",
-  description: "A visually striking poster created for a university event, featuring retro computer aesthetics and bold typography to highlight the theme 'Students' Voices Weaving a Better University.'",
+  description: "A visually striking poster created for a university event, featuring retro computer aesthetics and bold typography to highlight the theme 'Students\' Voices Weaving a Better University.'",
   technologies: ["Adobe Photoshop"],
   image: "Poster kritik.jpg",
   category: "Graphic Designer"
@@ -257,7 +257,7 @@ const PortfolioWindow: React.FC = () => {
 {
   id: "28",
   title: "Yayasan Profile Website",
-  description: "Design and development of a responsive, informative, and user-friendly website for Pondok Pesantren.",
+  description: "Comprehensive profile website for MTs Tahfidh Roudlotul Quran Islamic boarding school, featuring school information, programs, facilities, and contact details in a responsive and user-friendly layout.",
   technologies: ["Visual Studio Code"],
   image: "Web Yayasan.png",
   githubUrl: "https://mtstahfidhroudlotulquran.sch.id/",
@@ -275,7 +275,7 @@ const PortfolioWindow: React.FC = () => {
 {
   id: "30",
   title: "Chasing Dreams",
-  description: "A motivational video encouraging young people to spend their time productively and build a brighter future.",
+  description: "An inspiring motivational video encouraging young people to utilize their time productively, pursue their passions, and build a brighter future through dedication and hard work.",
   technologies: ["Adobe Premiere Pro"],
   image: "Produktif.png",
   instagramUrl: "https://www.behance.net/gallery/180597019/INACOM-Logo-Concept",
@@ -302,7 +302,7 @@ const PortfolioWindow: React.FC = () => {
 {
   id: "33",
   title: "Village Profile Website",
-  description: "A village profile website showcasing local culture, history, and community life in a user-friendly and engaging way.",
+  description: "Comprehensive village profile website for Wonokarang, showcasing local culture, history, demographics, government structure, and community activities in an engaging and accessible digital format.",
   technologies: ["Visual Studio Code"],
   image: "Web Profil Desa.png",
   githubUrl: "https://wonokarang.projekfilkom.com/",
@@ -311,7 +311,7 @@ const PortfolioWindow: React.FC = () => {
 {
   id: "34",
   title: "Website ND10",
-  description: "A personal portfolio website built under the ND10 brand, featuring projects, skills, and contact information in a clean, responsive layout.",
+  description: "Personal brand portfolio website for NDComps10, showcasing creative projects, video editing works, design skills, and professional contact information in a modern, responsive design.",
   technologies: ["Visual Studio Code"],
   image: "Web ND10.png",
   githubUrl: "https://ndcomps10.vercel.app/",
@@ -373,7 +373,7 @@ const PortfolioWindow: React.FC = () => {
 {
   id: "41",
    title: "Lionel Messi ● The Greatest | Ballon D'or Winner 2021",
-  description: "A tribute video collaboration with rdprods celebrating Lionel Messi's illustrious career and his achievement of winning the 2021 Ballon d'Or.",
+  description: "A tribute video collaboration with rdprods celebrating Lionel Messi\'s illustrious career and his achievement of winning the 2021 Ballon d\'Or.",
   technologies: ["Adobe Premiere Pro"],
   image: "Messi Collab.png",
   youtubeUrl: "https://youtu.be/S26N6CZ7CQw?si=z0pvScf45mTsvopf",
@@ -391,7 +391,7 @@ const PortfolioWindow: React.FC = () => {
 {
   id: "43",
    title: "Guidebook Cover",
-  description: "A visually engaging cover design for the Guidebook.",
+  description: "Professional and visually appealing cover design for KKN (Community Service Program) guidebook, combining informative elements with modern aesthetics.",
   technologies: ["Adobe Photoshop"],
   image: "Buku KKN.jpg",
   category: "Graphic Designer"
@@ -407,7 +407,7 @@ const PortfolioWindow: React.FC = () => {
 {
   id: "45",
    title: "ID Card LKMMTD 2025",
-  description: "A visually engaging ID card design for LKMMTD committee.",
+  description: "Professional and modern ID card design for LKMMTD 2025 committee members, featuring branding elements, member information, and security features.",
   technologies: ["Adobe Photoshop"],
   image: "id card lkmmtd.jpg",
   category: "Graphic Designer"
@@ -415,7 +415,7 @@ const PortfolioWindow: React.FC = () => {
 {
   id: "46",
    title: "Cristiano Ronaldo ● This One's For You | UEFA EURO 2016",
-  description: "A visually engaging thumbnail design for a video celebrating Cristiano Ronaldo's career and achievements.",
+  description: "Emotional tribute video celebrating Cristiano Ronaldo\'s journey and leadership in winning Portugal\'s first major international trophy at UEFA EURO 2016, featuring his best moments and the historic victory.",
   technologies: ["Adobe Premiere Pro"],
   image: "Ronaldo Euro 16.png",
   youtubeUrl: "https://youtu.be/N52m1t4ApRo?si=MKMzdH2HpaJp3H7i",
@@ -424,7 +424,7 @@ const PortfolioWindow: React.FC = () => {
 {
   id: "47",
    title: "Neymar & Messi ● Perfect 10 | Brazil & Argentina Skills and Goals",
-  description: "A visually engaging thumbnail design for a video celebrating Neymar & Messi's skills and goals.",
+  description: "Dynamic compilation video showcasing the incredible skills, dribbling, and goals of Neymar and Lionel Messi representing Brazil and Argentina, highlighting why they\'re considered perfect 10s in football.",
   technologies: ["Adobe Premiere Pro"],
   image: "Neymessi Perfect 10.png",
   youtubeUrl: "https://youtu.be/9thiXWA8bAU?si=Cm2NrMDjIrkFCS9y",
@@ -433,7 +433,7 @@ const PortfolioWindow: React.FC = () => {
 {
   id: "48",
    title: "Aksara Harapan Website",
-  description: "A visually engaging website design for Aksara Harapan.",
+  description: "Modern and responsive website for Aksara Harapan, featuring clean design, intuitive navigation, and optimized user experience to effectively communicate the organization\'s mission and activities.",
   technologies: ["Visual Studio Code"],
   image: "AksaraHarapan.png",
   githubUrl: "https://aksara-harapan.vercel.app/",
@@ -442,7 +442,7 @@ const PortfolioWindow: React.FC = () => {
 {
   id: "49",
    title: "BANNER SSC 2025",
-  description: "Design of a banner for SSC 2025 event.",
+  description: "Eye-catching promotional banner design for SSC 2025 event, combining bold typography, vibrant colors, and strategic layout to maximize visibility and attract participants.",
   technologies: ["Adobe Photoshop"],
   image: "BANNER SSC.png",
   category: "Graphic Designer"
@@ -450,7 +450,7 @@ const PortfolioWindow: React.FC = () => {
 {
   id: "50",
    title: "Lionel Messi winning the Copa America 2021 🐐",
-  description: "An emotional video edit celebrating Lionel Messi's historic Copa America 2021 victory with Argentina, capturing his journey and triumph in winning his first major international trophy.",
+  description: "An emotional video edit celebrating Lionel Messi\'s historic Copa America 2021 victory with Argentina, capturing his journey and triumph in winning his first major international trophy.",
   technologies: ["Adobe Photoshop"],
   image: "messi copa america 2021.jpg",
   instagramUrl: "https://www.instagram.com/p/CTsGmpHvbDj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
@@ -459,15 +459,16 @@ const PortfolioWindow: React.FC = () => {
 {
   id: "51",
    title: "Neymar winning Gold at the 2016 Olympics 🥇",
-  description: "A tribute video highlighting Neymar's incredible performance and leadership in leading Brazil to their first-ever Olympic gold medal in football at the 2016 Rio Olympics.",
+  description: "A tribute video highlighting Neymar\'s incredible performance and leadership in leading Brazil to their first-ever Olympic gold medal in football at the 2016 Rio Olympics.",
   technologies: ["Adobe Premiere Pro"],
   image: "neymar olimpiade 2016.jpg",
-  instagramUrl: "https://www.instagram.com/p/CTsGmpHvbDj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+  instagramUrl: "https://www.instagram.com/p/CTr7k2Vv4IN/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
   category: "Video Editor"
 },
-{  id: "52",
-   title: "Varane & Ramos Farewell Video ⚽️",
-  description: "An emotional farewell tribute video honoring the legendary defensive partnership of Sergio Ramos and Raphael Varane at Real Madrid, showcasing their greatest moments, achievements, and unforgettable contributions to the club's success.",
+{
+  id: "52",
+  title: "Varane & Ramos Farewell Video ⚽️",
+  description: "An emotional farewell tribute video honoring the legendary defensive partnership of Sergio Ramos and Raphael Varane at Real Madrid, showcasing their greatest moments, achievements, and unforgettable contributions to the club\'s success.",
   technologies: ["Adobe Premiere Pro"],
   image: "ramos & varane.jpg",
   instagramUrl: "https://www.instagram.com/p/CTsHHMHP5uA/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
