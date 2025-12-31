@@ -449,11 +449,29 @@ const PortfolioWindow: React.FC = () => {
 },
 {
   id: "50",
-   title: "Lewandowski Greatest Alive thumbnail",
-  description: "A visually engaging thumbnail design for a video celebrating Robert Lewandowski's career and achievements.",
+   title: "Lionel Messi winning the Copa America 2021 🐐",
+  description: "An emotional video edit celebrating Lionel Messi's historic Copa America 2021 victory with Argentina, capturing his journey and triumph in winning his first major international trophy.",
   technologies: ["Adobe Photoshop"],
-  image: "Lewa goat.jpeg",
-  category: "Graphic Designer"
+  image: "messi copa america 2021.jpg",
+  instagramUrl: "https://www.instagram.com/p/CTsGmpHvbDj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+  category: "Video Editor"
+},
+{
+  id: "51",
+   title: "Neymar winning Gold at the 2016 Olympics 🥇",
+  description: "A tribute video highlighting Neymar's incredible performance and leadership in leading Brazil to their first-ever Olympic gold medal in football at the 2016 Rio Olympics.",
+  technologies: ["Adobe Premiere Pro"],
+  image: "neymar olimpiade 2016.jpg",
+  instagramUrl: "https://www.instagram.com/p/CTsGmpHvbDj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+  category: "Video Editor"
+},
+{  id: "52",
+   title: "Varane & Ramos Farewell Video ⚽️",
+  description: "An emotional farewell tribute video honoring the legendary defensive partnership of Sergio Ramos and Raphael Varane at Real Madrid, showcasing their greatest moments, achievements, and unforgettable contributions to the club's success.",
+  technologies: ["Adobe Premiere Pro"],
+  image: "ramos & varane.jpg",
+  instagramUrl: "https://www.instagram.com/p/CTsHHMHP5uA/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+  category: "Video Editor"
 }
 
 ];
