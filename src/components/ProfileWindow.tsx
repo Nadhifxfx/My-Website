@@ -70,7 +70,7 @@ const ProfileWindow: React.FC = () => {
     {
       name: 'Instagram',
       icon: Instagram,
-      url: 'https://www.instagram.com/nd10.mp4/',
+      url: 'https://www.instagram.com/nadhifxfx/',
       color: 'text-pink-600',
       bgColor: 'bg-pink-100',
       hoverColor: 'hover:bg-pink-200'
