@@ -695,7 +695,7 @@ const PortfolioWindow: React.FC = () => {
         {/* Category Statistics */}
         <div className="mt-8 bg-white p-6 rounded-lg border-2 border-gray-300 shadow-lg">
           <h3 className="font-bold text-gray-800 mb-4 text-center">Total Projects</h3>
-          <div className="grid grid-cols-3 md:grid-cols-4 gap-4 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             <div>
               <div className="text-2xl font-bold text-yellow-600">{projects.length}</div>
               <div className="text-xs text-gray-600">Projects</div>
