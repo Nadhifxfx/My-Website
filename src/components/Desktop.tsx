@@ -27,22 +27,27 @@ interface WindowState {
 }
 
 const Desktop: React.FC = () => {
+  const hasVisitedThisSession = sessionStorage.getItem('hasVisitedThisSession') === 'true';
+
   // Check if this is the first visit in this session
   const [isLoading, setIsLoading] = useState(() => {
-    const hasVisited = sessionStorage.getItem('hasVisitedThisSession');
-    if (hasVisited) {
-      return false; // Skip loading screen on refresh
-    }
-    return true; // Show loading screen on first visit
+    return !hasVisitedThisSession;
   });
   const [showWelcome, setShowWelcome] = useState(false);
   const [showGreeting, setShowGreeting] = useState(() => {
+    if (!hasVisitedThisSession) {
+      return true;
+    }
     // Check if any windows were open before
     const savedState = localStorage.getItem('windowsState');
     if (savedState) {
-      const parsedState = JSON.parse(savedState);
-      const hasOpenWindows = parsedState.some((w: WindowState) => w.isOpen);
-      return !hasOpenWindows; // Hide greeting if windows were open
+      try {
+        const parsedState = JSON.parse(savedState);
+        const hasOpenWindows = parsedState.some((w: { isOpen?: boolean }) => Boolean(w?.isOpen));
+        return !hasOpenWindows; // Hide greeting if windows were open
+      } catch {
+        return true;
+      }
     }
     return true;
   });
@@ -132,35 +137,55 @@ const Desktop: React.FC = () => {
 
   // Restore windows state from localStorage
   const [windows, setWindows] = useState<WindowState[]>(() => {
+    // On first visit in a new session, always start clean (desktop only).
+    // On refresh (same session), restore the currently open windows.
+    if (!hasVisitedThisSession) {
+      return defaultWindows;
+    }
+
     const savedState = localStorage.getItem('windowsState');
     if (savedState) {
-      const parsedState = JSON.parse(savedState);
-      // Merge saved state with default windows to restore components
-      return defaultWindows.map(defaultWindow => {
-        const savedWindow = parsedState.find((w: WindowState) => w.id === defaultWindow.id);
-        if (savedWindow) {
-          return {
-            ...defaultWindow,
-            isOpen: savedWindow.isOpen,
-            isMinimized: savedWindow.isMinimized,
-            zIndex: savedWindow.zIndex,
-            position: savedWindow.position,
-            size: savedWindow.size
-          };
-        }
-        return defaultWindow;
-      });
+      try {
+        const parsedState = JSON.parse(savedState);
+        // Merge saved state with default windows to restore components
+        return defaultWindows.map(defaultWindow => {
+          const savedWindow = parsedState.find((w: { id?: string }) => w.id === defaultWindow.id);
+          if (savedWindow) {
+            return {
+              ...defaultWindow,
+              isOpen: Boolean(savedWindow.isOpen),
+              isMinimized: Boolean(savedWindow.isMinimized),
+              zIndex: typeof savedWindow.zIndex === 'number' ? savedWindow.zIndex : defaultWindow.zIndex,
+              position: savedWindow.position ?? defaultWindow.position,
+              size: savedWindow.size ?? defaultWindow.size
+            };
+          }
+          return defaultWindow;
+        });
+      } catch {
+        return defaultWindows;
+      }
     }
     return defaultWindows;
   });
 
   const maxZIndex = useRef((() => {
     // Restore maxZIndex from localStorage if available
+    if (!hasVisitedThisSession) {
+      return 10;
+    }
     const savedState = localStorage.getItem('windowsState');
     if (savedState) {
-      const parsedState = JSON.parse(savedState);
-      const maxZ = Math.max(...parsedState.map((w: WindowState) => w.zIndex), 10);
-      return maxZ;
+      try {
+        const parsedState = JSON.parse(savedState);
+        const maxZ = Math.max(
+          ...parsedState.map((w: { zIndex?: number }) => (typeof w?.zIndex === 'number' ? w.zIndex : 0)),
+          10
+        );
+        return maxZ;
+      } catch {
+        return 10;
+      }
     }
     return 10;
   })());
