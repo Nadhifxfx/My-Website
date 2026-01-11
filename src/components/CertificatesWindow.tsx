@@ -20,7 +20,7 @@ const CertificatesWindow: React.FC = () => {
       issuer: 'Hacktiv8 with IBM SkillsBuild',
       date: 'August 2025',
       verifyUrl: 'https://drive.google.com/file/d/1cIKOKIWvlMhE7recA5b9FKyRhUuHTTGA/view?usp=sharing',
-      image: 'https://drive.google.com/uc?export=view&id=1cIKOKIWvlMhE7recA5b9FKyRhUuHTTGA',
+      image: 'https://lh3.googleusercontent.com/d/1cIKOKIWvlMhE7recA5b9FKyRhUuHTTGA',
       category: 'Course',
     },
     {
@@ -29,7 +29,7 @@ const CertificatesWindow: React.FC = () => {
       issuer: 'Staya.Dev',
       date: 'March 2024',
       verifyUrl: 'https://drive.google.com/file/d/1QOPGvG3oj6tIqJao-0IB9tG3qrG1ZHxl/view?usp=sharing',
-      image: 'https://drive.google.com/uc?export=view&id=1QOPGvG3oj6tIqJao-0IB9tG3qrG1ZHxl',
+      image: 'https://lh3.googleusercontent.com/d/1QOPGvG3oj6tIqJao-0IB9tG3qrG1ZHxl',
       category: 'Class',
     },
     {
@@ -37,8 +37,8 @@ const CertificatesWindow: React.FC = () => {
       title: 'AI Powered Code Generation',
       issuer: 'Staya.Dev',
       date: 'January 2024',
-      verifyUrl: 'https://drive.google.com/file/d/1kO68w30q24bWXNSCH1l2rVgYNbmfHc7_/view?usp=sharing',
-      image: 'https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=150',
+      verifyUrl: 'https://drive.google.com/file/d/1kO68w30q24bWXNSCH1l2rVgYNbmfHc7_/view?usp=drive_link',
+      image: 'https://lh3.googleusercontent.com/d/1kO68w30q24bWXNSCH1l2rVgYNbmfHc7_',
       category: 'Class',
     },
     {
@@ -47,7 +47,7 @@ const CertificatesWindow: React.FC = () => {
       issuer: 'Dev Coach',
       date: 'November 2022',
       verifyUrl: 'https://drive.google.com/file/d/12zuCJXM_Qytjrl7r0TbSLHegmYWe7Aeq/view?usp=drive_link',
-      image: 'https://drive.google.com/uc?export=view&id=12zuCJXM_Qytjrl7r0TbSLHegmYWe7Aeq',
+      image: 'https://lh3.googleusercontent.com/d/12zuCJXM_Qytjrl7r0TbSLHegmYWe7Aeq',
       category: 'Class',
     },
     {
@@ -56,7 +56,7 @@ const CertificatesWindow: React.FC = () => {
       issuer: 'Dev Coach',
       date: 'September 2022',
       verifyUrl: 'https://drive.google.com/file/d/1FV6WIIu3QDeLY-CUJGMWFYkOJaJzMwDz/view?usp=drive_link',
-      image: 'https://drive.google.com/uc?export=view&id=1FV6WIIu3QDeLY-CUJGMWFYkOJaJzMwDz',
+      image: 'https://lh3.googleusercontent.com/d/1FV6WIIu3QDeLY-CUJGMWFYkOJaJzMwDz',
       category: 'Class',
     },
     {
@@ -65,7 +65,7 @@ const CertificatesWindow: React.FC = () => {
       issuer: 'BuildWithAngga',
       date: 'July 2022',
       verifyUrl: 'https://drive.google.com/file/d/1bpu8XXBZEbw7AENUBa8FnSOi-GrIA0Nd/view?usp=drive_link',
-      image: 'https://drive.google.com/uc?export=view&id=1bpu8XXBZEbw7AENUBa8FnSOi-GrIA0Nd',
+      image: 'https://lh3.googleusercontent.com/d/1bpu8XXBZEbw7AENUBa8FnSOi-GrIA0Nd',
       category: 'Course',
     },
     {
@@ -74,7 +74,7 @@ const CertificatesWindow: React.FC = () => {
       issuer: 'Karirnex',
       date: 'May 2022',
       verifyUrl: 'https://drive.google.com/file/d/17OR6Wbm3hIh90Ue85WJ5GM0TuBQcojua/view?usp=drive_link',
-      image: 'https://drive.google.com/uc?export=view&id=17OR6Wbm3hIh90Ue85WJ5GM0TuBQcojua',
+      image: 'https://lh3.googleusercontent.com/d/17OR6Wbm3hIh90Ue85WJ5GM0TuBQcojua',
       category: 'Course',
     },
     {
@@ -83,7 +83,7 @@ const CertificatesWindow: React.FC = () => {
       issuer: 'Hipwee x Kominfo',
       date: 'March 2022',
       verifyUrl: 'https://drive.google.com/file/d/1XielsJPOKzCgB_w2xOui_D8f7q0r4aAu/view?usp=drive_link',
-      image: 'https://drive.google.com/uc?export=view&id=1XielsJPOKzCgB_w2xOui_D8f7q0r4aAu',
+      image: 'https://lh3.googleusercontent.com/d/1XielsJPOKzCgB_w2xOui_D8f7q0r4aAu',
       category: 'Class',
     },
     {
@@ -92,7 +92,7 @@ const CertificatesWindow: React.FC = () => {
       issuer: 'CitraLand Driyorejo CBD',
       date: 'October 2021',
       verifyUrl: 'https://drive.google.com/file/d/1-dtOvaMsNbdTVigTKvvKbtlhxhqX5FIa/view?usp=drive_link',
-      image: 'https://drive.google.com/uc?export=view&id=1-dtOvaMsNbdTVigTKvvKbtlhxhqX5FIa',
+      image: 'https://lh3.googleusercontent.com/d/1-dtOvaMsNbdTVigTKvvKbtlhxhqX5FIa',
       category: 'Competition',
     },
     {
@@ -101,7 +101,7 @@ const CertificatesWindow: React.FC = () => {
       issuer: 'PPIM UIN Jakarta',
       date: 'September 2021',
       verifyUrl: 'https://drive.google.com/file/d/1LhqpukutbwbQAHHI4XV6HCKSe5AlC51O/view?usp=drive_link',
-      image: 'https://drive.google.com/uc?export=view&id=1LhqpukutbwbQAHHI4XV6HCKSe5AlC51O',
+      image: 'https://lh3.googleusercontent.com/d/1LhqpukutbwbQAHHI4XV6HCKSe5AlC51O',
       category: 'Competition',
     },
     {
@@ -110,15 +110,42 @@ const CertificatesWindow: React.FC = () => {
       issuer: 'CitraGarden Sidoarjo',
       date: 'June 2022',
       verifyUrl: 'https://drive.google.com/file/d/1NAW66izTinVlFZC_kZ2R5PY9HrhWaObq/view?usp=drive_link',
-      image: 'https://drive.google.com/uc?export=view&id=1NAW66izTinVlFZC_kZ2R5PY9HrhWaObq',
+      image: 'https://lh3.googleusercontent.com/d/1NAW66izTinVlFZC_kZ2R5PY9HrhWaObq',
       category: 'Competition',
     },
+    {
+      id: '12',
+      title: 'AI Productivity and AI API Integration for Developers',
+      issuer: 'Maju Bareng AI',
+      date: 'November 2025',
+      verifyUrl: 'https://drive.google.com/file/d/1HRN3OnEzF5qxrsd4cW8kZFy6sHMi_ZM6/view?usp=drive_link',
+      image: 'https://lh3.googleusercontent.com/d/1HRN3OnEzF5qxrsd4cW8kZFy6sHMi_ZM6',
+      category: 'Class',
+    },
+    {
+      id: '13',
+      title: 'PINGFEST 2025',
+      issuer: 'BEM FATISDA UNS',
+      date: 'October 2025',
+      verifyUrl: 'https://drive.google.com/file/d/1TMPythYb_bRBasb-RJS99-JMEMbe4BsD/view?usp=drive_link',
+      image: 'https://lh3.googleusercontent.com/d/1TMPythYb_bRBasb-RJS99-JMEMbe4BsD',
+      category: 'Course',
+    },
+    
   ];
 
   const categories = [...new Set(certificates.map((cert) => cert.category))];
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const [imageError, setImageError] = useState<Record<string, boolean>>({});
   const certificatesPerPage = 6;
+
+  const handleImageError = (id: string) => {
+    setImageError((prev) => ({
+      ...prev,
+      [id]: true,
+    }));
+  };
 
   const filteredCertificates =
     selectedCategory === 'All'
@@ -208,11 +235,23 @@ const CertificatesWindow: React.FC = () => {
         {/* Certificates Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {currentCertificates.map((cert) => (
-            <div key={cert.id} className="bg-white rounded-lg border-2 border-gray-300 shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <div className="h-32 bg-gradient-to-br from-yellow-100 to-orange-100 flex items-center justify-center border-b-2 border-gray-200">
-                <div className="w-16 h-16 bg-white rounded-full border-4 border-yellow-400 flex items-center justify-center shadow-lg">
-                  <Award size={32} className="text-yellow-600" />
-                </div>
+            <div key={cert.id} className="bg-white rounded-lg border-2 border-gray-300 shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+              <div className="h-48 overflow-hidden border-b-2 border-gray-200 bg-gray-100 relative">
+                {!imageError[cert.id] ? (
+                  <img 
+                    src={cert.image} 
+                    alt={cert.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                    onError={() => handleImageError(cert.id)}
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gradient-to-br from-yellow-100 to-orange-100 flex items-center justify-center">
+                    <div className="w-16 h-16 bg-white rounded-full border-4 border-yellow-400 flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-500">
+                      <Award size={32} className="text-yellow-600" />
+                    </div>
+                  </div>
+                )}
               </div>
               <div className="p-4">
                 <div className="mb-2">
