@@ -27,27 +27,27 @@ const ProfileWindow: React.FC = () => {
   const handleDownloadPDF = () => {
     // Simulate PDF download
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/file/d/124xnqKmAvBTcRgGYydV_QMifjY77hCnk/view?usp=sharing'; // In real implementation, this would be the actual PDF URL
+    link.href = 'https://drive.google.com/file/d/1RXOyUrih2IjAOFR6jfLkvzodPbynx9n0/view?usp=sharing'; // In real implementation, this would be the actual PDF URL
     link.download = 'Nadhif_Portofolio.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
     
     // Show download notification
-    alert('Portfolio PDF download started!');
+    alert('Portfolio has been successfully opened!');
   };
 
   const handleDownloadCV = () => {
     // Simulate CV download
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/file/d/1IJpBBRbqkRBo05dHQ-whFLUeDMpoe6M9/view?usp=sharing';
+    link.href = 'https://drive.google.com/file/d/1ubPGlz7I35VuiXlNot5v1x0tuXKeLJVb/view?usp=sharing';
     link.download = 'Nadhif_CV.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
     
     // Show download notification
-    alert('CV download started!');
+    alert('CV has been successfully opened!');
   };
 
   const socialMediaLinks = [

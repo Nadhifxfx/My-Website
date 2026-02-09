@@ -705,7 +705,7 @@ const PortfolioWindow: React.FC = () => {
               <div className="text-xs text-gray-600">Categories</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-purple-600">2025</div>
+              <div className="text-2xl font-bold text-purple-600">2026</div>
               <div className="text-xs text-gray-600">Latest Year</div>
             </div>
             <div>

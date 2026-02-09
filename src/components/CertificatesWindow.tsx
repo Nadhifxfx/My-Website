@@ -12,10 +12,119 @@ interface Certificate {
   category: string;
 }
 
+type CertificateInput = Omit<Certificate, 'id'>;
+
+const parseCertificateDate = (dateText: string): number => {
+  const text = dateText.trim().toLowerCase();
+  const yearMatch = text.match(/\b(\d{4})\b/);
+  if (!yearMatch) return 0;
+
+  const year = Number(yearMatch[1]);
+
+  const monthTokenMatch = text.match(/\b([a-z\u00C0-\u017F]+)\b/);
+  const monthToken = monthTokenMatch?.[1] ?? '';
+
+  const monthMap: Record<string, number> = {
+    jan: 0,
+    january: 0,
+    januari: 0,
+    feb: 1,
+    february: 1,
+    februari: 1,
+    mar: 2,
+    march: 2,
+    maret: 2,
+    apr: 3,
+    april: 3,
+    mei: 4,
+    may: 4,
+    jun: 5,
+    june: 5,
+    juni: 5,
+    jul: 6,
+    july: 6,
+    juli: 6,
+    aug: 7,
+    august: 7,
+    agustus: 7,
+    sep: 8,
+    sept: 8,
+    september: 8,
+    okt: 9,
+    oct: 9,
+    october: 9,
+    oktober: 9,
+    nov: 10,
+    november: 10,
+    des: 11,
+    dec: 11,
+    december: 11,
+    desember: 11,
+  };
+
+  const month = monthMap[monthToken] ?? monthMap[monthToken.slice(0, 3)] ?? 0;
+  return new Date(year, month, 1).getTime();
+};
+
 const CertificatesWindow: React.FC = () => {
-  const certificates: Certificate[] = [
+  const rawCertificates: CertificateInput[] = [
     {
-      id: '1',
+      title: 'Belajar Dasar Pemrograman Web',
+      issuer: 'Dicoding Indonesia',
+      date: 'February 2026',
+      verifyUrl: 'https://drive.google.com/file/d/1e0dd9eQb9d9UuOkpYfMtseaPwfhgc7mb/view?usp=drive_link',
+      image: 'https://lh3.googleusercontent.com/d/1e0dd9eQb9d9UuOkpYfMtseaPwfhgc7mb',
+      category: 'Course',
+    },
+     {
+      title: 'Mastering International Journal Writting',
+      issuer: 'UNUSIDA x UCSI Malaysia',
+      date: 'February 2025',
+      verifyUrl: 'https://drive.google.com/file/d/1S-laQQqO5qdjYyOvsYoQuOrtyJ_iZqm-/view?usp=drive_link', 
+      image: 'https://lh3.googleusercontent.com/d/1S-laQQqO5qdjYyOvsYoQuOrtyJ_iZqm-',
+      category: 'Class',
+    },
+     {
+      title: 'Microsoft Indetity Platforms',
+      issuer: 'STYAVA Dev',
+      date: 'April 2023',
+      verifyUrl: 'https://drive.google.com/file/d/10pY8OC-IdS5znI201-dwwtENFN0xwll0/view?usp=drive_link', 
+      image: 'https://lh3.googleusercontent.com/d/10pY8OC-IdS5znI201-dwwtENFN0xwll0',
+      category: 'Class',
+    },
+    {
+      title: 'Becoming Young Heroes by Creating Big Impact in Digital Era',
+      issuer: 'IPB University',
+      date: 'October 2021',
+      verifyUrl: 'https://drive.google.com/file/d/112QjCidxFaq0_WrgjHkRASDtfsIjfvvD/view?usp=drive_link', 
+      image: 'https://lh3.googleusercontent.com/d/112QjCidxFaq0_WrgjHkRASDtfsIjfvvD',
+      category: 'Class',
+    },
+    {
+      title: 'Ngonten Viral Bikin Banjir Orderan',
+      issuer: 'PT Digital Dua Media Dotco',
+      date: 'February 2024',
+      verifyUrl: 'https://drive.google.com/file/d/17uq9ovlrnELpIgt6euUV0HAL1bjQ9YEh/view?usp=drive_link', 
+      image: 'https://lh3.googleusercontent.com/d/17uq9ovlrnELpIgt6euUV0HAL1bjQ9YEh',
+      category: 'Class',
+    },
+    {
+      title: 'Belajar Dasar Pemrograman Javascript',
+      issuer: 'Dicoding Indonesia',
+      date: 'February 2026',
+      verifyUrl: 'https://drive.google.com/file/d/1J06yYUEHmvkz2Tz3kvfWOFQaB_jT7-Fv/view?usp=drive_link',
+      image: 'https://lh3.googleusercontent.com/d/1J06yYUEHmvkz2Tz3kvfWOFQaB_jT7-Fv',
+      category: 'Course',
+    },
+    {
+      title: 'Membuat Front-End Web untuk Pemula',
+      issuer: 'Dicoding Indonesia',
+      date: 'February 2026',
+      verifyUrl: 'https://drive.google.com/file/d/13Vg2UpyLOXBFvxQJk1N3Fg9jHzjqRkng/view?usp=drive_link',
+      image: 'https://lh3.googleusercontent.com/d/13Vg2UpyLOXBFvxQJk1N3Fg9jHzjqRkng',
+      category: 'Course',
+    },
+    {
       title: 'AI Productivity and AI API Integration for Developers',
       issuer: 'Maju Bareng AI',
       date: 'November 2025',
@@ -24,7 +133,6 @@ const CertificatesWindow: React.FC = () => {
       category: 'Class',
     },
     {
-      id: '2',
       title: 'PINGFEST 2025',
       issuer: 'BEM FATISDA UNS',
       date: 'October 2025',
@@ -33,7 +141,6 @@ const CertificatesWindow: React.FC = () => {
       category: 'Course',
     },
     {
-      id: '3',
       title: 'Code Generation and Optimization Using IBM Granite',
       issuer: 'Hacktiv8 with IBM SkillsBuild',
       date: 'August 2025',
@@ -42,7 +149,6 @@ const CertificatesWindow: React.FC = () => {
       category: 'Course',
     },
     {
-      id: '4',
       title: 'Building a .NET ChatBot',
       issuer: 'Staya.Dev',
       date: 'March 2024',
@@ -51,7 +157,6 @@ const CertificatesWindow: React.FC = () => {
       category: 'Class',
     },
     {
-      id: '5',
       title: 'AI Powered Code Generation',
       issuer: 'Staya.Dev',
       date: 'January 2024',
@@ -60,7 +165,6 @@ const CertificatesWindow: React.FC = () => {
       category: 'Class',
     },
     {
-      id: '6',
       title: 'Frontend (Kelola paketmu dengan npm)',
       issuer: 'Dev Coach',
       date: 'November 2022',
@@ -69,7 +173,6 @@ const CertificatesWindow: React.FC = () => {
       category: 'Class',
     },
     {
-      id: '7',
       title: 'Backend (Meningkatkan performa rest api dengan cache)',
       issuer: 'Dev Coach',
       date: 'September 2022',
@@ -78,7 +181,6 @@ const CertificatesWindow: React.FC = () => {
       category: 'Class',
     },
     {
-      id: '8',
       title: 'UI/UX Design website with Figma',
       issuer: 'BuildWithAngga',
       date: 'July 2022',
@@ -87,7 +189,6 @@ const CertificatesWindow: React.FC = () => {
       category: 'Course',
     },
     {
-      id: '9',
       title: 'Finalist Video Contest Competition',
       issuer: 'CitraGarden Sidoarjo',
       date: 'June 2022',
@@ -96,7 +197,6 @@ const CertificatesWindow: React.FC = () => {
       category: 'Competition',
     },
     {
-      id: '10',
       title: 'Sertifikat Karirnex Bootcamp Excel 2',
       issuer: 'Karirnex',
       date: 'May 2022',
@@ -105,16 +205,14 @@ const CertificatesWindow: React.FC = () => {
       category: 'Course',
     },
     {
-      id: '11',
       title: 'Content Creator Class Participants',
       issuer: 'Hipwee x Kominfo',
-      date: 'March 2022',
+      date: 'October 2021',
       verifyUrl: 'https://drive.google.com/file/d/1XielsJPOKzCgB_w2xOui_D8f7q0r4aAu/view?usp=drive_link',
       image: 'https://lh3.googleusercontent.com/d/1XielsJPOKzCgB_w2xOui_D8f7q0r4aAu',
       category: 'Class',
     },
     {
-      id: '12',
       title: '2nd Winner of Instagram Reels Contest',
       issuer: 'CitraLand Driyorejo CBD',
       date: 'October 2021',
@@ -123,7 +221,6 @@ const CertificatesWindow: React.FC = () => {
       category: 'Competition',
     },
     {
-      id: '13',
       title: 'Creative Video Competition Participants',
       issuer: 'PPIM UIN Jakarta',
       date: 'September 2021',
@@ -133,6 +230,26 @@ const CertificatesWindow: React.FC = () => {
     },
     
   ];
+
+  const certificates: Certificate[] = rawCertificates
+    .map((cert, originalIndex) => ({ cert, originalIndex }))
+    .sort((a, b) => {
+      const dateDiff = parseCertificateDate(b.cert.date) - parseCertificateDate(a.cert.date);
+      if (dateDiff !== 0) return dateDiff;
+      return a.originalIndex - b.originalIndex;
+    })
+    .map((item, index) => ({
+      ...item.cert,
+      id: String(index + 1),
+    }));
+
+  const latestYear = Math.max(
+    0,
+    ...certificates
+      .map((cert) => cert.date.match(/\b(\d{4})\b/)?.[1])
+      .filter((year): year is string => Boolean(year))
+      .map((year) => Number(year)),
+  );
 
   const categories = [...new Set(certificates.map((cert) => cert.category))];
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
@@ -341,7 +458,7 @@ const CertificatesWindow: React.FC = () => {
               <div className="text-xs text-gray-600">Categories</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-green-600">2025</div>
+              <div className="text-2xl font-bold text-green-600">{latestYear || '-'}</div>
               <div className="text-xs text-gray-600">Latest Year</div>
             </div>
             <div>
