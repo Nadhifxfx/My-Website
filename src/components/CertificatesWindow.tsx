@@ -197,7 +197,7 @@ const CertificatesWindow: React.FC = () => {
       category: 'Competition',
     },
     {
-      title: 'Sertifikat Karirnex Bootcamp Excel 2',
+      title: 'Karirnex Bootcamp Excel 2',
       issuer: 'Karirnex',
       date: 'May 2022',
       verifyUrl: 'https://drive.google.com/file/d/17OR6Wbm3hIh90Ue85WJ5GM0TuBQcojua/view?usp=drive_link',
