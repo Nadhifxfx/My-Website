@@ -449,7 +449,7 @@ const PortfolioWindow: React.FC = () => {
 },
 {
   id: "50",
-   title: "Lionel Messi winning the Copa America 2021 🐐",
+   title: "Lionel Messi winning the Copa America 2021",
   description: "An emotional video edit celebrating Lionel Messi\'s historic Copa America 2021 victory with Argentina, capturing his journey and triumph in winning his first major international trophy.",
   technologies: ["Adobe Photoshop"],
   image: "messi copa america 2021.jpg",
