@@ -204,7 +204,7 @@ const PortfolioWindow: React.FC = () => {
   },
   {
   id: '22',
-  title: 'Weal Dental',
+  title: 'Weal Dent care',
   description: 'Professional promotional video showcasing Weal Dental comprehensive dental care services, modern facilities, and expert team, designed to build trust and attract new patients.',
   technologies: ['Capcut'],
   image: 'weal deant care.png',
@@ -373,7 +373,7 @@ const PortfolioWindow: React.FC = () => {
 {
   id: "41",
    title: "Lionel Messi ● The Greatest | Ballon D'or Winner 2021",
-  description: "A tribute video collaboration with rdprods celebrating Lionel Messi\'s illustrious career and his achievement of winning the 2021 Ballon d\'Or.",
+  description: "A tribute video collaboration ndcomps10 with rdprods celebrating Lionel Messi\'s illustrious career and his achievement of winning the 2021 Ballon d\'Or.",
   technologies: ["Adobe Premiere Pro"],
   image: "Messi Collab.png",
   youtubeUrl: "https://youtu.be/S26N6CZ7CQw?si=z0pvScf45mTsvopf",
@@ -382,7 +382,7 @@ const PortfolioWindow: React.FC = () => {
 {
   id: "42",
    title: "Choose your character series #4",
-  description: "Video collaboration edit with barcanation featuring top football players like Messi & Griezmann inspired by video game character selection screens.",
+  description: "Video collaboration edit ndcomps10 with barcanation featuring top football players like Messi & Griezmann inspired by video game character selection screens.",
   technologies: ["Adobe Premiere Pro"],
   image: "Collab Abi.png",
   instagramUrl: "https://www.instagram.com/p/CK3taHkg72I/?utm_source=ig_web_copy_link&igsh=c2o2cjhxaXFmdW4y", 
@@ -424,7 +424,7 @@ const PortfolioWindow: React.FC = () => {
 {
   id: "47",
    title: "Neymar & Messi ● Perfect 10 | Brazil & Argentina Skills and Goals",
-  description: "Dynamic compilation video showcasing the incredible skills, dribbling, and goals of Neymar and Lionel Messi representing Brazil and Argentina, highlighting why they\'re considered perfect 10s in football.",
+  description: "Video collaboration edit ndcomps10 with golazorg. Dynamic compilation video showcasing the incredible skills, dribbling, and goals of Neymar and Lionel Messi representing Brazil and Argentina.",
   technologies: ["Adobe Premiere Pro"],
   image: "Neymessi Perfect 10.png",
   youtubeUrl: "https://youtu.be/9thiXWA8bAU?si=Cm2NrMDjIrkFCS9y",
@@ -458,7 +458,7 @@ const PortfolioWindow: React.FC = () => {
 },
 {
   id: "51",
-   title: "Neymar winning Gold at the 2016 Olympics 🥇",
+   title: "Neymar winning Gold at the 2016 Olympics",
   description: "A tribute video highlighting Neymar\'s incredible performance and leadership in leading Brazil to their first-ever Olympic gold medal in football at the 2016 Rio Olympics.",
   technologies: ["Adobe Premiere Pro"],
   image: "neymar olimpiade 2016.jpg",
@@ -467,7 +467,7 @@ const PortfolioWindow: React.FC = () => {
 },
 {
   id: "52",
-  title: "Varane & Ramos Farewell Video ⚽️",
+  title: "Varane & Ramos Farewell Video",
   description: "An emotional farewell tribute video honoring the legendary defensive partnership of Sergio Ramos and Raphael Varane at Real Madrid, showcasing their greatest moments, achievements, and unforgettable contributions to the club\'s success.",
   technologies: ["Adobe Premiere Pro"],
   image: "ramos & varane.jpg",
@@ -493,7 +493,7 @@ const PortfolioWindow: React.FC = () => {
 {
   id: "55",
   title: "Marco van Ginkel Farewell Video ",
-  description: "An emotional farewell tribute video honoring the legendary defensive partnership of Sergio Ramos and Raphael Varane at Real Madrid, showcasing their greatest moments, achievements, and unforgettable contributions to the club\'s success.",
+  description: "An emotional farewell tribute video honoring Marco van Ginkel following his retirement announcement, celebrating his resilience, leadership, and unforgettable journey through football.",
   technologies: ["Adobe Premiere Pro"],
   image: "farewell video.png",
   instagramUrl: "https://www.instagram.com/p/DUX697pjHOt/",
