@@ -207,7 +207,7 @@ const PortfolioWindow: React.FC = () => {
   title: 'Weal Dental',
   description: 'Professional promotional video showcasing Weal Dental comprehensive dental care services, modern facilities, and expert team, designed to build trust and attract new patients.',
   technologies: ['Capcut'],
-  image: 'Weal Dental.png',
+  image: 'weal deant care.png',
   liveUrl: 'https://drive.google.com/file/d/1RNAY7ewpj0gQIaLNe_T0WXK_5Y2ACqLo/view?usp=sharing',
   category: 'Video Editor'
   },
@@ -472,6 +472,31 @@ const PortfolioWindow: React.FC = () => {
   technologies: ["Adobe Premiere Pro"],
   image: "ramos & varane.jpg",
   instagramUrl: "https://www.instagram.com/p/CTsHHMHP5uA/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+  category: "Video Editor"
+},
+{
+  id: "53",
+  title: "Catatan Semenit Social Media Design",
+  description: "A creative social media design project for Catatan Semenit, focusing on visually engaging content to enhance brand presence and audience interaction.",
+  technologies: ["Canva"],
+  image: "cs mockup.png",
+  category: "Graphic Designer"
+},
+{
+  id: "54",
+  title: "AFCON 2025 Recap",
+  description: "An emotional farewell tribute video celebrating the journey of the AFCON 2025 stars  features the most iconic moments, determined struggles, crucial goals, incredible saves, and the spirit of unity that brought a continent together.",
+  technologies: ["Adobe Premiere Pro"],
+  image: "afcon 2025.png",
+  category: "Video Editor"
+},
+{
+  id: "55",
+  title: "Marco van Ginkel Farewell Video ",
+  description: "An emotional farewell tribute video honoring the legendary defensive partnership of Sergio Ramos and Raphael Varane at Real Madrid, showcasing their greatest moments, achievements, and unforgettable contributions to the club\'s success.",
+  technologies: ["Adobe Premiere Pro"],
+  image: "farewell video.png",
+  instagramUrl: "https://www.instagram.com/p/DUX697pjHOt/",
   category: "Video Editor"
 }
 
