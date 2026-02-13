@@ -37,7 +37,7 @@ const PortfolioWindow: React.FC = () => {
   },
   {
     id: '3',
-    title: ' Contents Editor for MandyCJ',
+    title: 'MandyCJ Daily Contents',
     description: 'Serving as editor for all MandyCJ content. Responsible for ensuring that each video has strong storytelling, visuals consistent with personal branding, and is able to increase audience appeal and engagement across various social media platforms.',
     technologies: ['Adobe Premiere Pro', 'Capcut'],
     image: 'mandycj.png',
@@ -80,14 +80,14 @@ const PortfolioWindow: React.FC = () => {
     category: 'Graphic Designer'
   },
   {
-    id: '8',
-    title: 'Getuk Pisang Sahira Website',
-    description: 'A responsive website showcasing Sahira\'s traditional Getuk Pisang (banana-based Indonesian snack) products, featuring product catalog, ordering information, and business details.',
-    technologies: ['Visual Studio Code'],
-    image: 'Web Sahira.png',
-    githubUrl: 'https://nadhifxfx.github.io/Getuk-Pisang-Sahira/',
-    category: 'Programmer'
-  },
+  id: "8",
+  title: "Marco van Ginkel Farewell Video ",
+  description: "An emotional farewell tribute video honoring Marco van Ginkel following his retirement announcement, celebrating his resilience, leadership, and unforgettable journey through football.",
+  technologies: ["Adobe Premiere Pro"],
+  image: "farewell video.png",
+  instagramUrl: "https://www.instagram.com/p/DUX697pjHOt/",
+  category: "Video Editor"
+},
   {
     id: '9',
     title: 'UEC 2024 Aftermovie',
@@ -268,7 +268,7 @@ const PortfolioWindow: React.FC = () => {
   title: "YouTube Video Thumbnails",
   description: "Eye-catching YouTube thumbnail designs that visually represent the video content and attract viewers' attention.",
   technologies: ["Adobe Photoshop"],
-  image: "tumnail.png",
+  image: "thumbnails.png",
   instagramUrl: "https://www.instagram.com/reel/CXeHkoeFL_W/?utm_source=ig_web_copy_link&igsh=MXVnZGtyd3BrYmdqMA==",
   category: "Graphic Designer"
 },
@@ -384,17 +384,18 @@ const PortfolioWindow: React.FC = () => {
    title: "Choose your character series #4",
   description: "Video collaboration edit ndcomps10 with barcanation featuring top football players like Messi & Griezmann inspired by video game character selection screens.",
   technologies: ["Adobe Premiere Pro"],
-  image: "Collab Abi.png",
+  image: "collab cyc.jpg",
   instagramUrl: "https://www.instagram.com/p/CK3taHkg72I/?utm_source=ig_web_copy_link&igsh=c2o2cjhxaXFmdW4y", 
   category: "Video Editor"
 },
 {
   id: "43",
-   title: "Guidebook Cover",
-  description: "Professional and visually appealing cover design for KKN (Community Service Program) guidebook, combining informative elements with modern aesthetics.",
-  technologies: ["Adobe Photoshop"],
-  image: "Buku KKN.jpg",
-  category: "Graphic Designer"
+  title: "Vardy Leicester Farewell Video",
+  description: "An emotional farewell tribute video honoring Jamie Vardy following his retirement announcement, celebrating his resilience, leadership, and unforgettable journey through football.",
+  technologies: ["Adobe Premiere Pro"],
+  image: "Vardy.jpg",
+  instagramUrl: "https://www.instagram.com/reel/DRnREj3DKgu/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+  category: "Video Editor"
 },
 {
   id: "44",
@@ -491,18 +492,18 @@ const PortfolioWindow: React.FC = () => {
   category: "Graphic Designer"
 },
 {
-  id: "55",
-  title: "Marco van Ginkel Farewell Video ",
-  description: "An emotional farewell tribute video honoring Marco van Ginkel following his retirement announcement, celebrating his resilience, leadership, and unforgettable journey through football.",
-  technologies: ["Adobe Premiere Pro"],
-  image: "farewell video.png",
-  instagramUrl: "https://www.instagram.com/p/DUX697pjHOt/",
-  category: "Video Editor"
-},
+    id: '55',
+    title: 'Getuk Pisang Sahira Website',
+    description: 'A responsive website showcasing Sahira\'s traditional Getuk Pisang (banana-based Indonesian snack) products, featuring product catalog, ordering information, and business details.',
+    technologies: ['Visual Studio Code'],
+    image: 'Web Sahira.png',
+    githubUrl: 'https://nadhifxfx.github.io/Getuk-Pisang-Sahira/',
+    category: 'Programmer'
+  },
 {
   id: "56",
   title: "DC Evolution",
-  description: "An emotional farewell tribute video honoring Marco van Ginkel following his retirement announcement, celebrating his resilience, leadership, and unforgettable journey through football.",
+  description: "A cinematic evolution video showcasing the transformation of DC Comics through the years — tracing its journey from classic comic book eras to modern cinematic universes, highlighting the shifting visual styles, iconic characters, reboots, storytelling changes, and the cultural impact that shaped DC from generation to generation.",
   technologies: ["Adobe Premiere Pro"],
   image: "DC Evolution.png",
   instagramUrl: "https://www.instagram.com/p/DUX697pjHOt/",
@@ -537,12 +538,28 @@ const PortfolioWindow: React.FC = () => {
 },
 {
   id: "60",
-  title: "Vardy Leicester Farewell Video",
-  description: "An emotional farewell tribute video honoring Jamie Vardy following his retirement announcement, celebrating his resilience, leadership, and unforgettable journey through football.",
+   title: "Guidebook Cover",
+  description: "Professional and visually appealing cover design for KKN (Community Service Program) guidebook, combining informative elements with modern aesthetics.",
+  technologies: ["Adobe Photoshop"],
+  image: "Buku KKN.jpg",
+  category: "Graphic Designer"
+},
+{
+  id: "61",
+  title: "Tom Lockyer Farewell Video",
+  description: "An emotional farewell tribute video honoring Tom Lockyer following his retirement announcement, celebrating his resilience, leadership, and unforgettable journey through football.",
   technologies: ["Adobe Premiere Pro"],
-  image: "Vardy.jpg",
-  instagramUrl: "https://www.instagram.com/reel/DRnREj3DKgu/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+  image: "Tom Lockyer.jpg",
+  instagramUrl: "https://www.instagram.com/p/DPl398xiIs7/",
   category: "Video Editor"
+},
+{
+  id: "62",
+  title: "Certificates Design",
+  description: "A set of beautifully designed certificates for various events and achievements.",
+  technologies: ["Canva", "Adobe Photoshop"],
+  image: "Sertifikat.png",
+  category: "Graphic Designer"
 },
 
 
