@@ -37,9 +37,9 @@ const PortfolioWindow: React.FC = () => {
   },
   {
     id: '3',
-    title: 'MandyCJ',
+    title: ' Contents Editor for MandyCJ',
     description: 'Serving as editor for all MandyCJ content. Responsible for ensuring that each video has strong storytelling, visuals consistent with personal branding, and is able to increase audience appeal and engagement across various social media platforms.',
-    technologies: ['Adobe Premiere Pro, Capcut'],
+    technologies: ['Adobe Premiere Pro', 'Capcut'],
     image: 'mandycj.png',
     instagramUrl: 'https://www.instagram.com/mandycj_/',
     category: 'Video Editor'
@@ -155,7 +155,7 @@ const PortfolioWindow: React.FC = () => {
     id: '16',
     title: 'Brazilians Next Gen',
     description: 'Video edit featuring the next generation of Brazilian footballers set to the energetic track "Danza Kuduro", which has garnered over 5 million views.',
-    technologies: ['Adobe Photoshop', 'Adobe Premiere Pro'],
+    technologies: ['Adobe Premiere Pro'],
     image: 'danza.jpg',
     youtubeUrl: 'https://youtu.be/2HDLx6-HarY?si=8w2mlOmy5djnl7nt',
     category: 'Video Editor'
