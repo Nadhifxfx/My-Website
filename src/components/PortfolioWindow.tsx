@@ -46,12 +46,12 @@ const PortfolioWindow: React.FC = () => {
   },
   {
     id: '4',
-    title: 'NDComps10 Football Website UI',
-    description: 'Modern UI design for a football fan website dedicated to NDComps10.',
-    technologies: ['Figma', 'Adobe Photoshop'],
-    image: 'NDcomps10.jpg',
-    dribbbleUrl: 'https://dribbble.com/shots/25922166-NDComps10-Modern-Football-Fan-Website-UI',
-    category: 'Graphic Designer'
+    title: 'MandyCJ',
+    description: 'Serving as editor for all MandyCJ content. Responsible for ensuring that each video has strong storytelling, visuals consistent with personal branding, and is able to increase audience appeal and engagement across various social media platforms.',
+    technologies: ['Adobe Premiere Pro, Capcut'],
+    image: 'mandycj.png',
+    instagramUrl: 'https://www.instagram.com/mandycj_/',
+    category: 'Video Editor'
   },
   {
   id: "5",
@@ -93,7 +93,7 @@ const PortfolioWindow: React.FC = () => {
     title: 'UEC 2024 Aftermovie',
     description: 'Aftermovie highlighting the activities and excitement of the UEC 2024 event.',
     technologies: ['Capcut'],
-    image: 'UEC 2024.jpg',
+    image: 'UEC.jpg',
     youtubeUrl: 'https://youtu.be/X8Gwa-Pyqmc?feature=shared',
     category: 'Video Editor'
   },
@@ -153,7 +153,7 @@ const PortfolioWindow: React.FC = () => {
   },
   {
     id: '16',
-    title: 'Brazilians Next Gen Edit',
+    title: 'Brazilians Next Gen',
     description: 'Video edit featuring the next generation of Brazilian footballers set to the energetic track "Danza Kuduro", which has garnered over 5 million views.',
     technologies: ['Adobe Photoshop', 'Adobe Premiere Pro'],
     image: 'danza.jpg',
@@ -232,7 +232,7 @@ const PortfolioWindow: React.FC = () => {
   title: "Urban Style at Urban Home",
   description: "A promotional video highlighting modern urban lifestyles, created for an event at Urban Home Citraland Driyorejo.",
   technologies: ["Adobe Premiere Pro"],
-  image: "Citraland.png",
+  image: "Urban Style.png",
   instagramUrl: "https://www.instagram.com/reel/CVIm5Ehs_zd/?utm_source=ig_web_copy_link&igsh=MXZiOHNjb3dtMTU2eQ==",
   category: "Video Editor"
 },
@@ -277,8 +277,8 @@ const PortfolioWindow: React.FC = () => {
   title: "Chasing Dreams",
   description: "An inspiring motivational video encouraging young people to utilize their time productively, pursue their passions, and build a brighter future through dedication and hard work.",
   technologies: ["Adobe Premiere Pro"],
-  image: "Produktif.png",
-  instagramUrl: "https://www.behance.net/gallery/180597019/INACOM-Logo-Concept",
+  image: "Chasing Dreams.jpg",
+  instagramUrl: "https://www.instagram.com/reel/CXeHkoeFL_W/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
   category: "Video Editor"
 },
 {
@@ -358,7 +358,7 @@ const PortfolioWindow: React.FC = () => {
    title: "Lifestyle at Citra Garden Sidoarjo",
   description: "A lifestyle video highlighting the facilities, community, and atmosphere of Citra Garden Sidoarjo.",
   technologies: ["Adobe Premiere Pro"],
-  image: "Lifestyle.png",
+  image: "Lifestyle.jpg",
   instagramUrl: "https://www.instagram.com/reel/CVIm5Ehs_zd/?utm_source=ig_web_copy_link&igsh=MXZiOHNjb3dtMTU2eQ==",
   category: "Video Editor"
 },
@@ -373,9 +373,9 @@ const PortfolioWindow: React.FC = () => {
 {
   id: "41",
    title: "Lionel Messi ● The Greatest | Ballon D'or Winner 2021",
-  description: "A tribute video collaboration ndcomps10 with rdprods celebrating Lionel Messi\'s illustrious career and his achievement of winning the 2021 Ballon d\'Or.",
+  description: "A tribute video collaboratfion ndcomps10 with rdprods celebrating Lionel Messi\'s illustrious career and his achievement of winning the 2021 Ballon d\'Or.",
   technologies: ["Adobe Premiere Pro"],
-  image: "Messi Collab.png",
+  image: "The Greatest.jpg",
   youtubeUrl: "https://youtu.be/S26N6CZ7CQw?si=z0pvScf45mTsvopf",
   category: "Video Editor"
 },
@@ -417,7 +417,7 @@ const PortfolioWindow: React.FC = () => {
    title: "Cristiano Ronaldo ● This One's For You | UEFA EURO 2016",
   description: "Emotional tribute video celebrating Cristiano Ronaldo\'s journey and leadership in winning Portugal\'s first major international trophy at UEFA EURO 2016, featuring his best moments and the historic victory.",
   technologies: ["Adobe Premiere Pro"],
-  image: "Ronaldo Euro 16.png",
+  image: "Ronaldo 2016.jpg",
   youtubeUrl: "https://youtu.be/N52m1t4ApRo?si=MKMzdH2HpaJp3H7i",
   category: "Video Editor"
 },
@@ -426,7 +426,7 @@ const PortfolioWindow: React.FC = () => {
    title: "Neymar & Messi ● Perfect 10 | Brazil & Argentina Skills and Goals",
   description: "Video collaboration edit ndcomps10 with golazorg. Dynamic compilation video showcasing the incredible skills, dribbling, and goals of Neymar and Lionel Messi representing Brazil and Argentina.",
   technologies: ["Adobe Premiere Pro"],
-  image: "Neymessi Perfect 10.png",
+  image: "Neymessi Perfect 10.jpg",
   youtubeUrl: "https://youtu.be/9thiXWA8bAU?si=Cm2NrMDjIrkFCS9y",
   category: "Video Editor"
 },
@@ -498,7 +498,53 @@ const PortfolioWindow: React.FC = () => {
   image: "farewell video.png",
   instagramUrl: "https://www.instagram.com/p/DUX697pjHOt/",
   category: "Video Editor"
-}
+},
+{
+  id: "56",
+  title: "DC Evolution",
+  description: "An emotional farewell tribute video honoring Marco van Ginkel following his retirement announcement, celebrating his resilience, leadership, and unforgettable journey through football.",
+  technologies: ["Adobe Premiere Pro"],
+  image: "DC Evolution.png",
+  instagramUrl: "https://www.instagram.com/p/DUX697pjHOt/",
+  category: "Video Editor"
+},
+{
+  id: "57",
+  title: "NDComps10 Football Website UI",
+  description: "Modern UI design for a football fan website dedicated to NDComps10.",
+  technologies: ["Figma", "Adobe Photoshop"],
+  image: "NDcomps10.jpg",
+  dribbbleUrl: "https://dribbble.com/shots/25922166-NDComps10-Modern-Football-Fan-Website-UI",
+  category: "Graphic Designer"
+},
+{
+  id: "58",
+  title: "Mbappe birthday",
+  description: "An emotional farewell tribute video honoring Kylian Mbappé following his retirement announcement, celebrating his resilience, leadership, and unforgettable journey through football.",
+  technologies: ["Adobe Premiere Pro"],
+  image: "Mbappe.png",
+  instagramUrl: "https://www.instagram.com/reel/DSeqYZhDQ_-/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==",
+  category: "Video Editor"
+},
+{
+  id: "59",
+  title: "Mobile Banking App",
+  description: "A mobile banking application designed to provide secure and user-friendly financial services for customers.",
+  technologies: ["Visual Studio Code"],
+  image: "Bank SAE.png",
+  githubUrl: "https://github.com/nadhifxf/Mobile-Banking",
+  category: "Programming"
+},
+{
+  id: "60",
+  title: "Vardy Leicester Farewell Video",
+  description: "An emotional farewell tribute video honoring Jamie Vardy following his retirement announcement, celebrating his resilience, leadership, and unforgettable journey through football.",
+  technologies: ["Adobe Premiere Pro"],
+  image: "Vardy.jpg",
+  instagramUrl: "https://www.instagram.com/reel/DRnREj3DKgu/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+  category: "Video Editor"
+},
+
 
 ];
   const [selectedCategory, setSelectedCategory] = React.useState<string>('All');
