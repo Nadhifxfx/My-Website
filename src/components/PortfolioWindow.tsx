@@ -37,20 +37,20 @@ const PortfolioWindow: React.FC = () => {
   },
   {
     id: '3',
-    title: 'Bank Indonesia Investment Program',
-    description: 'One-minute competition video educating viewers on the Rupiah’s role as a store of value and investment.',
-    technologies: ['Adobe Premiere Pro'],
-    image: 'Bank Indonesia.png',
-    instagramUrl: 'https://www.instagram.com/p/CW5lSYkrABF/?utm_source=ig_web_copy_link&igsh=MXFkaXZxcnJ6c2J5Ng==',
-    category: 'Video Editor'
-  },
-  {
-    id: '4',
     title: 'MandyCJ',
     description: 'Serving as editor for all MandyCJ content. Responsible for ensuring that each video has strong storytelling, visuals consistent with personal branding, and is able to increase audience appeal and engagement across various social media platforms.',
     technologies: ['Adobe Premiere Pro, Capcut'],
     image: 'mandycj.png',
     instagramUrl: 'https://www.instagram.com/mandycj_/',
+    category: 'Video Editor'
+  },
+   {
+    id: '4',
+    title: 'Bank Indonesia Investment Program',
+    description: 'One-minute competition video educating viewers on the Rupiah’s role as a store of value and investment.',
+    technologies: ['Adobe Premiere Pro'],
+    image: 'Bank Indonesia.png',
+    instagramUrl: 'https://www.instagram.com/p/CW5lSYkrABF/?utm_source=ig_web_copy_link&igsh=MXFkaXZxcnJ6c2J5Ng==',
     category: 'Video Editor'
   },
   {
