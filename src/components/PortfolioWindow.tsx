@@ -55,11 +55,11 @@ const PortfolioWindow: React.FC = () => {
   },
   {
   id: "5",
-  title: "Agrifest Instagram Feed Design",
-  description: "A visually cohesive Instagram feed design for Agrifest, featuring event highlights and engaging visual storytelling to attract attendees.",
-  technologies: ["Adobe Photoshop", "Canva"],
-  image: "Agrifest.png",
-  category: "Graphic Designer"
+  title: "AFCON 2025 Recap",
+  description: "An emotional farewell tribute video celebrating the journey of the AFCON 2025 stars  features the most iconic moments, determined struggles, crucial goals, incredible saves, and the spirit of unity that brought a continent together.",
+  technologies: ["Adobe Premiere Pro"],
+  image: "afcon 2025.png",
+  category: "Video Editor"
   },
   {
     id: '6',
@@ -484,11 +484,11 @@ const PortfolioWindow: React.FC = () => {
 },
 {
   id: "54",
-  title: "AFCON 2025 Recap",
-  description: "An emotional farewell tribute video celebrating the journey of the AFCON 2025 stars  features the most iconic moments, determined struggles, crucial goals, incredible saves, and the spirit of unity that brought a continent together.",
-  technologies: ["Adobe Premiere Pro"],
-  image: "afcon 2025.png",
-  category: "Video Editor"
+  title: "Agrifest Instagram Feed Design",
+  description: "A visually cohesive Instagram feed design for Agrifest, featuring event highlights and engaging visual storytelling to attract attendees.",
+  technologies: ["Adobe Photoshop", "Canva"],
+  image: "Agrifest.png",
+  category: "Graphic Designer"
 },
 {
   id: "55",
@@ -519,8 +519,8 @@ const PortfolioWindow: React.FC = () => {
 },
 {
   id: "58",
-  title: "Mbappe birthday",
-  description: "An emotional farewell tribute video honoring Kylian Mbappé following his retirement announcement, celebrating his resilience, leadership, and unforgettable journey through football.",
+  title: "Mbappe 27th Birthday",
+  description: "A celebratory birthday edit video for Kylian Mbappé’s 27th birthday, highlighting his incredible goals, memorable moments, and the excitement he brings to football as he continues to shine at the peak of his career.",
   technologies: ["Adobe Premiere Pro"],
   image: "Mbappe.png",
   instagramUrl: "https://www.instagram.com/reel/DSeqYZhDQ_-/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==",
@@ -531,9 +531,9 @@ const PortfolioWindow: React.FC = () => {
   title: "Mobile Banking App",
   description: "A mobile banking application designed to provide secure and user-friendly financial services for customers.",
   technologies: ["Visual Studio Code"],
-  image: "Bank SAE.png",
+  image: "Bank SAE.jpg",
   githubUrl: "https://github.com/nadhifxf/Mobile-Banking",
-  category: "Programming"
+  category: "Programmer"
 },
 {
   id: "60",
