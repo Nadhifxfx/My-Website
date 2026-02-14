@@ -84,7 +84,7 @@ const PortfolioWindow: React.FC = () => {
   descriptionId:'Video tribute yang emosional merayakan perjalanan bintang-bintang pada saat kompetisi sedang berjalan hingga selesai.',
   technologies: ["Adobe Premiere Pro"],
   image: "afcon 2025.png",
-  instagramUrl: 'https://youtube.com/shorts/1FKvUiazGUg',
+  instagramUrl: '',
   category: "Video Editor"
   },
   {
