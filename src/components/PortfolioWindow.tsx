@@ -628,7 +628,7 @@ const PortfolioWindow: React.FC = () => {
   descriptionId: 'Video evolusi sinematik yang menampilkan transformasi DC Comics dari masa ke masa, menyoroti perubahan gaya visual, karakter ikonik dari generasi ke generasi.',
   technologies: ["Adobe Premiere Pro"],
   image: "DC Evolution.png",
-  instagramUrl: "https://www.instagram.com/p/DUX697pjHOt/",
+  instagramUrl: "",
   category: "Video Editor"
 },
 {
@@ -773,7 +773,7 @@ const PortfolioWindow: React.FC = () => {
   return (
     <div className="max-w-6xl mx-auto dark:text-gray-100">
       <div className="text-center mb-6">
-        <h2 className="text-xl font-bold text-gray-800 flex items-center justify-center space-x-2 mt-5">
+        <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100 flex items-center justify-center space-x-2 mt-5">
           <Folder className="text-purple-600" />
           <span>{t('portfolio.title')}</span>
         </h2>

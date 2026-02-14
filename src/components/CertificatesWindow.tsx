@@ -392,7 +392,7 @@ const CertificatesWindow: React.FC = () => {
                     {getCategoryLabel(cert.category)}
                   </span>
                 </div>
-                <h3 className="font-bold text-gray-800 text-sm mb-1">{cert.title}</h3>
+                <h3 className="font-bold text-gray-800 dark:text-gray-100 text-sm mb-1">{cert.title}</h3>
                 <p className="text-gray-600 dark:text-gray-300 text-xs mb-2">{cert.issuer}</p>
                 <div className="flex items-center space-x-1 text-xs text-gray-500 dark:text-gray-400 mb-3">
                   <Calendar size={12} />
