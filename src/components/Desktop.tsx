@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Monitor, User, BookOpen, FolderOpen, Award, Mail, Clock, MessageCircle, Sun, Moon } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 import Window from './Window';
 import StartMenu from './StartMenu';
 import AnimatedWallpaper from './AnimatedWallpaper';
@@ -28,12 +29,10 @@ interface WindowState {
   isAnimating?: boolean;
 }
 
-type IconComponent = React.ComponentType<{ size?: number; className?: string }>;
-
 interface StartMenuItem {
   id: string;
   label: string;
-  icon: IconComponent;
+  icon: LucideIcon;
 }
 
 const Desktop: React.FC = () => {

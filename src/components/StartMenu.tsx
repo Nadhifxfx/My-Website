@@ -1,11 +1,12 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Power } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 import { useI18n } from '../config/i18n';
 
 interface MenuItem {
   id: string;
   label: string;
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+  icon: LucideIcon;
 }
 
 interface StartMenuProps {

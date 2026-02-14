@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Palette, Video } from 'lucide-react';
+import { Code, Monitor, Palette, Video } from 'lucide-react';
 import { useI18n } from '../config/i18n';
 
 interface SkillItem {
@@ -31,6 +31,10 @@ const SkillsWindow: React.FC = () => {
     { name: 'Design', icon: Palette, color: 'purple' },
     { name: 'Editing', icon: Video, color: 'red' }
   ];
+
+  const getCategoryMeta = (categoryName: string) => {
+    return categories.find((c) => c.name === categoryName) ?? categories[0];
+  };
 
   const getCategoryLabel = (categoryName: string) => {
     switch (categoryName) {
@@ -66,7 +70,10 @@ const SkillsWindow: React.FC = () => {
   return (
     <div className="p-6 h-full overflow-auto bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center">{t('skills.title')}</h2>
+        <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-6 flex items-center justify-center space-x-2">
+          <Monitor className="text-blue-600" />
+          <span>{t('skills.title')}</span>
+        </h2>
         
         {categories.map((category) => (
           <div key={category.name} className="mb-6">
@@ -82,7 +89,16 @@ const SkillsWindow: React.FC = () => {
                   .map((skill) => (
                     <div key={skill.name} className="space-y-1">
                       <div className="flex justify-between items-center">
-                        <span className="text-sm font-medium text-gray-700 dark:text-gray-200">{skill.name}</span>
+                        <span className="text-sm font-medium text-gray-700 dark:text-gray-200 flex items-center gap-2">
+                          {(() => {
+                            const meta = getCategoryMeta(skill.category);
+                            const Icon = meta.icon;
+                            return (
+                              <Icon size={14} className={getCategoryIconColor(meta.color)} />
+                            );
+                          })()}
+                          {skill.name}
+                        </span>
                         <span className="text-xs text-gray-500 dark:text-gray-400">{skill.level}%</span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-3 border border-gray-300 shadow-inner dark:bg-gray-800 dark:border-gray-700">
@@ -106,15 +122,24 @@ const SkillsWindow: React.FC = () => {
           <div className="grid grid-cols-3 gap-4 text-center">
             <div>
               <div className="text-2xl font-bold text-blue-600">{skills.filter(s => s.category === 'Programming').length}</div>
-              <div className="text-sm text-gray-600">{t('skills.overview.programming')}</div>
+              <div className="text-sm text-gray-600 dark:text-gray-300 flex items-center justify-center gap-2">
+                <Code size={14} className="text-blue-600" />
+                {t('skills.overview.programming')}
+              </div>
             </div>
             <div>
               <div className="text-2xl font-bold text-purple-600">{skills.filter(s => s.category === 'Design').length}</div>
-              <div className="text-sm text-gray-600">{t('skills.overview.designTools')}</div>
+              <div className="text-sm text-gray-600 dark:text-gray-300 flex items-center justify-center gap-2">
+                <Palette size={14} className="text-purple-600" />
+                {t('skills.overview.designTools')}
+              </div>
             </div>
             <div>
               <div className="text-2xl font-bold text-red-600">{skills.filter(s => s.category === 'Editing').length}</div>
-              <div className="text-sm text-gray-600">{t('skills.overview.editingTools')}</div>
+              <div className="text-sm text-gray-600 dark:text-gray-300 flex items-center justify-center gap-2">
+                <Video size={14} className="text-red-600" />
+                {t('skills.overview.editingTools')}
+              </div>
             </div>
           </div>
         </div>
