@@ -364,10 +364,10 @@ const PortfolioWindow: React.FC = () => {
 },
 {
   id: "40",
-   title: "Thumbnail Football Rewind",
-  description: "A visually engaging thumbnail design for a football rewind video, capturing key moments and excitement of the matches.",
+   title: "Banner Event UEC",
+  description: "Banner design for the Unusida Esport Competition (UEC) 2023 & 2024 that captures the spirit of campus gaming competition with strong visual elements: featuring the UEC event logo.",
   technologies: ["Adobe Photoshop"],
-  image: "bola rewind.jpeg",
+  image: "Banner UEC.png",
   category: "Graphic Designer"
 },
 {
@@ -399,10 +399,10 @@ const PortfolioWindow: React.FC = () => {
 },
 {
   id: "44",
-   title: "Lewandowski Greatest Alive thumbnail",
-  description: "A visually engaging thumbnail design for a video celebrating Robert Lewandowski's career and achievements.",
+   title: "Aftermovie UEC 2024 thumbnail",
+  description: "A dynamic and visually striking thumbnail design for the UNUSIDA Esport Competition (UEC) 2024 aftermovie video, capturing the electrifying atmosphere of the tournament.",
   technologies: ["Adobe Photoshop"],
-  image: "Lewa goat.jpeg",
+  image: "UEC 2024.jpg",
   category: "Graphic Designer"
 },
 {
