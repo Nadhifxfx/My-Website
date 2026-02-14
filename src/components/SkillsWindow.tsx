@@ -1,5 +1,6 @@
 import React from 'react';
-import { Code, Palette, Video, Monitor } from 'lucide-react';
+import { Code, Palette, Video } from 'lucide-react';
+import { useI18n } from '../config/i18n';
 
 interface SkillItem {
   name: string;
@@ -8,6 +9,7 @@ interface SkillItem {
 }
 
 const SkillsWindow: React.FC = () => {
+  const { t } = useI18n();
   const skills: SkillItem[] = [
     { name: 'Html', level: 90, category: 'Programming' },
     { name: 'TypeScript', level: 85, category: 'Programming' },
@@ -30,6 +32,19 @@ const SkillsWindow: React.FC = () => {
     { name: 'Editing', icon: Video, color: 'red' }
   ];
 
+  const getCategoryLabel = (categoryName: string) => {
+    switch (categoryName) {
+      case 'Programming':
+        return t('skills.category.programming');
+      case 'Design':
+        return t('skills.category.design');
+      case 'Editing':
+        return t('skills.category.editing');
+      default:
+        return categoryName;
+    }
+  };
+
   const getColorClasses = (color: string) => {
     const colors = {
       blue: 'bg-blue-500 border-blue-600',
@@ -49,28 +64,28 @@ const SkillsWindow: React.FC = () => {
   };
 
   return (
-    <div className="p-6 h-full overflow-auto bg-gradient-to-b from-gray-50 to-white">
+    <div className="p-6 h-full overflow-auto bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-xl font-bold text-gray-800 mb-6 text-center">Skills</h2>
+        <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center">{t('skills.title')}</h2>
         
         {categories.map((category) => (
           <div key={category.name} className="mb-6">
             <div className="flex items-center space-x-2 mb-3">
               <category.icon size={20} className={getCategoryIconColor(category.color)} />
-              <h3 className="font-bold text-gray-700">{category.name}</h3>
+              <h3 className="font-bold text-gray-700 dark:text-gray-200">{getCategoryLabel(category.name)}</h3>
             </div>
             
-            <div className="bg-white p-4 rounded border-2 border-gray-300 shadow-inner">
+            <div className="bg-white p-4 rounded border-2 border-gray-300 shadow-inner dark:bg-gray-900 dark:border-gray-700">
               <div className="space-y-3">
                 {skills
                   .filter(skill => skill.category === category.name)
                   .map((skill) => (
                     <div key={skill.name} className="space-y-1">
                       <div className="flex justify-between items-center">
-                        <span className="text-sm font-medium text-gray-700">{skill.name}</span>
-                        <span className="text-xs text-gray-500">{skill.level}%</span>
+                        <span className="text-sm font-medium text-gray-700 dark:text-gray-200">{skill.name}</span>
+                        <span className="text-xs text-gray-500 dark:text-gray-400">{skill.level}%</span>
                       </div>
-                      <div className="w-full bg-gray-200 rounded-full h-3 border border-gray-300 shadow-inner">
+                      <div className="w-full bg-gray-200 rounded-full h-3 border border-gray-300 shadow-inner dark:bg-gray-800 dark:border-gray-700">
                         <div 
                           className={`h-full rounded-full ${getColorClasses(category.color)} shadow-sm transition-all duration-1000 ease-out`}
                           style={{ width: `${skill.level}%` }}
@@ -86,20 +101,20 @@ const SkillsWindow: React.FC = () => {
         ))}
 
         {/* Skills Summary */}
-        <div className="mt-8 bg-white p-6 rounded-lg border-2 border-gray-300 shadow-lg">
-          <h3 className="font-bold text-gray-800 mb-4 text-center">Skills Overview</h3>
+        <div className="mt-8 bg-white p-6 rounded-lg border-2 border-gray-300 shadow-lg dark:bg-gray-900 dark:border-gray-700">
+          <h3 className="font-bold text-gray-800 dark:text-gray-100 mb-4 text-center">{t('skills.overview')}</h3>
           <div className="grid grid-cols-3 gap-4 text-center">
             <div>
               <div className="text-2xl font-bold text-blue-600">{skills.filter(s => s.category === 'Programming').length}</div>
-              <div className="text-sm text-gray-600">Programming</div>
+              <div className="text-sm text-gray-600">{t('skills.overview.programming')}</div>
             </div>
             <div>
               <div className="text-2xl font-bold text-purple-600">{skills.filter(s => s.category === 'Design').length}</div>
-              <div className="text-sm text-gray-600">Design Tools</div>
+              <div className="text-sm text-gray-600">{t('skills.overview.designTools')}</div>
             </div>
             <div>
               <div className="text-2xl font-bold text-red-600">{skills.filter(s => s.category === 'Editing').length}</div>
-              <div className="text-sm text-gray-600">Editing Tools</div>
+              <div className="text-sm text-gray-600">{t('skills.overview.editingTools')}</div>
             </div>
           </div>
         </div>

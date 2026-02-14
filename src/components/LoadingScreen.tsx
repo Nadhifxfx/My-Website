@@ -1,22 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
+import { useI18n } from '../config/i18n';
 
 interface LoadingScreenProps {
   onLoadingComplete: () => void;
 }
 
 const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
+  const { t } = useI18n();
   const [progress, setProgress] = useState(0);
-  const [currentMessage, setCurrentMessage] = useState('Starting Windows...');
+  const [currentMessage, setCurrentMessage] = useState(() => t('loading.msg.starting'));
   const [showWelcome, setShowWelcome] = useState(false);
 
-  const loadingMessages = [
-    'Starting Windows...',
-    'Loading system files...',
-    'Initializing components...',
-    'Loading user profile...',
-    'Preparing desktop...',
-    'Almost ready...'
-  ];
+  const loadingMessages = useMemo(
+    () => [
+      t('loading.msg.starting'),
+      t('loading.msg.files'),
+      t('loading.msg.init'),
+      t('loading.msg.profile'),
+      t('loading.msg.desktop'),
+      t('loading.msg.ready')
+    ],
+    [t]
+  );
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -42,7 +47,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
     }, 200 + Math.random() * 300);
 
     return () => clearInterval(interval);
-  }, [onLoadingComplete]);
+  }, [onLoadingComplete, loadingMessages]);
 
   if (showWelcome) {
     return (
@@ -58,7 +63,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
         </div>
       </div>
       <h1 className="text-4xl font-bold text-white mb-2" style={{ fontFamily: 'Tahoma, Verdana, sans-serif' }}>
-        Welcome
+        {t('loading.welcome')}
       </h1>
       <p className="text-xl text-blue-100">Nadhif Fathur Rahman</p>
     </div>
@@ -79,7 +84,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
           className="w-32 h-32 mx-auto mb-6"
         />
         <h1 className="text-5xl font-bold text-white mb-2 drop-shadow-lg">
-          Loading
+          {t('loading.loading')}
         </h1>
       </div>
 
@@ -110,7 +115,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
 
             <div className="flex justify-between items-center mt-2">
               <span className="text-blue-100 text-xs">
-                {Math.round(progress)}% complete
+                {Math.round(progress)}{t('loading.complete')}
               </span>
               <div className="flex space-x-1">
                 <div

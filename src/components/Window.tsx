@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { X, Minus } from 'lucide-react';
+import { useI18n } from '../config/i18n';
 
 interface WindowProps {
   id: string;
@@ -25,6 +26,7 @@ const Window: React.FC<WindowProps> = ({
   onMinimize,
   onBringToFront,
 }) => {
+  const { t } = useI18n();
   const windowRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -51,8 +53,9 @@ const Window: React.FC<WindowProps> = ({
   return (
     <div
       ref={windowRef}
+      data-window-id={id}
       style={windowStyle}
-      className={`bg-gray-100 border-2 border-gray-400 shadow-lg overflow-hidden transition-all duration-300 ${
+      className={`bg-gray-100 border-2 border-gray-400 shadow-lg overflow-hidden transition-all duration-300 dark:bg-gray-900 dark:border-gray-700 ${
         isVisible && !isAnimating 
           ? 'opacity-100 scale-100' 
           : 'opacity-0 scale-95'
@@ -60,7 +63,7 @@ const Window: React.FC<WindowProps> = ({
       onClick={onBringToFront}
     >
       {/* Title Bar */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-3 py-2 flex items-center justify-between select-none border-b-2 border-blue-400">
+      <div className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-3 py-2 flex items-center justify-between select-none border-b-2 border-blue-400 dark:from-gray-800 dark:to-gray-700 dark:border-gray-600">
         <div className="flex items-center space-x-2">
           <div className="w-4 h-4 bg-white bg-opacity-20 rounded border border-white border-opacity-30"></div>
           <span className="font-bold text-sm">{title}</span>
@@ -72,7 +75,7 @@ const Window: React.FC<WindowProps> = ({
               e.stopPropagation();
               onMinimize();
             }}
-            title="Minimize"
+            title={t('window.controls.minimize')}
           >
             <Minus size={14} className="text-gray-700" />
           </button>
@@ -82,7 +85,7 @@ const Window: React.FC<WindowProps> = ({
               e.stopPropagation();
               onClose();
             }}
-            title="Close"
+            title={t('window.controls.close')}
           >
             <X size={14} className="text-white" />
           </button>
@@ -90,7 +93,7 @@ const Window: React.FC<WindowProps> = ({
       </div>
 
       {/* Content */}
-      <div className="h-full overflow-auto bg-white transition-all duration-300" style={{ height: 'calc(100% - 36px)' }}>
+      <div className="h-full overflow-auto bg-white transition-all duration-300 dark:bg-gray-900" style={{ height: 'calc(100% - 36px)' }}>
         {children}
       </div>
     </div>

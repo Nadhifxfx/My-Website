@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { User, X } from 'lucide-react';
+import { useI18n } from '../config/i18n';
 
 interface WelcomeDialogProps {
   onClose: () => void;
 }
 
 const WelcomeDialog: React.FC<WelcomeDialogProps> = ({ onClose }) => {
+  const { t } = useI18n();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -24,7 +26,7 @@ const WelcomeDialog: React.FC<WelcomeDialogProps> = ({ onClose }) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
       <div 
-        className={`bg-white border-2 border-gray-400 rounded shadow-2xl max-w-md w-full transform transition-all duration-300 ${
+        className={`bg-white border-2 border-gray-400 rounded shadow-2xl max-w-md w-full transform transition-all duration-300 dark:bg-gray-900 dark:border-gray-700 ${
           isVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
         }`}
         style={{ fontFamily: 'Tahoma, Verdana, sans-serif' }}
@@ -37,12 +39,12 @@ const WelcomeDialog: React.FC<WelcomeDialogProps> = ({ onClose }) => {
               <User size={10} className="text-white" />
               
             </div>
-            <span className="font-bold text-sm">Welcome</span>
+            <span className="font-bold text-sm">{t('welcome.title')}</span>
           </div>
           <button
             className="w-6 h-6 bg-red-500 hover:bg-red-400 border border-red-600 rounded-sm flex items-center justify-center shadow-sm active:shadow-inner transition-colors"
             onClick={handleClose}
-            title="Close"
+            title={t('common.close')}
           >
             <X size={12} className="text-white" />
           </button>
@@ -67,39 +69,36 @@ const WelcomeDialog: React.FC<WelcomeDialogProps> = ({ onClose }) => {
 
           {/* Welcome Message */}
           <div className="text-center mb-6">
-            <h2 className="text-xl font-bold text-gray-800 mb-2">
-              Welcome to my Website!
+            <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2">
+              {t('welcome.heading')}
             </h2>
-            <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              Hello! Thank you for visiting my personal website. 
-              I am Nadhif Fathur Rahman, an unemployed person with over 5 years of experience 
-              in accepting freelance jobs.
+            <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
+              {t('welcome.p1')}
             </p>
-            <p className="text-gray-600 text-sm leading-relaxed">
-             Please feel free to explore the various features on the desktop to view my profile, skills, 
-             education, portfolio, certificates, and how to contact me.
+            <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+              {t('welcome.p2')}
             </p>
           </div>
 
           {/* Quick Navigation */}
-          <div className="bg-gray-50 p-4 rounded border border-gray-300 mb-4">
-            <h3 className="font-bold text-gray-700 text-sm mb-2">Quick Navigation:</h3>
+          <div className="bg-gray-50 p-4 rounded border border-gray-300 mb-4 dark:bg-gray-800 dark:border-gray-700">
+            <h3 className="font-bold text-gray-700 text-sm mb-2">{t('welcome.quickNav')}</h3>
             <div className="grid grid-cols-2 gap-2 text-xs">
               <div className="flex items-center space-x-1">
                 <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <span>Click “Start” for the menu</span>
+                <span>{t('welcome.nav.startMenu')}</span>
               </div>
               <div className="flex items-center space-x-1">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span>Double-click icon desktop</span>
+                <span>{t('welcome.nav.desktopIcon')}</span>
               </div>
               <div className="flex items-center space-x-1">
                 <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                <span>Use the bottom taskbar</span>
+                <span>{t('welcome.nav.taskbar')}</span>
               </div>
               <div className="flex items-center space-x-1">
                 <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                <span>Minimize/Close window</span>
+                <span>{t('welcome.nav.windowControls')}</span>
               </div>
             </div>
           </div>
@@ -110,13 +109,13 @@ const WelcomeDialog: React.FC<WelcomeDialogProps> = ({ onClose }) => {
               className="flex-1 bg-gradient-to-b from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500 text-white font-bold py-2 px-4 rounded border-2 border-blue-600 shadow-lg transition-all active:from-blue-600 active:to-blue-700 text-sm"
               onClick={handleClose}
             >
-              Explore Now
+              {t('welcome.exploreNow')}
             </button>
             <button
-              className="bg-gradient-to-b from-gray-300 to-gray-400 hover:from-gray-200 hover:to-gray-300 text-gray-800 font-bold py-2 px-4 rounded border-2 border-gray-400 shadow-lg transition-all active:from-gray-400 active:to-gray-500 text-sm"
+              className="bg-gradient-to-b from-gray-300 to-gray-400 hover:from-gray-200 hover:to-gray-300 text-gray-800 font-bold py-2 px-4 rounded border-2 border-gray-400 shadow-lg transition-all active:from-gray-400 active:to-gray-500 text-sm dark:from-gray-800 dark:to-gray-700 dark:hover:from-gray-700 dark:hover:to-gray-600 dark:text-gray-100 dark:border-gray-600"
               onClick={handleClose}
             >
-              Close
+              {t('welcome.close')}
             </button>
           </div>
         </div>

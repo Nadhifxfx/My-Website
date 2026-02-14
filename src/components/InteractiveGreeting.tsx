@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import { Code, Zap, Star, Heart, Sparkles, Rocket, Trophy, Target } from 'lucide-react';
+import { useI18n } from '../config/i18n';
 
 const InteractiveGreeting: React.FC = () => {
+  const { t } = useI18n();
   const [currentPhase, setCurrentPhase] = useState(0);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isHovered, setIsHovered] = useState(false);
-  const [clickCount, setClickCount] = useState(0);
 
-  const greetingPhrases = [
-    "Not just visuals but a way of thinking",
-  ];
+  const greetingPhrases = useMemo(() => [t('desktop.tagline')], [t]);
+  const titleText = t('desktop.hello');
 
   const floatingIcons = [
     { Icon: Code, color: 'text-blue-400', delay: 0 },
@@ -27,7 +26,7 @@ const InteractiveGreeting: React.FC = () => {
       setCurrentPhase(prev => (prev + 1) % greetingPhrases.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [greetingPhrases.length]);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -38,7 +37,6 @@ const InteractiveGreeting: React.FC = () => {
   }, []);
 
   const handleGreetingClick = () => {
-    setClickCount(prev => prev + 1);
     const ripple = document.createElement('div');
     ripple.className = 'absolute rounded-full bg-white bg-opacity-30 animate-ping pointer-events-none';
     ripple.style.width = '100px';
@@ -53,8 +51,6 @@ const InteractiveGreeting: React.FC = () => {
     <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
       <div 
         className="relative text-center pointer-events-auto"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
         onClick={handleGreetingClick}
       >
         {/* Teks utama */}
@@ -64,19 +60,18 @@ const InteractiveGreeting: React.FC = () => {
             textShadow: '0 0 20px rgba(255,255,255,0.5), 0 0 40px rgba(255,255,255,0.8)'
           }}
         >
-          <span className="inline-block animate-bounce" style={{ animationDelay: '0s' }}>H</span>
-          <span className="inline-block animate-bounce" style={{ animationDelay: '0.1s' }}>e</span>
-          <span className="inline-block animate-bounce" style={{ animationDelay: '0.2s' }}>l</span>
-          <span className="inline-block animate-bounce" style={{ animationDelay: '0.3s' }}>l</span>
-          <span className="inline-block animate-bounce" style={{ animationDelay: '0.4s' }}>o</span>
-          <span className="inline-block animate-bounce mx-2" style={{ animationDelay: '0.0s' }}></span>
-          <span className="inline-block animate-bounce" style={{ animationDelay: '0.5s' }}>W</span>
-          <span className="inline-block animate-bounce" style={{ animationDelay: '0.6s' }}>o</span>
-          <span className="inline-block animate-bounce" style={{ animationDelay: '0.7s' }}>r</span>
-          <span className="inline-block animate-bounce" style={{ animationDelay: '0.8s' }}>l</span>
-          <span className="inline-block animate-bounce" style={{ animationDelay: '0.9s' }}>d</span>
-          <span className="inline-block animate-bounce mx-2" style={{ animationDelay: '0.0s' }}></span>
-          <span className="inline-block animate-bounce" style={{ animationDelay: '1.0s' }}>👋</span>
+          {Array.from(titleText).map((char, index) => (
+            <span
+              key={`${char}-${index}`}
+              className={`inline-block animate-bounce${char === ' ' ? ' mx-2' : ''}`}
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              {char === ' ' ? '' : char}
+            </span>
+          ))}
+          <span className="inline-block animate-bounce ml-2" style={{ animationDelay: `${Math.max(10, titleText.length) * 0.1}s` }}>
+            👋
+          </span>
        
         </h1>
 
@@ -92,7 +87,7 @@ const InteractiveGreeting: React.FC = () => {
 
         {/* Tombol interaktif */}
         <div className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-white font-bold text-sm shadow-lg select-none">
-          ✨ Double-click the icon or press the Start menu located at the bottom ✨
+          ✨ {t('desktop.hint')} ✨
         </div>
 
         {/* Floating Icons */}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Award, Calendar, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useI18n } from '../config/i18n';
 
 interface Certificate {
   id: string;
@@ -67,6 +68,7 @@ const parseCertificateDate = (dateText: string): number => {
 };
 
 const CertificatesWindow: React.FC = () => {
+  const { t } = useI18n();
   const rawCertificates: CertificateInput[] = [
     {
       title: 'Belajar Dasar Pemrograman Web',
@@ -252,10 +254,24 @@ const CertificatesWindow: React.FC = () => {
   );
 
   const categories = [...new Set(certificates.map((cert) => cert.category))];
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const allCategory = 'All';
+  const [selectedCategory, setSelectedCategory] = useState<string>(allCategory);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [imageError, setImageError] = useState<Record<string, boolean>>({});
   const certificatesPerPage = 6;
+
+  const getCategoryLabel = (category: string) => {
+    switch (category) {
+      case 'Course':
+        return t('certificates.category.course');
+      case 'Class':
+        return t('certificates.category.class');
+      case 'Competition':
+        return t('certificates.category.competition');
+      default:
+        return category;
+    }
+  };
 
   const handleImageError = (id: string) => {
     setImageError((prev) => ({
@@ -265,7 +281,7 @@ const CertificatesWindow: React.FC = () => {
   };
 
   const filteredCertificates =
-    selectedCategory === 'All'
+    selectedCategory === allCategory
       ? certificates
       : certificates.filter((cert) => cert.category === selectedCategory);
 
@@ -312,27 +328,27 @@ const CertificatesWindow: React.FC = () => {
   };
 
   return (
-    <div className="p-6 h-full overflow-auto bg-gradient-to-b from-yellow-50 to-white">
+    <div className="p-6 h-full overflow-auto bg-gradient-to-b from-yellow-50 to-white dark:from-gray-900 dark:to-gray-950">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-6">
-          <h2 className="text-xl font-bold text-gray-800 flex items-center justify-center space-x-2">
+          <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100 flex items-center justify-center space-x-2">
             <Award className="text-yellow-600" />
-            <span>Professional Certificates</span>
+            <span>{t('certificates.title')}</span>
           </h2>
-          <p className="text-gray-600 text-sm mt-2">My professional certifications and achievements</p>
+          <p className="text-gray-600 dark:text-gray-300 text-sm mt-2">{t('certificates.subtitle')}</p>
         </div>
 
         {/* Category Filter */}
         <div className="mb-6 flex flex-wrap gap-2 justify-center">
           <button
-            onClick={() => handleCategoryChange('All')}
+            onClick={() => handleCategoryChange(allCategory)}
             className={`px-4 py-2 rounded-full text-sm font-medium border-2 shadow-sm ${
-              selectedCategory === 'All'
+              selectedCategory === allCategory
                 ? 'bg-blue-500 text-white border-blue-600'
-                : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
+                : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50 dark:bg-gray-900 dark:text-gray-100 dark:border-gray-700 dark:hover:bg-gray-800'
             }`}
           >
-            All
+            {t('certificates.filter.all')}
           </button>
           {categories.map((category) => (
             <button
@@ -341,10 +357,10 @@ const CertificatesWindow: React.FC = () => {
               className={`px-4 py-2 rounded-full text-sm font-medium border-2 shadow-sm ${
                 selectedCategory === category
                   ? 'bg-blue-500 text-white border-blue-600'
-                  : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
+                  : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50 dark:bg-gray-900 dark:text-gray-100 dark:border-gray-700 dark:hover:bg-gray-800'
               }`}
             >
-              {category}
+              {getCategoryLabel(category)}
             </button>
           ))}
         </div>
@@ -352,7 +368,7 @@ const CertificatesWindow: React.FC = () => {
         {/* Certificates Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {currentCertificates.map((cert) => (
-            <div key={cert.id} className="bg-white rounded-lg border-2 border-gray-300 shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+            <div key={cert.id} className="bg-white rounded-lg border-2 border-gray-300 shadow-lg overflow-hidden hover:shadow-xl transition-shadow group dark:bg-gray-900 dark:border-gray-700">
               <div className="h-48 overflow-hidden border-b-2 border-gray-200 bg-gray-100 relative">
                 {!imageError[cert.id] ? (
                   <img 
@@ -373,12 +389,12 @@ const CertificatesWindow: React.FC = () => {
               <div className="p-4">
                 <div className="mb-2">
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium border border-blue-200">
-                    {cert.category}
+                    {getCategoryLabel(cert.category)}
                   </span>
                 </div>
                 <h3 className="font-bold text-gray-800 text-sm mb-1">{cert.title}</h3>
-                <p className="text-gray-600 text-xs mb-2">{cert.issuer}</p>
-                <div className="flex items-center space-x-1 text-xs text-gray-500 mb-3">
+                <p className="text-gray-600 dark:text-gray-300 text-xs mb-2">{cert.issuer}</p>
+                <div className="flex items-center space-x-1 text-xs text-gray-500 dark:text-gray-400 mb-3">
                   <Calendar size={12} />
                   <span>{cert.date}</span>
                 </div>
@@ -390,7 +406,7 @@ const CertificatesWindow: React.FC = () => {
                     className="inline-flex items-center text-blue-600 text-xs hover:underline"
                   >
                     <ExternalLink size={14} className="mr-1" />
-                    Verify Credential
+                    {t('certificates.verify')}
                   </a>
                 )}
               </div>
@@ -411,7 +427,7 @@ const CertificatesWindow: React.FC = () => {
               }`}
             >
               <ChevronLeft size={16} />
-              <span>Prev</span>
+              <span>{t('certificates.prev')}</span>
             </button>
 
             <div className="flex gap-1 flex-wrap justify-center">
@@ -439,31 +455,31 @@ const CertificatesWindow: React.FC = () => {
                   : 'bg-white text-gray-700 border-gray-300 hover:bg-yellow-50'
               }`}
             >
-              <span>Next</span>
+              <span>{t('certificates.next')}</span>
               <ChevronRight size={16} />
             </button>
           </div>
         )}
 
         {/* Summary Stats */}
-        <div className="mt-8 bg-white p-6 rounded-lg border-2 border-gray-300 shadow-lg">
-          <h3 className="font-bold text-gray-800 mb-4 text-center">Certification Summary</h3>
+        <div className="mt-8 bg-white p-6 rounded-lg border-2 border-gray-300 shadow-lg dark:bg-gray-900 dark:border-gray-700">
+          <h3 className="font-bold text-gray-800 dark:text-gray-100 mb-4 text-center">{t('certificates.summary')}</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             <div>
               <div className="text-2xl font-bold text-yellow-600">{certificates.length}</div>
-              <div className="text-xs text-gray-600">Total Certificates</div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">{t('certificates.stats.total')}</div>
             </div>
             <div>
               <div className="text-2xl font-bold text-blue-600">{categories.length}</div>
-              <div className="text-xs text-gray-600">Categories</div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">{t('certificates.stats.categories')}</div>
             </div>
             <div>
               <div className="text-2xl font-bold text-green-600">{latestYear || '-'}</div>
-              <div className="text-xs text-gray-600">Latest Year</div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">{t('certificates.stats.latestYear')}</div>
             </div>
             <div>
               <div className="text-2xl font-bold text-purple-600">100%</div>
-              <div className="text-xs text-gray-600">Verified</div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">{t('certificates.stats.verified')}</div>
             </div>
           </div>
         </div>

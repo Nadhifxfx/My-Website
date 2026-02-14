@@ -1,10 +1,11 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { DivideIcon as LucideIcon, Power, Settings } from 'lucide-react';
+import { Power } from 'lucide-react';
+import { useI18n } from '../config/i18n';
 
 interface MenuItem {
   id: string;
   label: string;
-  icon: typeof LucideIcon;
+  icon: React.ComponentType<{ size?: number; className?: string }>;
 }
 
 interface StartMenuProps {
@@ -16,6 +17,7 @@ interface StartMenuProps {
 const StartMenu: React.FC<StartMenuProps> = ({ items, onItemClick, onClose }) => {
   const menuRef = useRef<HTMLDivElement>(null);
   const [showConfirm, setShowConfirm] = useState(false);
+  const { lang, t } = useI18n();
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -64,11 +66,19 @@ const StartMenu: React.FC<StartMenuProps> = ({ items, onItemClick, onClose }) =>
         
         // Method 3: As a fallback, show a message
         setTimeout(() => {
-          alert('Silakan tutup tab ini secara manual dengan menekan Ctrl+W atau mengklik tombol X pada tab.');
+          alert(
+            lang === 'id'
+              ? 'Silakan tutup tab ini secara manual dengan menekan Ctrl+W atau mengklik tombol X pada tab.'
+              : 'Please close this tab manually by pressing Ctrl+W or clicking the X button on the tab.'
+          );
         }, 500);
-      } catch (error) {
+      } catch {
         // If all methods fail, show instruction
-        alert('Silakan tutup tab ini secara manual dengan menekan Ctrl+W atau mengklik tombol X pada tab.');
+        alert(
+          lang === 'id'
+            ? 'Silakan tutup tab ini secara manual dengan menekan Ctrl+W atau mengklik tombol X pada tab.'
+            : 'Please close this tab manually by pressing Ctrl+W or clicking the X button on the tab.'
+        );
       }
     }, 500);
   };
@@ -81,7 +91,7 @@ const StartMenu: React.FC<StartMenuProps> = ({ items, onItemClick, onClose }) =>
     <>
       <div
         ref={menuRef}
-        className="absolute bottom-10 left-0 w-80 bg-white border-2 border-gray-400 rounded-tr-lg shadow-xl z-50 animate-slide-up"
+        className="absolute bottom-10 left-0 w-80 bg-white border-2 border-gray-400 rounded-tr-lg shadow-xl z-50 animate-slide-up dark:bg-gray-900 dark:border-gray-700"
         style={{ fontFamily: 'Tahoma, Verdana, sans-serif' }}
       >
         {/* Start Menu Header */}
@@ -97,7 +107,7 @@ const StartMenu: React.FC<StartMenuProps> = ({ items, onItemClick, onClose }) =>
             </div>
           </div>
           <div>
-            <div className="font-bold text-lg">Welcome</div>
+            <div className="font-bold text-lg">{t('menu.welcome')}</div>
             <div className="text-sm opacity-90">Nadhif</div>
           </div>
         </div>
@@ -108,26 +118,26 @@ const StartMenu: React.FC<StartMenuProps> = ({ items, onItemClick, onClose }) =>
             <button
               key={item.id}
               data-menu-item={item.id}
-              className="w-full flex items-center space-x-3 px-4 py-3 hover:bg-blue-100 text-left transition-all transform hover:scale-105 active:scale-95 hover:shadow-sm"
+              className="w-full flex items-center space-x-3 px-4 py-3 hover:bg-blue-100 text-left transition-all transform hover:scale-105 active:scale-95 hover:shadow-sm dark:hover:bg-gray-800"
               onClick={() => handleItemClick(item.id)}
               style={{ animationDelay: `${index * 50}ms` }}
             >
-              <div className="w-8 h-8 bg-blue-50 rounded border border-blue-200 flex items-center justify-center transition-all hover:bg-blue-100 hover:border-blue-300">
+              <div className="w-8 h-8 bg-blue-50 rounded border border-blue-200 flex items-center justify-center transition-all hover:bg-blue-100 hover:border-blue-300 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                 <item.icon size={16} className="text-blue-600" />
               </div>
-              <span className="font-medium text-gray-800">{item.label}</span>
+              <span className="font-medium text-gray-800 dark:text-gray-100">{item.label}</span>
             </button>
           ))}
 
-          <hr className="my-2 border-gray-300" />
+          <hr className="my-2 border-gray-300 dark:border-gray-700" />
           <button 
-            className="w-full flex items-center space-x-3 px-4 py-3 hover:bg-red-100 text-left transition-all transform hover:scale-105 active:scale-95"
+            className="w-full flex items-center space-x-3 px-4 py-3 hover:bg-red-100 text-left transition-all transform hover:scale-105 active:scale-95 dark:hover:bg-gray-800"
             onClick={handleShutdownClick}
           >
-            <div className="w-8 h-8 bg-red-50 rounded border border-red-200 flex items-center justify-center hover:bg-red-100">
+            <div className="w-8 h-8 bg-red-50 rounded border border-red-200 flex items-center justify-center hover:bg-red-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
               <Power size={16} className="text-red-600" />
             </div>
-            <span className="font-medium text-gray-800">Shut Down</span>
+            <span className="font-medium text-gray-800 dark:text-gray-100">{t('menu.shutdown')}</span>
           </button>
         </div>
 
@@ -152,29 +162,29 @@ const StartMenu: React.FC<StartMenuProps> = ({ items, onItemClick, onClose }) =>
       {/* Modal Confirm */}
       {showConfirm && (
         <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center backdrop-blur-sm">
-          <div className="bg-white rounded-lg shadow-2xl p-6 w-96 border-2 border-gray-300 animate-bounce-in">
+          <div className="bg-white rounded-lg shadow-2xl p-6 w-96 border-2 border-gray-300 animate-bounce-in dark:bg-gray-900 dark:border-gray-700">
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
                 <Power size={24} className="text-red-600" />
               </div>
               <div>
-                <h2 className="text-lg font-bold text-gray-800">Shutdown Confirmation</h2>
-                <p className="text-sm text-gray-600">The website will be closed</p>
+                <h2 className="text-lg font-bold text-gray-800 dark:text-gray-100">{t('menu.shutdownTitle')}</h2>
+                <p className="text-sm text-gray-600 dark:text-gray-300">{t('menu.shutdownSubtitle')}</p>
               </div>
             </div>
-            <p className="mb-6 text-gray-700">Are you sure you want to close this tab?</p>
+            <p className="mb-6 text-gray-700 dark:text-gray-200">{t('menu.shutdownQuestion')}</p>
             <div className="flex justify-end space-x-3">
               <button
                 onClick={handleCancelShutdown}
-                className="px-6 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium transition-all transform hover:scale-105 active:scale-95"
+                className="px-6 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium transition-all transform hover:scale-105 active:scale-95 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100"
               >
-                Cancel
+                {t('menu.cancel')}
               </button>
               <button
                 onClick={handleConfirmShutdown}
                 className="px-6 py-2 rounded-lg bg-red-500 hover:bg-red-600 text-white font-medium transition-all transform hover:scale-105 active:scale-95 shadow-lg"
               >
-                Same
+                {t('menu.yes')}
               </button>
             </div>
           </div>

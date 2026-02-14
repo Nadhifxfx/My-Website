@@ -1,10 +1,13 @@
 import React from 'react';
 import { ExternalLink, Github, Folder, Youtube, Tag, Instagram, Dribbble, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useI18n } from '../config/i18n';
 
 interface Project {
   id: string;
   title: string;
+  titleId?: string;
   description: string;
+  descriptionId?: string;
   technologies: string[];
   image: string;
   liveUrl?: string;
@@ -17,11 +20,20 @@ interface Project {
 }
 
 const PortfolioWindow: React.FC = () => {
+  const { t, lang } = useI18n();
+
+  const getProjectTitle = (project: Project) => (lang === 'id' ? project.titleId ?? project.title : project.title);
+  const getProjectDescription = (project: Project) =>
+    lang === 'id' ? project.descriptionId ?? project.description : project.description;
+
   const projects: Project[] = [
   {
     id: '1',
     title: 'Graduation Film Class XVII 2021',
+    titleId: 'Film Kelulusan Kelas XVII 2021',
     description: 'Graduation film capturing the moments and memories of the 2021 graduating class of Antartika 2 Vocational High School.',
+    descriptionId:
+      'Film kelulusan yang mengabadikan momen dan kenangan angkatan kelulusan tahun 2021 dari SMK Antartika 2.',
     technologies: ['Adobe Premiere Pro', 'Adobe After Effects'],
     image: 'smartsda.png',
     category: 'Video Editor'
@@ -29,7 +41,9 @@ const PortfolioWindow: React.FC = () => {
   {
     id: '2',
     title: 'INACOM Modern Logo Concept',
+    titleId: 'Konsep Logo Modern INACOM',
     description: 'Conceptual modern and minimalistic logo design for INACOM.',
+    descriptionId: 'Desain konsep logo INACOM yang modern dan minimalis.',
     technologies: ['Adobe Photoshop', 'Adobe Illustrator'],
     image: 'Inacom.jpg',
     behanceUrl: 'https://www.behance.net/gallery/180597019/INACOM-Logo-Concept',
@@ -38,16 +52,21 @@ const PortfolioWindow: React.FC = () => {
   {
     id: '3',
     title: 'MandyCJ Daily Contents',
+    titleId: 'Konten Harian MandyCJ',
     description: 'Serving as editor for all MandyCJ content. Responsible for ensuring that each video has strong storytelling, visuals consistent with personal branding, and is able to increase audience appeal and engagement across various social media platforms.',
+    descriptionId:
+      'Berperan sebagai editor untuk seluruh konten MandyCJ. Bertanggung jawab memastikan setiap video memiliki storytelling yang kuat, visual yang konsisten dengan personal branding, serta mampu meningkatkan daya tarik dan engagement audiens di berbagai platform media sosial.',
     technologies: ['Adobe Premiere Pro', 'Capcut'],
     image: 'mandycj.png',
-    instagramUrl: 'https://www.instagram.com/mandycj_/',
+    instagramUrl: 'https://www.instagram.com/mandycj_/reels/',
     category: 'Video Editor'
   },
    {
     id: '4',
     title: 'Bank Indonesia Investment Program',
+    titleId: 'Program Investasi Bank Indonesia',
     description: 'One-minute competition video educating viewers on the Rupiah’s role as a store of value and investment.',
+    descriptionId: 'Video kompetisi berdurasi satu menit yang mengedukasi tentang peran Rupiah sebagai penyimpan nilai dan instrumen investasi.',
     technologies: ['Adobe Premiere Pro'],
     image: 'Bank Indonesia.png',
     instagramUrl: 'https://www.instagram.com/p/CW5lSYkrABF/?utm_source=ig_web_copy_link&igsh=MXFkaXZxcnJ6c2J5Ng==',
@@ -56,15 +75,21 @@ const PortfolioWindow: React.FC = () => {
   {
   id: "5",
   title: "AFCON 2025 Recap",
+  titleId: 'Rekap AFCON 2025',
   description: "An emotional farewell tribute video celebrating the journey of the AFCON 2025 stars  features the most iconic moments, determined struggles, crucial goals, incredible saves, and the spirit of unity that brought a continent together.",
+  descriptionId:
+    'Video tribute yang emosional merayakan perjalanan bintang-bintang AFCON 2025, menampilkan momen paling ikonik, perjuangan penuh tekad, gol krusial, penyelamatan luar biasa, dan semangat persatuan yang menyatukan satu benua.',
   technologies: ["Adobe Premiere Pro"],
   image: "afcon 2025.png",
+  instagramUrl: 'https://youtube.com/shorts/1FKvUiazGUg',
   category: "Video Editor"
   },
   {
     id: '6',
     title: 'Byon Combat Unofficial Website',
+    titleId: 'Website Tidak Resmi Byon Combat',
     description: 'Unofficial website for Byon Combat showcasing its products and brand visuals.',
+    descriptionId: 'Website tidak resmi Byon Combat untuk menampilkan produk serta visual brand.',
     technologies: ['Visual Studio Code'],
     image: 'Byon.png',
     githubUrl: 'https://byon-combat.vercel.app/',
@@ -73,7 +98,10 @@ const PortfolioWindow: React.FC = () => {
   {
     id: '7',
     title: 'Gamified Quran Learning App UI/UX',
+    titleId: 'UI/UX Aplikasi Belajar Al-Qur’an Gamifikasi',
     description: 'Modern and intuitive UI/UX design concept for a Qur\'an learning application that integrates gamification elements to make learning more engaging and interactive.',
+    descriptionId:
+      'Konsep desain UI/UX yang modern dan intuitif untuk aplikasi belajar Al-Qur’an, menggabungkan elemen gamifikasi agar proses belajar lebih menarik dan interaktif.',
     technologies: ['Figma', 'Canva'],
     image: 'TEXT GEN.png',
     dribbbleUrl: 'https://dribbble.com/shots/25921769-Coffee-Shop-Modern-Login-Menu-Design',
@@ -82,7 +110,10 @@ const PortfolioWindow: React.FC = () => {
   {
   id: "8",
   title: "Marco van Ginkel Farewell Video ",
+  titleId: 'Video Perpisahan Marco van Ginkel',
   description: "An emotional farewell tribute video honoring Marco van Ginkel following his retirement announcement, celebrating his resilience, leadership, and unforgettable journey through football.",
+  descriptionId:
+    'Video tribute perpisahan yang emosional untuk Marco van Ginkel setelah pengumuman pensiun, merayakan ketangguhan, kepemimpinan, dan perjalanan sepak bolanya yang tak terlupakan.',
   technologies: ["Adobe Premiere Pro"],
   image: "farewell video.png",
   instagramUrl: "https://www.instagram.com/p/DUX697pjHOt/",
@@ -91,7 +122,9 @@ const PortfolioWindow: React.FC = () => {
   {
     id: '9',
     title: 'UEC 2024 Aftermovie',
+    titleId: 'Aftermovie UEC 2024',
     description: 'Aftermovie highlighting the activities and excitement of the UEC 2024 event.',
+    descriptionId: 'Aftermovie yang menampilkan aktivitas dan keseruan acara UEC 2024.',
     technologies: ['Capcut'],
     image: 'UEC.jpg',
     youtubeUrl: 'https://youtu.be/X8Gwa-Pyqmc?feature=shared',
@@ -222,7 +255,7 @@ const PortfolioWindow: React.FC = () => {
 {
   id: "24",
   title: "KRITIK TIF Poster",
-  description: "A visually striking poster created for a university event, featuring retro computer aesthetics and bold typography to highlight the theme 'Students\' Voices Weaving a Better University.'",
+  description: "A visually striking poster created for a university event, featuring retro computer aesthetics and bold typography to highlight the theme 'Students' Voices Weaving a Better University.'",
   technologies: ["Adobe Photoshop"],
   image: "Poster kritik.jpg",
   category: "Graphic Designer"
@@ -337,8 +370,8 @@ const PortfolioWindow: React.FC = () => {
 },
 {
   id: "37",
-  title: "IEC Instagram Feed Design",
-  description: "A cohesive Instagram feed design for IEC, created to reflect the organization’s identity and connect with its audience effectively.",
+  title: "IEC Social Media Design",
+  description: "A cohesive social media design for IEC, created to reflect the organization’s identity and connect with its audience effectively.",
   technologies: ["Adobe Photoshop"],
   image: "IEC.png",
   dribbbleUrl: "https://dribbble.com/shots/180597019/INACOM-Logo-Concept",
@@ -346,8 +379,8 @@ const PortfolioWindow: React.FC = () => {
 },
 {
   id: "38",
-  title: "HIMATIF Instagram Feed Design",
-  description: "A visually cohesive Instagram feed design for HIMATIF, highlighting events and activities with engaging visual storytelling.",
+  title: "HIMATIF Social Media Design",
+  description: "A visually cohesive social media design for HIMATIF, highlighting events and activities with engaging visual storytelling.",
   technologies: ["Adobe Photoshop", "Canva"],
   image: "HIMATIF.png",
   dribbbleUrl: "https://dribbble.com/shots/180597019/INACOM-Logo-Concept",
@@ -373,7 +406,7 @@ const PortfolioWindow: React.FC = () => {
 {
   id: "41",
    title: "Lionel Messi ● The Greatest | Ballon D'or Winner 2021",
-  description: "A tribute video collaboratfion ndcomps10 with rdprods celebrating Lionel Messi\'s illustrious career and his achievement of winning the 2021 Ballon d\'Or.",
+  description: "A tribute video collaboratfion ndcomps10 with rdprods celebrating Lionel Messi's illustrious career and his achievement of winning the 2021 Ballon d'Or.",
   technologies: ["Adobe Premiere Pro"],
   image: "The Greatest.jpg",
   youtubeUrl: "https://youtu.be/S26N6CZ7CQw?si=z0pvScf45mTsvopf",
@@ -416,7 +449,7 @@ const PortfolioWindow: React.FC = () => {
 {
   id: "46",
    title: "Cristiano Ronaldo ● This One's For You | UEFA EURO 2016",
-  description: "Emotional tribute video celebrating Cristiano Ronaldo\'s journey and leadership in winning Portugal\'s first major international trophy at UEFA EURO 2016, featuring his best moments and the historic victory.",
+  description: "Emotional tribute video celebrating Cristiano Ronaldo's journey and leadership in winning Portugal's first major international trophy at UEFA EURO 2016, featuring his best moments and the historic victory.",
   technologies: ["Adobe Premiere Pro"],
   image: "Ronaldo 2016.jpg",
   youtubeUrl: "https://youtu.be/N52m1t4ApRo?si=MKMzdH2HpaJp3H7i",
@@ -434,7 +467,7 @@ const PortfolioWindow: React.FC = () => {
 {
   id: "48",
    title: "Aksara Harapan Website",
-  description: "Modern and responsive website for Aksara Harapan, featuring clean design, intuitive navigation, and optimized user experience to effectively communicate the organization\'s mission and activities.",
+  description: "Modern and responsive website for Aksara Harapan, featuring clean design, intuitive navigation, and optimized user experience to effectively communicate the organization's mission and activities.",
   technologies: ["Visual Studio Code"],
   image: "AksaraHarapan.png",
   githubUrl: "https://aksara-harapan.vercel.app/",
@@ -442,7 +475,7 @@ const PortfolioWindow: React.FC = () => {
 },
 {
   id: "49",
-   title: "BANNER SSC 2025",
+   title: "Banner Event SSC 2025",
   description: "Eye-catching promotional banner design for SSC 2025 event, combining bold typography, vibrant colors, and strategic layout to maximize visibility and attract participants.",
   technologies: ["Adobe Photoshop"],
   image: "BANNER SSC.png",
@@ -451,7 +484,7 @@ const PortfolioWindow: React.FC = () => {
 {
   id: "50",
    title: "Lionel Messi winning the Copa America 2021",
-  description: "An emotional video edit celebrating Lionel Messi\'s historic Copa America 2021 victory with Argentina, capturing his journey and triumph in winning his first major international trophy.",
+  description: "An emotional video edit celebrating Lionel Messi's historic Copa America 2021 victory with Argentina, capturing his journey and triumph in winning his first major international trophy.",
   technologies: ["Adobe Photoshop"],
   image: "messi copa america 2021.jpg",
   instagramUrl: "https://www.instagram.com/p/CTsGmpHvbDj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
@@ -460,7 +493,7 @@ const PortfolioWindow: React.FC = () => {
 {
   id: "51",
    title: "Neymar winning Gold at the 2016 Olympics",
-  description: "A tribute video highlighting Neymar\'s incredible performance and leadership in leading Brazil to their first-ever Olympic gold medal in football at the 2016 Rio Olympics.",
+  description: "A tribute video highlighting Neymar's incredible performance and leadership in leading Brazil to their first-ever Olympic gold medal in football at the 2016 Rio Olympics.",
   technologies: ["Adobe Premiere Pro"],
   image: "neymar olimpiade 2016.jpg",
   instagramUrl: "https://www.instagram.com/p/CTr7k2Vv4IN/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
@@ -469,7 +502,7 @@ const PortfolioWindow: React.FC = () => {
 {
   id: "52",
   title: "Varane & Ramos Farewell Video",
-  description: "An emotional farewell tribute video honoring the legendary defensive partnership of Sergio Ramos and Raphael Varane at Real Madrid, showcasing their greatest moments, achievements, and unforgettable contributions to the club\'s success.",
+  description: "An emotional farewell tribute video honoring the legendary defensive partnership of Sergio Ramos and Raphael Varane at Real Madrid, showcasing their greatest moments, achievements, and unforgettable contributions to the club's success.",
   technologies: ["Adobe Premiere Pro"],
   image: "ramos & varane.jpg",
   instagramUrl: "https://www.instagram.com/p/CTsHHMHP5uA/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
@@ -596,6 +629,19 @@ const PortfolioWindow: React.FC = () => {
 
   const categoryCounts = getCategoryCounts();
 
+  const getCategoryLabel = (category: string) => {
+    switch (category) {
+      case 'Video Editor':
+        return t('portfolio.category.videoEditor');
+      case 'Graphic Designer':
+        return t('portfolio.category.graphicDesigner');
+      case 'Programmer':
+        return t('portfolio.category.programmer');
+      default:
+        return category;
+    }
+  };
+
   const getPageNumbers = () => {
     const maxVisible = 5;
     const pages: number[] = [];
@@ -624,13 +670,13 @@ const PortfolioWindow: React.FC = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto">
+    <div className="max-w-6xl mx-auto dark:text-gray-100">
       <div className="text-center mb-6">
         <h2 className="text-xl font-bold text-gray-800 flex items-center justify-center space-x-2 mt-5">
           <Folder className="text-purple-600" />
-          <span>Projects</span>
+          <span>{t('portfolio.title')}</span>
         </h2>
-        <p className="text-gray-600 text-sm mt-2">A collection of my recent projects and work</p>
+        <p className="text-gray-600 dark:text-gray-300 text-sm mt-2">{t('portfolio.subtitle')}</p>
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-2 mb-10 mt-5">
@@ -641,10 +687,10 @@ const PortfolioWindow: React.FC = () => {
               className={`px-4 py-2 rounded-full text-sm font-medium border-2 shadow-sm ${
                 selectedCategory === category
                   ? 'bg-blue-500 text-white border-blue-600'
-                  : 'bg-white text-gray-700 border-gray-300 hover:bg-purple-50'
+                  : 'bg-white text-gray-700 border-gray-300 hover:bg-purple-50 dark:bg-gray-900 dark:text-gray-100 dark:border-gray-700 dark:hover:bg-gray-800'
               }`}
             >
-              {category}
+              {category === 'All' ? t('portfolio.filter.all') : getCategoryLabel(category)}
             </button>
           ))}
         </div>
@@ -652,27 +698,37 @@ const PortfolioWindow: React.FC = () => {
         {/* Project Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {currentProjects.map((project) => (
-            <div key={project.id} className="bg-white rounded-xl border border-gray-200 shadow-md hover:shadow-lg transition-all">
-              <div className="relative w-full h-48 bg-gray-100 overflow-hidden">
+            <div
+              key={project.id}
+              className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-lg transition-all"
+            >
+              <div className="relative w-full h-48 bg-gray-100 dark:bg-gray-800 overflow-hidden rounded-t-xl">
                 <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover"
+                  src={encodeURI(project.image.startsWith('/') ? project.image : `/${project.image}`)}
+                  alt={getProjectTitle(project)}
+                  className="w-full h-full object-cover rounded-t-xl"
+                  loading="lazy"
+                  decoding="async"
+                  width={640}
+                  height={360}
                 />
                 <div className="absolute top-2 left-2 bg-purple-600 text-white text-xs px-2 py-1 rounded-full flex items-center space-x-1 shadow">
                   <Tag size={12} />
-                  <span>{project.category}</span>
+                  <span>{getCategoryLabel(project.category)}</span>
                 </div>
               </div>
 
               <div className="p-4">
-                <h3 className="font-bold text-gray-800 text-lg mb-2">{project.title}</h3>
-                <p className="text-gray-600 text-sm mb-3 leading-relaxed">{project.description}</p>
+                <h3 className="font-bold text-gray-800 dark:text-gray-100 text-lg mb-2">{getProjectTitle(project)}</h3>
+                <p className="text-gray-600 dark:text-gray-300 text-sm mb-3 leading-relaxed">{getProjectDescription(project)}</p>
 
                 {/* Technologies */}
                 <div className="mb-4 flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
-                    <span key={tech} className="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-md text-xs font-medium border border-blue-200">
+                    <span
+                      key={tech}
+                      className="bg-blue-100 text-blue-800 border-blue-200 dark:bg-blue-900/30 dark:text-blue-200 dark:border-blue-800 px-2 py-0.5 rounded-md text-xs font-medium border"
+                    >
                       {tech}
                     </span>
                   ))}
@@ -684,7 +740,7 @@ const PortfolioWindow: React.FC = () => {
                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                       <button className="flex items-center space-x-1 bg-yellow-700 hover:bg-yellow-800 text-white px-3 py-2 rounded text-xs font-medium border-2 border-yellow-600 shadow-sm transition-colors">
                         <ExternalLink size={12} />
-                        <span>View</span>
+                        <span>{t('portfolio.view')}</span>
                       </button>
                     </a>
                   )}
@@ -692,7 +748,7 @@ const PortfolioWindow: React.FC = () => {
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                       <button className="flex items-center space-x-1 bg-gray-800 hover:bg-gray-900 text-white px-3 py-2 rounded text-xs font-medium border-2 border-gray-900 shadow-sm transition-colors">
                         <Github size={12} />
-                        <span>View</span>
+                        <span>{t('portfolio.view')}</span>
                       </button>
                     </a>
                   )}
@@ -700,7 +756,7 @@ const PortfolioWindow: React.FC = () => {
                     <a href={project.youtubeUrl} target="_blank" rel="noopener noreferrer">
                       <button className="flex items-center space-x-1 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded text-xs font-medium border-2 border-red-700 shadow-sm transition-colors">
                         <Youtube size={12} />
-                        <span>View</span>
+                        <span>{t('portfolio.view')}</span>
                       </button>
                     </a>
                   )}
@@ -708,14 +764,14 @@ const PortfolioWindow: React.FC = () => {
                     <a href={project.instagramUrl} target="_blank" rel="noopener noreferrer">
                       <button className="flex items-center space-x-1 bg-pink-500 hover:bg-pink-600 text-white px-3 py-2 rounded text-xs font-medium border-2 border-pink-600 shadow-sm transition-colors">
                         <Instagram size={12} />
-                        <span>View</span>
+                        <span>{t('portfolio.view')}</span>
                       </button>
                     </a>
                   )}
                   {project.behanceUrl && (
                     <a href={project.behanceUrl} target="_blank" rel="noopener noreferrer">
                       <button className="flex items-center space-x-1 bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded text-xs font-medium border-2 border-blue-700 shadow-sm transition-colors">
-                        <span>View</span>
+                        <span>{t('portfolio.view')}</span>
                       </button>
                     </a>
                   )}
@@ -723,7 +779,7 @@ const PortfolioWindow: React.FC = () => {
                     <a href={project.dribbbleUrl} target="_blank" rel="noopener noreferrer">
                       <button className="flex items-center space-x-1 bg-pink-400 hover:bg-pink-500 text-white px-3 py-2 rounded text-xs font-medium border-2 border-pink-500 shadow-sm transition-colors">
                         <Dribbble size={12} />
-                        <span>View</span>
+                        <span>{t('portfolio.view')}</span>
                       </button>
                     </a>
                   )}
@@ -742,11 +798,11 @@ const PortfolioWindow: React.FC = () => {
               className={`flex items-center space-x-1 px-4 py-2 rounded text-sm font-medium border-2 shadow-sm transition-colors ${
                 currentPage === 1
                   ? 'bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed'
-                  : 'bg-white text-gray-700 border-gray-300 hover:bg-purple-50'
+                  : 'bg-white text-gray-700 border-gray-300 hover:bg-purple-50 dark:bg-gray-900 dark:text-gray-100 dark:border-gray-700 dark:hover:bg-gray-800'
               }`}
             >
               <ChevronLeft size={16} />
-              <span>Prev</span>
+              <span>{t('portfolio.prev')}</span>
             </button>
 
             <div className="flex gap-1">
@@ -757,7 +813,7 @@ const PortfolioWindow: React.FC = () => {
                   className={`px-3 py-2 rounded text-sm font-medium border-2 shadow-sm transition-colors ${
                     currentPage === page
                       ? 'bg-blue-500 text-white border-blue-600'
-                      : 'bg-white text-gray-700 border-gray-300 hover:bg-purple-50'
+                      : 'bg-white text-gray-700 border-gray-300 hover:bg-purple-50 dark:bg-gray-900 dark:text-gray-100 dark:border-gray-700 dark:hover:bg-gray-800'
                   }`}
                 >
                   {page}
@@ -771,34 +827,34 @@ const PortfolioWindow: React.FC = () => {
               className={`flex items-center space-x-1 px-4 py-2 rounded text-sm font-medium border-2 shadow-sm transition-colors ${
                 currentPage === totalPages
                   ? 'bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed'
-                  : 'bg-white text-gray-700 border-gray-300 hover:bg-purple-50'
+                  : 'bg-white text-gray-700 border-gray-300 hover:bg-purple-50 dark:bg-gray-900 dark:text-gray-100 dark:border-gray-700 dark:hover:bg-gray-800'
               }`}
             >
-              <span>Next</span>
+              <span>{t('portfolio.next')}</span>
               <ChevronRight size={16} />
             </button>
           </div>
         )}
 
         {/* Category Statistics */}
-        <div className="mt-8 bg-white p-6 rounded-lg border-2 border-gray-300 shadow-lg">
-          <h3 className="font-bold text-gray-800 mb-4 text-center">Total Projects</h3>
+        <div className="mt-8 bg-white dark:bg-gray-900 p-6 rounded-lg border-2 border-gray-300 dark:border-gray-700 shadow-lg">
+          <h3 className="font-bold text-gray-800 dark:text-gray-100 mb-4 text-center">{t('portfolio.stats.title')}</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             <div>
               <div className="text-2xl font-bold text-yellow-600">{projects.length}</div>
-              <div className="text-xs text-gray-600">Projects</div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">{t('portfolio.stats.projects')}</div>
             </div>
             <div>
               <div className="text-2xl font-bold text-blue-600">{Object.keys(categoryCounts).length}</div>
-              <div className="text-xs text-gray-600">Categories</div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">{t('portfolio.stats.categories')}</div>
             </div>
             <div>
               <div className="text-2xl font-bold text-purple-600">2026</div>
-              <div className="text-xs text-gray-600">Latest Year</div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">{t('portfolio.stats.latestYear')}</div>
             </div>
             <div>
               <div className="text-2xl font-bold text-green-600">100%</div>
-              <div className="text-xs text-gray-600">Success</div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">{t('portfolio.stats.success')}</div>
             </div>
           </div>
         </div>

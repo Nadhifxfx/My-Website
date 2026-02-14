@@ -1,5 +1,6 @@
 import React from 'react';
 import { User, MapPin, Calendar, Mail, Download, Github, Linkedin, Instagram } from 'lucide-react';
+import { useI18n } from '../config/i18n';
 
 // Custom Social Media Icons
 const BehanceIcon: React.FC<{ size?: number; className?: string }> = ({ size = 20, className = '' }) => (
@@ -24,6 +25,7 @@ const TikTokIcon: React.FC<{ size?: number; className?: string }> = ({ size = 20
 );
 
 const ProfileWindow: React.FC = () => {
+  const { t } = useI18n();
   const handleDownloadPDF = () => {
     // Simulate PDF download
     const link = document.createElement('a');
@@ -34,7 +36,7 @@ const ProfileWindow: React.FC = () => {
     document.body.removeChild(link);
     
     // Show download notification
-    alert('Portfolio has been successfully opened!');
+    alert(t('profile.alert.portfolioOpened'));
   };
 
   const handleDownloadCV = () => {
@@ -47,7 +49,7 @@ const ProfileWindow: React.FC = () => {
     document.body.removeChild(link);
     
     // Show download notification
-    alert('CV has been successfully opened!');
+    alert(t('profile.alert.cvOpened'));
   };
 
   const socialMediaLinks = [
@@ -102,7 +104,7 @@ const ProfileWindow: React.FC = () => {
   ];
 
   return (
-    <div className="p-6 h-full overflow-auto bg-gradient-to-b from-blue-50 to-white">
+    <div className="p-6 h-full overflow-auto bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-950">
       <div className="max-w-md mx-auto">
         {/* Profile Image */}
         <div className="text-center mb-6">
@@ -114,8 +116,8 @@ const ProfileWindow: React.FC = () => {
           />
             <User size={64} className="text-blue-600" />
           </div>
-          <h2 className="text-2xl font-bold text-gray-800 mt-4">Nadhif Fathur Rahman</h2>
-          <p className="text-blue-600 font-semibold">Sang Pencari Loker</p>
+          <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mt-4">Nadhif Fathur Rahman</h2>
+          <p className="text-blue-600 font-semibold">{t('profile.badge')}</p>
         </div>
 
         {/* Download Buttons */}
@@ -125,20 +127,20 @@ const ProfileWindow: React.FC = () => {
             className="bg-gradient-to-b from-red-500 to-red-600 hover:from-red-400 hover:to-red-500 text-white font-bold py-3 px-4 rounded border-2 border-red-600 shadow-lg transition-all active:from-red-600 active:to-red-700 flex items-center justify-center space-x-2 transform hover:scale-105 active:scale-95"
           >
             <Download size={20} />
-            <span>Portfolio</span>
+            <span>{t('profile.download.portfolio')}</span>
           </button>
           <button
             onClick={handleDownloadCV}
             className="bg-gradient-to-b from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500 text-white font-bold py-3 px-4 rounded border-2 border-blue-600 shadow-lg transition-all active:from-blue-600 active:to-blue-700 flex items-center justify-center space-x-2 transform hover:scale-105 active:scale-95"
           >
             <Download size={20} />
-            <span>Curriculum Vitae </span>
+            <span>{t('profile.download.cv')}</span>
           </button>
         </div>
 
         {/* Social Media Links */}
-        <div className="bg-white p-4 rounded border-2 border-gray-300 shadow-inner mb-4">
-          <h3 className="font-bold text-gray-800 mb-3 border-b border-gray-200 pb-2 text-center">Connect With Me</h3>
+        <div className="bg-white p-4 rounded border-2 border-gray-300 shadow-inner mb-4 dark:bg-gray-900 dark:border-gray-700">
+          <h3 className="font-bold text-gray-800 dark:text-gray-100 mb-3 border-b border-gray-200 pb-2 text-center dark:border-gray-700">{t('profile.connect')}</h3>
           <div className="grid grid-cols-3 gap-3">
             {socialMediaLinks.map((social) => (
               <a
@@ -157,43 +159,42 @@ const ProfileWindow: React.FC = () => {
         </div>
 
         {/* Bio */}
-        <div className="bg-white p-4 rounded border-2 border-gray-300 shadow-inner mb-4">
-          <h3 className="font-bold text-gray-800 mb-2 border-b border-gray-200 pb-1">About Me</h3>
-          <p className="text-gray-700 text-sm leading-relaxed">
-            Hello! I am Nadhif Fathur Rahman, an enthusiastic and committed individual who enjoys continuous learning and solving problems creatively. With a strong interest in design and editing, I strive to make a meaningful impact through collaboration and meaningful work.  
-            I am enthusiastic about trying new things and continuously strive to learn and improve my skills every day.Currently, I am focused on developing my skills in programming and am open to new opportunities where I can grow, contribute, and connect with like-minded individuals.   
+        <div className="bg-white p-4 rounded border-2 border-gray-300 shadow-inner mb-4 dark:bg-gray-900 dark:border-gray-700">
+          <h3 className="font-bold text-gray-800 dark:text-gray-100 mb-2 border-b border-gray-200 pb-1 dark:border-gray-700">{t('profile.about')}</h3>
+          <p className="text-gray-700 dark:text-gray-200 text-sm leading-relaxed">
+            {t('profile.bio')}
           </p>
         </div>
 
         {/* Details */}
         <div className="space-y-3">
-          <div className="flex items-center space-x-3 bg-white p-3 rounded border border-gray-300 shadow-sm">
+          <div className="flex items-center space-x-3 bg-white p-3 rounded border border-gray-300 shadow-sm dark:bg-gray-900 dark:border-gray-700">
             <MapPin size={16} className="text-blue-600" />
-            <span className="text-gray-700 text-sm">Indonesia</span>
+            <span className="text-gray-700 dark:text-gray-200 text-sm">{t('profile.location')}</span>
           </div>
           
-          <div className="flex items-center space-x-3 bg-white p-3 rounded border border-gray-300 shadow-sm">
+          <div className="flex items-center space-x-3 bg-white p-3 rounded border border-gray-300 shadow-sm dark:bg-gray-900 dark:border-gray-700">
             <Calendar size={16} className="text-blue-600" />
-            <span className="text-gray-700 text-sm">5+ Years Experience</span>
+            <span className="text-gray-700 dark:text-gray-200 text-sm">{t('profile.experience')}</span>
           </div>
           
-          <div className="flex items-center space-x-3 bg-white p-3 rounded border border-gray-300 shadow-sm">
+          <div className="flex items-center space-x-3 bg-white p-3 rounded border border-gray-300 shadow-sm dark:bg-gray-900 dark:border-gray-700">
             <Mail size={16} className="text-blue-600" />
-            <span className="text-gray-700 text-sm">nadhiffathur@gmail.com</span>
+            <span className="text-gray-700 dark:text-gray-200 text-sm">nadhiffathur@gmail.com</span>
           </div>
         </div>
 
         {/* Quick Stats */}
-        <div className="mt-6 bg-white p-4 rounded border-2 border-gray-300 shadow-inner">
-          <h3 className="font-bold text-gray-800 mb-3 border-b border-gray-200 pb-1">Quick Stats</h3>
+        <div className="mt-6 bg-white p-4 rounded border-2 border-gray-300 shadow-inner dark:bg-gray-900 dark:border-gray-700">
+          <h3 className="font-bold text-gray-800 dark:text-gray-100 mb-3 border-b border-gray-200 pb-1 dark:border-gray-700">{t('profile.stats')}</h3>
           <div className="grid grid-cols-2 gap-4 text-center">
             <div>
               <div className="text-2xl font-bold text-blue-600">50+</div>
-              <div className="text-xs text-gray-600">Projects</div>
+              <div className="text-xs text-gray-600">{t('profile.stats.projects')}</div>
             </div>
             <div>
               <div className="text-2xl font-bold text-green-600">5+</div>
-              <div className="text-xs text-gray-600">Clients</div>
+              <div className="text-xs text-gray-600">{t('profile.stats.clients')}</div>
             </div>
           </div>
         </div>

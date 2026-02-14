@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { useI18n } from '../config/i18n';
 
 const ContactWindow: React.FC = () => {
+  const { t } = useI18n();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -52,8 +54,8 @@ const ContactWindow: React.FC = () => {
       } else {
         throw new Error('Failed to send message');
       }
-    } catch (err) {
-      setError('Failed to send message. Please try again or contact directly via email.');
+    } catch {
+      setError(t('contact.error.sendFailed'));
     } finally {
       setIsSubmitting(false);
     }
@@ -61,15 +63,15 @@ const ContactWindow: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <div className="p-6 h-full flex items-center justify-center bg-gradient-to-b from-green-50 to-white">
+      <div className="p-6 h-full flex items-center justify-center bg-gradient-to-b from-green-50 to-white dark:from-gray-900 dark:to-gray-950">
         <div className="text-center max-w-md">
           <CheckCircle size={64} className="text-green-500 mx-auto mb-4 animate-bounce" />
-          <h3 className="text-xl font-bold text-gray-800 mb-2">Message Sent Successfully!</h3>
-          <p className="text-gray-600 text-sm mb-4">
-            Thank you for your message! I'll get back to you as soon as possible.
+          <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2">{t('contact.success.title')}</h3>
+          <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+            {t('contact.success.body')}
           </p>
-          <div className="bg-white p-3 rounded-lg border border-gray-300 shadow-sm">
-            <span className="text-blue-600 font-semibold text-sm">Usually within 24 hours</span>
+          <div className="bg-white p-3 rounded-lg border border-gray-300 shadow-sm dark:bg-gray-900 dark:border-gray-700">
+            <span className="text-blue-600 font-semibold text-sm">{t('contact.success.eta')}</span>
           </div>
         </div>
       </div>
@@ -77,19 +79,19 @@ const ContactWindow: React.FC = () => {
   }
 
   return (
-    <div className="p-6 h-full overflow-auto bg-gradient-to-b from-blue-50 to-white">
+    <div className="p-6 h-full overflow-auto bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-950">
       <div className="max-w-lg mx-auto">
         <div className="text-center mb-6">
           <h2 className="text-xl font-bold text-gray-800 flex items-center justify-center space-x-2">
             <Mail className="text-blue-600" />
-            <span>Get In Touch</span>
+            <span>{t('contact.title')}</span>
           </h2>
-          <p className="text-gray-600 text-sm mt-2">I'd love to hear from you. Send me a message!</p>
+          <p className="text-gray-600 dark:text-gray-300 text-sm mt-2">{t('contact.subtitle')}</p>
         </div>
 
         {/* Contact Info */}
-        <div className="bg-white p-4 rounded-lg border-2 border-gray-300 shadow-lg mb-6">
-          <h3 className="font-bold text-gray-800 mb-3 border-b border-gray-200 pb-2">Contact Information</h3>
+        <div className="bg-white p-4 rounded-lg border-2 border-gray-300 shadow-lg mb-6 dark:bg-gray-900 dark:border-gray-700">
+          <h3 className="font-bold text-gray-800 mb-3 border-b border-gray-200 pb-2 dark:text-gray-100 dark:border-gray-700">{t('contact.infoTitle')}</h3>
           <div className="space-y-3">
             <div className="flex items-center space-x-3">
               <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center border border-blue-300">
@@ -117,7 +119,7 @@ const ContactWindow: React.FC = () => {
               <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center border border-purple-300">
                 <MapPin size={16} className="text-purple-600" />
               </div>
-              <span className="text-sm text-gray-700">Sidoarjo, Indonesia</span>
+              <span className="text-sm text-gray-700 dark:text-gray-200">{t('contact.location')}</span>
             </div>
           </div>
         </div>
@@ -131,11 +133,11 @@ const ContactWindow: React.FC = () => {
         )}
 
         {/* Contact Form */}
-        <div className="bg-white p-5 rounded-lg border-2 border-gray-300 shadow-lg">
+        <div className="bg-white p-5 rounded-lg border-2 border-gray-300 shadow-lg dark:bg-gray-900 dark:border-gray-700">
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                Name <span className="text-red-500">*</span>
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
+                {t('contact.form.name')} <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -144,15 +146,15 @@ const ContactWindow: React.FC = () => {
                 value={formData.name}
                 onChange={handleInputChange}
                 required
-                className="w-full px-3 py-2 border-2 border-gray-300 rounded focus:outline-none focus:border-blue-500 shadow-inner text-sm"
-                placeholder="Your full name"
+                className="w-full px-3 py-2 border-2 border-gray-300 rounded focus:outline-none focus:border-blue-500 shadow-inner text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100"
+                placeholder={t('contact.form.placeholder.name')}
                 disabled={isSubmitting}
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                Email <span className="text-red-500">*</span>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
+                {t('contact.form.email')} <span className="text-red-500">*</span>
               </label>
               <input
                 type="email"
@@ -161,15 +163,15 @@ const ContactWindow: React.FC = () => {
                 value={formData.email}
                 onChange={handleInputChange}
                 required
-                className="w-full px-3 py-2 border-2 border-gray-300 rounded focus:outline-none focus:border-blue-500 shadow-inner text-sm"
-                placeholder="your.email@example.com"
+                className="w-full px-3 py-2 border-2 border-gray-300 rounded focus:outline-none focus:border-blue-500 shadow-inner text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100"
+                placeholder={t('contact.form.placeholder.email')}
                 disabled={isSubmitting}
               />
             </div>
 
             <div>
-              <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
-                Subject <span className="text-red-500">*</span>
+              <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
+                {t('contact.form.subject')} <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -178,15 +180,15 @@ const ContactWindow: React.FC = () => {
                 value={formData.subject}
                 onChange={handleInputChange}
                 required
-                className="w-full px-3 py-2 border-2 border-gray-300 rounded focus:outline-none focus:border-blue-500 shadow-inner text-sm"
-                placeholder="What's this about?"
+                className="w-full px-3 py-2 border-2 border-gray-300 rounded focus:outline-none focus:border-blue-500 shadow-inner text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100"
+                placeholder={t('contact.form.placeholder.subject')}
                 disabled={isSubmitting}
               />
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                Message <span className="text-red-500">*</span>
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
+                {t('contact.form.message')} <span className="text-red-500">*</span>
               </label>
               <textarea
                 id="message"
@@ -195,8 +197,8 @@ const ContactWindow: React.FC = () => {
                 onChange={handleInputChange}
                 required
                 rows={4}
-                className="w-full px-3 py-2 border-2 border-gray-300 rounded focus:outline-none focus:border-blue-500 shadow-inner text-sm resize-none"
-                placeholder="Tell me about your project or just say hello!"
+                className="w-full px-3 py-2 border-2 border-gray-300 rounded focus:outline-none focus:border-blue-500 shadow-inner text-sm resize-none dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100"
+                placeholder={t('contact.form.placeholder.message')}
                 disabled={isSubmitting}
               />
             </div>
@@ -213,12 +215,12 @@ const ContactWindow: React.FC = () => {
               {isSubmitting ? (
                 <>
                   <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
-                  <span>Sending...</span>
+                  <span>{t('contact.form.sending')}</span>
                 </>
               ) : (
                 <>
                   <Send size={16} />
-                  <span>Send Message</span>
+                  <span>{t('contact.form.send')}</span>
                 </>
               )}
             </button>

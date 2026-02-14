@@ -1,18 +1,22 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, Bot, User } from 'lucide-react';
+import { useI18n } from '../config/i18n';
 
 interface Message {
   id: string;
   text: string;
+  textKey?: string;
   isBot: boolean;
   timestamp: Date;
 }
 
 const ChatBot: React.FC = () => {
+  const { t } = useI18n();
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: 'Hello! I\'m your FAQ assistant. Ask me anything about Nadhif\'s skills, projects, or experience!',
+      text: '',
+      textKey: 'chatbot.a.intro',
       isBot: true,
       timestamp: new Date()
     }
@@ -29,36 +33,20 @@ const ChatBot: React.FC = () => {
     scrollToBottom();
   }, [messages]);
 
-  const faqData = {
-    skills: "Nadhif has expertise in Programming (HTML, TypeScript, React, Node.js, Python), Design (Canva, Adobe Photoshop, Adobe Illustrator, Figma), and Video Editing (CapCut, After Effects, Premiere Pro, Vegas Pro).",
-    experience: "Nadhif has 5+ years of experience in web development, graphic design, and video editing. He has worked on various projects including websites, mobile app UI/UX, video content, and branding materials.",
-    projects: "Some notable projects include: Graduation Film Class XVII 2021, INACOM Modern Logo Concept, Bank Indonesia Investment Program video, NDComps10 Football Website UI, Byon Combat Website, Gamified Qur'an Learning App UI/UX, and many more across programming, design, and video editing.",
-    education: "Nadhif is currently pursuing his education while actively working on various creative and technical projects. He has completed multiple certifications including Building a .NET ChatBot, AI Powered Code Generation, and UI/UX Design with Figma.",
-    contact: "You can reach Nadhif at nadhiffathur@gmail.com or connect with him on GitHub (github.com/Nadhifxfx), LinkedIn (linkedin.com/in/nadhifxfx/), or Instagram (@nd10.mp4).",
-    certificates: "Nadhif has earned multiple certifications including Building a .NET ChatBot from Staya.Dev, AI Powered Code Generation, UI/UX Design website with Figma from BuildWithAngga, and several competition awards including 2nd Winner of Instagram Reels Contest."
-  };
+  const includesAny = (text: string, needles: string[]) => needles.some((needle) => text.includes(needle));
 
-  const generateBotResponse = async (userMessage: string): Promise<string> => {
+  const generateBotResponseKey = async (userMessage: string): Promise<string> => {
     const lowerMessage = userMessage.toLowerCase();
     
     // Simple keyword matching for FAQ
-    if (lowerMessage.includes('skill') || lowerMessage.includes('tech') || lowerMessage.includes('programming')) {
-      return faqData.skills;
-    } else if (lowerMessage.includes('experience') || lowerMessage.includes('work') || lowerMessage.includes('career')) {
-      return faqData.experience;
-    } else if (lowerMessage.includes('project') || lowerMessage.includes('portfolio') || lowerMessage.includes('work samples')) {
-      return faqData.projects;
-    } else if (lowerMessage.includes('education') || lowerMessage.includes('study') || lowerMessage.includes('school')) {
-      return faqData.education;
-    } else if (lowerMessage.includes('contact') || lowerMessage.includes('email') || lowerMessage.includes('reach')) {
-      return faqData.contact;
-    } else if (lowerMessage.includes('certificate') || lowerMessage.includes('certification') || lowerMessage.includes('award')) {
-      return faqData.certificates;
-    } else if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey')) {
-      return "Hello! I'm here to help you learn more about Nadhif. You can ask me about his skills, projects, experience, education, or how to contact him.";
-    } else {
-      return "I can help you with information about Nadhif's skills, projects, experience, education, certifications, or contact details. What would you like to know?";
-    }
+    if (includesAny(lowerMessage, ['skill', 'skills', 'tech', 'technology', 'programming', 'keahlian', 'skill', 'teknologi', 'pemrograman'])) return 'chatbot.a.skills';
+    if (includesAny(lowerMessage, ['experience', 'work', 'career', 'pengalaman', 'kerja', 'karier'])) return 'chatbot.a.experience';
+    if (includesAny(lowerMessage, ['project', 'projects', 'portfolio', 'work samples', 'portofolio', 'proyek', 'project'])) return 'chatbot.a.projects';
+    if (includesAny(lowerMessage, ['education', 'study', 'school', 'pendidikan', 'kuliah', 'sekolah', 'studi'])) return 'chatbot.a.education';
+    if (includesAny(lowerMessage, ['contact', 'email', 'reach', 'kontak', 'hubungi', 'dm'])) return 'chatbot.a.contact';
+    if (includesAny(lowerMessage, ['certificate', 'certificates', 'certification', 'award', 'sertifikat', 'sertifikasi', 'penghargaan', 'juara'])) return 'chatbot.a.certificates';
+    if (includesAny(lowerMessage, ['hello', 'hi', 'hey', 'halo', 'hai'])) return 'chatbot.a.greeting';
+    return 'chatbot.a.default';
   };
 
   const handleSendMessage = async () => {
@@ -77,11 +65,12 @@ const ChatBot: React.FC = () => {
 
     // Simulate API call delay
     setTimeout(async () => {
-      const botResponse = await generateBotResponse(inputValue);
+      const botResponseKey = await generateBotResponseKey(inputValue);
       
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: botResponse,
+        text: '',
+        textKey: botResponseKey,
         isBot: true,
         timestamp: new Date()
       };
@@ -98,16 +87,16 @@ const ChatBot: React.FC = () => {
     }
   };
 
-  const suggestedQuestions = [
-    "Tell me about Nadhif's skills",
-    "What projects has he worked on?",
-    "What certifications does he have?",
-    "How can I contact him?",
-    "What's his experience?"
+  const suggestedQuestionKeys = [
+    'chatbot.q.skills',
+    'chatbot.q.projects',
+    'chatbot.q.certificates',
+    'chatbot.q.contact',
+    'chatbot.q.experience',
   ];
 
   return (
-    <div className="h-full flex flex-col bg-gradient-to-b from-blue-50 to-white">
+    <div className="h-full flex flex-col bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-950">
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-4 border-b-2 border-blue-300 shadow-lg">
         <div className="flex items-center space-x-3">
@@ -115,14 +104,14 @@ const ChatBot: React.FC = () => {
             <Bot className="text-blue-600" size={24} />
           </div>
           <div>
-            <h2 className="text-lg font-bold">FAQ Assistant</h2>
-            <p className="text-xs text-blue-100">Ask me anything about Nadhif</p>
+            <h2 className="text-lg font-bold">{t('chatbot.title')}</h2>
+            <p className="text-xs text-blue-100">{t('chatbot.subtitle')}</p>
           </div>
         </div>
       </div>
 
       {/* Messages Area */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50">
+      <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50 dark:bg-gray-950">
         {messages.map((message) => (
           <div
             key={message.id}
@@ -147,11 +136,11 @@ const ChatBot: React.FC = () => {
               <div
                 className={`p-3 rounded-lg text-sm shadow-md border-2 ${
                   message.isBot
-                    ? 'bg-white border-gray-200 text-gray-800'
+                    ? 'bg-white border-gray-200 text-gray-800 dark:bg-gray-900 dark:border-gray-700 dark:text-gray-100'
                     : 'bg-blue-500 border-blue-600 text-white'
                 }`}
               >
-                <p className="leading-relaxed whitespace-pre-wrap">{message.text}</p>
+                <p className="leading-relaxed whitespace-pre-wrap">{message.textKey ? t(message.textKey) : message.text}</p>
                 <p className={`text-xs mt-1 ${message.isBot ? 'text-gray-500' : 'text-blue-100'}`}>
                   {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                 </p>
@@ -181,16 +170,16 @@ const ChatBot: React.FC = () => {
 
       {/* Suggested Questions */}
       {messages.length === 1 && (
-        <div className="px-4 pb-2 bg-white border-t border-gray-200">
-          <p className="text-xs text-gray-600 mb-2 font-medium">Try asking:</p>
+        <div className="px-4 pb-2 bg-white border-t border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+          <p className="text-xs text-gray-600 mb-2 font-medium">{t('chatbot.tryAsking')}</p>
           <div className="flex flex-wrap gap-2">
-            {suggestedQuestions.map((question, index) => (
+            {suggestedQuestionKeys.map((questionKey, index) => (
               <button
                 key={index}
-                onClick={() => setInputValue(question)}
+                onClick={() => setInputValue(t(questionKey))}
                 className="text-xs bg-blue-50 border border-blue-300 text-blue-700 px-3 py-1 rounded-full hover:bg-blue-100 transition-colors shadow-sm"
               >
-                {question}
+                {t(questionKey)}
               </button>
             ))}
           </div>
@@ -198,15 +187,15 @@ const ChatBot: React.FC = () => {
       )}
 
       {/* Input Area */}
-      <div className="p-4 border-t-2 border-gray-200 bg-white shadow-lg">
+      <div className="p-4 border-t-2 border-gray-200 bg-white shadow-lg dark:bg-gray-900 dark:border-gray-700">
         <div className="flex space-x-2">
           <input
             type="text"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             onKeyPress={handleKeyPress}
-            placeholder="Ask me anything about Nadhif..."
-            className="flex-1 p-3 border-2 border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            placeholder={t('chatbot.placeholder')}
+            className="flex-1 p-3 border-2 border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100"
             disabled={isLoading}
           />
           <button
@@ -217,7 +206,7 @@ const ChatBot: React.FC = () => {
             <Send size={18} />
           </button>
         </div>
-        <p className="text-xs text-gray-500 mt-2">Press Enter to send</p>
+        <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">{t('chatbot.pressEnter')}</p>
       </div>
     </div>
   );
