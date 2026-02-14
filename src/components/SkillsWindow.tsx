@@ -122,22 +122,19 @@ const SkillsWindow: React.FC = () => {
           <div className="grid grid-cols-3 gap-4 text-center">
             <div>
               <div className="text-2xl font-bold text-blue-600">{skills.filter(s => s.category === 'Programming').length}</div>
-              <div className="text-sm text-gray-600 dark:text-gray-300 flex items-center justify-center gap-2">
-                <Code size={14} className="text-blue-600" />
+              <div className="text-sm text-gray-600 dark:text-gray-300">
                 {t('skills.overview.programming')}
               </div>
             </div>
             <div>
               <div className="text-2xl font-bold text-purple-600">{skills.filter(s => s.category === 'Design').length}</div>
-              <div className="text-sm text-gray-600 dark:text-gray-300 flex items-center justify-center gap-2">
-                <Palette size={14} className="text-purple-600" />
+              <div className="text-sm text-gray-600 dark:text-gray-300">
                 {t('skills.overview.designTools')}
               </div>
             </div>
             <div>
               <div className="text-2xl font-bold text-red-600">{skills.filter(s => s.category === 'Editing').length}</div>
-              <div className="text-sm text-gray-600 dark:text-gray-300 flex items-center justify-center gap-2">
-                <Video size={14} className="text-red-600" />
+              <div className="text-sm text-gray-600 dark:text-gray-300">
                 {t('skills.overview.editingTools')}
               </div>
             </div>

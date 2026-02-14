@@ -63,7 +63,7 @@ const Window: React.FC<WindowProps> = ({
       onClick={onBringToFront}
     >
       {/* Title Bar */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-3 py-2 flex items-center justify-between select-none border-b-2 border-blue-400 dark:from-gray-800 dark:to-gray-700 dark:border-gray-600">
+      <div className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-3 py-2 flex items-center justify-between select-none border-b-2 border-blue-400">
         <div className="flex items-center space-x-2">
           <div className="w-4 h-4 bg-white bg-opacity-20 rounded border border-white border-opacity-30"></div>
           <span className="font-bold text-sm">{title}</span>

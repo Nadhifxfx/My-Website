@@ -224,7 +224,7 @@ const translations: Record<Language, Record<string, string>> = {
     'tray.themeToLight': 'Aktifkan mode terang',
 
     'desktop.hello': 'Halo Dunia',
-    'desktop.tagline': 'Bukan hanya visual, tapi cara berpikir',
+    'desktop.tagline': 'Bukan hanya visual, tetapi juga pada pola pikir',
     'desktop.hint': 'Klik dua kali ikon atau tekan menu Mulai di bagian bawah',
 
     'welcome.title': 'Selamat Datang',

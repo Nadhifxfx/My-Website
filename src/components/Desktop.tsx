@@ -379,7 +379,7 @@ const Desktop: React.FC = () => {
                  className="flex flex-col items-center cursor-pointer group w-20 transition-all duration-200 hover:scale-105"
                  data-window-id={item.id}
                  onDoubleClick={() => openWindow(item.id)}>
-              <div className="bg-white bg-opacity-90 p-2 rounded border border-gray-300 shadow-lg group-hover:bg-opacity-100 group-hover:shadow-xl transition-all backdrop-blur-sm transform group-active:scale-95 dark:bg-gray-900 dark:bg-opacity-80 dark:border-gray-700">
+              <div className="bg-white bg-opacity-90 p-2 rounded border border-gray-300 shadow-lg group-hover:bg-opacity-100 group-hover:shadow-xl transition-all backdrop-blur-sm transform group-active:scale-95">
                 <item.icon size={32} className="text-blue-600" />
               </div>
               <span className="text-white text-xs mt-1 text-center drop-shadow-lg font-semibold bg-black bg-opacity-30 px-2 py-1 rounded backdrop-blur-sm group-hover:bg-opacity-50 transition-all">
@@ -421,7 +421,7 @@ const Desktop: React.FC = () => {
       )}
 
       {/* Taskbar */}
-      <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-blue-600 to-blue-500 border-t-2 border-blue-300 shadow-lg backdrop-blur-sm bg-opacity-95 z-50 dark:from-gray-900 dark:to-gray-800 dark:border-gray-700">
+      <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-blue-600 to-blue-500 border-t-2 border-blue-300 shadow-lg backdrop-blur-sm bg-opacity-95 z-50">
         <div className="flex items-center justify-between h-full px-2">
           {/* Start Button */}
           <button
@@ -457,7 +457,7 @@ const Desktop: React.FC = () => {
             <button
               type="button"
               onClick={toggleLang}
-              className="flex items-center space-x-1 text-white text-xs font-bold bg-blue-700 px-2 py-1 rounded border border-blue-500 shadow-inner hover:bg-blue-600 transition-colors dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+              className="flex items-center space-x-1 text-white text-xs font-bold bg-blue-700 px-2 py-1 rounded border border-blue-500 shadow-inner hover:bg-blue-600 transition-colors"
               title={t('tray.changeLanguage')}
               aria-label={t('tray.changeLanguage')}
             >
@@ -467,14 +467,14 @@ const Desktop: React.FC = () => {
             <button
               type="button"
               onClick={toggleTheme}
-              className="flex items-center justify-center text-white text-xs font-bold bg-blue-700 px-2 py-1 rounded border border-blue-500 shadow-inner hover:bg-blue-600 transition-colors dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+              className="flex items-center justify-center text-white text-xs font-bold bg-blue-700 px-2 py-1 rounded border border-blue-500 shadow-inner hover:bg-blue-600 transition-colors"
               title={theme === 'dark' ? t('tray.themeToLight') : t('tray.themeToDark')}
               aria-label={theme === 'dark' ? t('tray.themeToLight') : t('tray.themeToDark')}
             >
               {theme === 'dark' ? <Sun size={14} /> : <Moon size={14} />}
             </button>
 
-            <div className="flex items-center space-x-1 text-white text-sm font-medium bg-blue-700 px-2 py-1 rounded border border-blue-500 shadow-inner hover:bg-blue-600 transition-colors dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            <div className="flex items-center space-x-1 text-white text-sm font-medium bg-blue-700 px-2 py-1 rounded border border-blue-500 shadow-inner hover:bg-blue-600 transition-colors">
               <Clock size={12} />
               <span>{time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
             </div>

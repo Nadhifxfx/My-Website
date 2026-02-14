@@ -76,7 +76,7 @@ const InteractiveGreeting: React.FC = () => {
         </h1>
 
         {/* Subtitle dengan gradasi dan animasi */}
-        <p className="text-2xl font-semibold mb-6 bg-gradient-to-r from-red-700 via-yellow-700 to-blue-700 bg-clip-text text-transparent animate-gradient"
+        <p className="text-2xl font-semibold mb-6 bg-gradient-to-r from-purple-700 via-yellow-900 to-blue-700 bg-clip-text text-transparent animate-gradient"
           style={{
             backgroundSize: '300% 300%',
             textShadow: '0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255,255,255,0.2)'

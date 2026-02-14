@@ -123,7 +123,7 @@ const StartMenu: React.FC<StartMenuProps> = ({ items, onItemClick, onClose }) =>
               onClick={() => handleItemClick(item.id)}
               style={{ animationDelay: `${index * 50}ms` }}
             >
-              <div className="w-8 h-8 bg-blue-50 rounded border border-blue-200 flex items-center justify-center transition-all hover:bg-blue-100 hover:border-blue-300 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+              <div className="w-8 h-8 bg-blue-50 rounded border border-blue-200 flex items-center justify-center transition-all hover:bg-blue-100 hover:border-blue-300">
                 <item.icon size={16} className="text-blue-600" />
               </div>
               <span className="font-medium text-gray-800 dark:text-gray-100">{item.label}</span>
@@ -135,7 +135,7 @@ const StartMenu: React.FC<StartMenuProps> = ({ items, onItemClick, onClose }) =>
             className="w-full flex items-center space-x-3 px-4 py-3 hover:bg-red-100 text-left transition-all transform hover:scale-105 active:scale-95 dark:hover:bg-gray-800"
             onClick={handleShutdownClick}
           >
-            <div className="w-8 h-8 bg-red-50 rounded border border-red-200 flex items-center justify-center hover:bg-red-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            <div className="w-8 h-8 bg-red-50 rounded border border-red-200 flex items-center justify-center hover:bg-red-100">
               <Power size={16} className="text-red-600" />
             </div>
             <span className="font-medium text-gray-800 dark:text-gray-100">{t('menu.shutdown')}</span>
@@ -163,21 +163,21 @@ const StartMenu: React.FC<StartMenuProps> = ({ items, onItemClick, onClose }) =>
       {/* Modal Confirm */}
       {showConfirm && (
         <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center backdrop-blur-sm">
-          <div className="bg-white rounded-lg shadow-2xl p-6 w-96 border-2 border-gray-300 animate-bounce-in dark:bg-gray-900 dark:border-gray-700">
+          <div className="bg-white rounded-lg shadow-2xl p-6 w-96 border-2 border-gray-300 animate-bounce-in">
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
                 <Power size={24} className="text-red-600" />
               </div>
               <div>
-                <h2 className="text-lg font-bold text-gray-800 dark:text-gray-100">{t('menu.shutdownTitle')}</h2>
-                <p className="text-sm text-gray-600 dark:text-gray-300">{t('menu.shutdownSubtitle')}</p>
+                <h2 className="text-lg font-bold text-gray-800">{t('menu.shutdownTitle')}</h2>
+                <p className="text-sm text-gray-600">{t('menu.shutdownSubtitle')}</p>
               </div>
             </div>
-            <p className="mb-6 text-gray-700 dark:text-gray-200">{t('menu.shutdownQuestion')}</p>
+            <p className="mb-6 text-gray-700">{t('menu.shutdownQuestion')}</p>
             <div className="flex justify-end space-x-3">
               <button
                 onClick={handleCancelShutdown}
-                className="px-6 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium transition-all transform hover:scale-105 active:scale-95 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100"
+                className="px-6 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium transition-all transform hover:scale-105 active:scale-95"
               >
                 {t('menu.cancel')}
               </button>

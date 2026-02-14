@@ -26,10 +26,10 @@ const AnimatedWallpaper: React.FC = () => {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
       {/* Base gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-400 via-green-400 to-blue-500">
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-400 via-green-400 to-blue-500 dark:from-slate-950 dark:via-emerald-950 dark:to-blue-950">
         {/* Subtle pattern overlay */}
         <div 
-          className="absolute inset-0 opacity-10"
+          className="absolute inset-0 opacity-10 dark:opacity-5"
           style={{
             backgroundImage: `
               radial-gradient(circle at 25% 25%, rgba(255,255,255,0.3) 0%, transparent 50%),
@@ -41,7 +41,7 @@ const AnimatedWallpaper: React.FC = () => {
       </div>
 
       {/* Animated circuit lines */}
-      <svg className="absolute inset-0 w-full h-full opacity-20" viewBox="0 0 1000 1000">
+      <svg className="absolute inset-0 w-full h-full opacity-20 dark:opacity-15" viewBox="0 0 1000 1000">
         <defs>
           <linearGradient id="circuitGradient" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="#60a5fa" stopOpacity="0.8" />
@@ -80,7 +80,7 @@ const AnimatedWallpaper: React.FC = () => {
         {techIcons.map(({ Icon, delay, duration }, index) => (
           <div
             key={index}
-            className="absolute opacity-10 text-white"
+            className="absolute opacity-10 text-white dark:opacity-5"
             style={{
               left: `${(index * 11 + 5) % 90}%`,
               top: `${(index * 13 + 10) % 80}%`,
@@ -116,7 +116,7 @@ const AnimatedWallpaper: React.FC = () => {
         {Array.from({ length: 8 }, (_, i) => (
           <div
             key={i}
-            className="absolute w-1 bg-gradient-to-b from-transparent via-blue-300 to-transparent opacity-30"
+            className="absolute w-1 bg-gradient-to-b from-transparent via-blue-300 to-transparent opacity-30 dark:via-blue-400 dark:opacity-20"
             style={{
               height: '100px',
               left: `${(i * 12.5) + 5}%`,
@@ -128,7 +128,7 @@ const AnimatedWallpaper: React.FC = () => {
       </div>
 
       {/* Binary code rain effect */}
-      <div className="absolute inset-0 overflow-hidden opacity-5">
+      <div className="absolute inset-0 overflow-hidden opacity-5 dark:opacity-10">
         {Array.from({ length: 20 }, (_, i) => (
           <div
             key={i}

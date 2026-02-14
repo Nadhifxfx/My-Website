@@ -695,7 +695,36 @@ const PortfolioWindow: React.FC = () => {
   image: "Sertifikat.png",
   category: "Graphic Designer"
 },
-
+{
+  id: "63",
+  title: "Event Certificates",
+  description: "A set of certificate designs created for various campus events.",
+  titleId: 'Sertifikat acara',
+  descriptionId: 'Satu set desain sertifikat yang dibuat dengan tampilan menarik untuk berbagai events yang diadakan di kampus.',
+  technologies: ["Canva", "Adobe Photoshop"],
+  image: "Sertifikat.png",
+  category: "Graphic Designer"
+},
+{
+  id: "64",
+  title: "Event Certificates",
+  description: "A set of certificate designs created for various campus events.",
+  titleId: 'Sertifikat acara',
+  descriptionId: 'Satu set desain sertifikat yang dibuat dengan tampilan menarik untuk berbagai events yang diadakan di kampus.',
+  technologies: ["Canva", "Adobe Photoshop"],
+  image: "Sertifikat.png",
+  category: "Graphic Designer"
+},
+{
+  id: "65",
+  title: "Event Certificates",
+  description: "A set of certificate designs created for various campus events.",
+  titleId: 'Sertifikat acara',
+  descriptionId: 'Satu set desain sertifikat yang dibuat dengan tampilan menarik untuk berbagai events yang diadakan di kampus.',
+  technologies: ["Canva", "Adobe Photoshop"],
+  image: "Sertifikat.png",
+  category: "Graphic Designer"
+},
 
 ];
   const [selectedCategory, setSelectedCategory] = React.useState<string>('All');

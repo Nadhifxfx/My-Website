@@ -69,20 +69,20 @@ const WelcomeDialog: React.FC<WelcomeDialogProps> = ({ onClose }) => {
 
           {/* Welcome Message */}
           <div className="text-center mb-6">
-            <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2">
+            <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
               {t('welcome.heading')}
             </h2>
-            <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
+            <p className="text-gray-600 dark:text-white text-sm leading-relaxed mb-4">
               {t('welcome.p1')}
             </p>
-            <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+            <p className="text-gray-600 dark:text-white text-sm leading-relaxed">
               {t('welcome.p2')}
             </p>
           </div>
 
           {/* Quick Navigation */}
-          <div className="bg-gray-50 p-4 rounded border border-gray-300 mb-4 dark:bg-gray-800 dark:border-gray-700">
-            <h3 className="font-bold text-gray-700 text-sm mb-2">{t('welcome.quickNav')}</h3>
+          <div className="bg-gray-50 p-4 rounded border border-gray-300 mb-4 text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+            <h3 className="font-bold text-gray-700 dark:text-white text-sm mb-2">{t('welcome.quickNav')}</h3>
             <div className="grid grid-cols-2 gap-2 text-xs">
               <div className="flex items-center space-x-1">
                 <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
@@ -112,7 +112,7 @@ const WelcomeDialog: React.FC<WelcomeDialogProps> = ({ onClose }) => {
               {t('welcome.exploreNow')}
             </button>
             <button
-              className="bg-gradient-to-b from-gray-300 to-gray-400 hover:from-gray-200 hover:to-gray-300 text-gray-800 font-bold py-2 px-4 rounded border-2 border-gray-400 shadow-lg transition-all active:from-gray-400 active:to-gray-500 text-sm dark:from-gray-800 dark:to-gray-700 dark:hover:from-gray-700 dark:hover:to-gray-600 dark:text-gray-100 dark:border-gray-600"
+              className="bg-gradient-to-b from-gray-300 to-gray-400 hover:from-gray-200 hover:to-gray-300 text-gray-800 font-bold py-2 px-4 rounded border-2 border-gray-400 shadow-lg transition-all active:from-gray-400 active:to-gray-500 text-sm dark:from-gray-800 dark:to-gray-700 dark:hover:from-gray-700 dark:hover:to-gray-600 dark:text-white dark:border-gray-600"
               onClick={handleClose}
             >
               {t('welcome.close')}
