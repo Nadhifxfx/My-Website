@@ -687,7 +687,7 @@ const PortfolioWindow: React.FC = () => {
 },
 {
   id: "62",
-  title: "Event Certificate Designs",
+  title: "Event Certificates",
   description: "A set of certificate designs created for various campus events.",
   titleId: 'Sertifikat acara',
   descriptionId: 'Satu set desain sertifikat yang dibuat dengan tampilan menarik untuk berbagai events yang diadakan di kampus.',
