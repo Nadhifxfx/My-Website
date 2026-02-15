@@ -422,10 +422,10 @@ const Desktop: React.FC = () => {
 
       {/* Taskbar */}
       <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-blue-600 to-blue-500 border-t-2 border-blue-300 shadow-lg backdrop-blur-sm bg-opacity-95 z-50">
-        <div className="flex items-center justify-between h-full px-2">
+        <div className="flex items-center h-full px-1 sm:px-2 gap-1 sm:gap-2">
           {/* Start Button */}
           <button
-            className="flex items-center space-x-2 px-3 py-1 bg-gradient-to-b from-green-400 to-green-500 hover:from-green-300 hover:to-green-400 
+            className="shrink-0 flex items-center space-x-2 px-2 sm:px-3 py-1 bg-gradient-to-b from-green-400 to-green-500 hover:from-green-300 hover:to-green-400 
                        border-2 border-green-300 rounded shadow-inner text-white font-bold text-sm transition-all transform
                        active:from-green-500 active:to-green-600 active:scale-95 hover:scale-105"
             onClick={() => setIsStartMenuOpen(!isStartMenuOpen)}
@@ -437,27 +437,29 @@ const Desktop: React.FC = () => {
           </button>
 
           {/* Taskbar Windows */}
-          <div className="flex-1 flex space-x-1 mx-2">
-            {windows.filter(w => w.isOpen).map((window) => (
-              <button
-                key={window.id}
-                className={`flex items-center space-x-2 px-3 py-1 text-white text-sm font-medium rounded transition-all transform hover:scale-105 active:scale-95
-                           ${window.isMinimized 
-                             ? 'bg-blue-700 hover:bg-blue-600 shadow-inner' 
-                             : 'bg-blue-800 hover:bg-blue-700 shadow-sm'}`}
-                onClick={() => window.isMinimized ? restoreWindow(window.id) : minimizeWindow(window.id)}
-              >
-                <span className="truncate max-w-32">{t(window.titleKey)}</span>
-              </button>
-            ))}
+          <div className="flex-1 min-w-0">
+            <div className="h-full flex items-center gap-0.5 sm:gap-1 overflow-x-auto scrollbar-hide touch-pan-x">
+              {windows.filter(w => w.isOpen).map((window) => (
+                <button
+                  key={window.id}
+                  className={`shrink-0 whitespace-nowrap flex items-center space-x-2 px-2 sm:px-3 py-1 text-white text-xs sm:text-sm font-medium rounded transition-all transform hover:scale-105 active:scale-95
+                             ${window.isMinimized 
+                               ? 'bg-blue-700 hover:bg-blue-600 shadow-inner' 
+                               : 'bg-blue-800 hover:bg-blue-700 shadow-sm'}`}
+                  onClick={() => window.isMinimized ? restoreWindow(window.id) : minimizeWindow(window.id)}
+                >
+                  <span className="truncate max-w-24 sm:max-w-32">{t(window.titleKey)}</span>
+                </button>
+              ))}
+            </div>
           </div>
 
           {/* System Tray */}
-          <div className="flex items-center space-x-2">
+          <div className="shrink-0 flex items-center space-x-1 sm:space-x-2">
             <button
               type="button"
               onClick={toggleLang}
-              className="flex items-center space-x-1 text-white text-xs font-bold bg-blue-700 px-2 py-1 rounded border border-blue-500 shadow-inner hover:bg-blue-600 transition-colors"
+              className="flex items-center space-x-1 text-white text-xs font-bold bg-blue-700 px-1.5 sm:px-2 py-1 rounded border border-blue-500 shadow-inner hover:bg-blue-600 transition-colors"
               title={t('tray.changeLanguage')}
               aria-label={t('tray.changeLanguage')}
             >
@@ -467,14 +469,14 @@ const Desktop: React.FC = () => {
             <button
               type="button"
               onClick={toggleTheme}
-              className="flex items-center justify-center text-white text-xs font-bold bg-blue-700 px-2 py-1 rounded border border-blue-500 shadow-inner hover:bg-blue-600 transition-colors"
+              className="flex items-center justify-center text-white text-xs font-bold bg-blue-700 px-1.5 sm:px-2 py-1 rounded border border-blue-500 shadow-inner hover:bg-blue-600 transition-colors"
               title={theme === 'dark' ? t('tray.themeToLight') : t('tray.themeToDark')}
               aria-label={theme === 'dark' ? t('tray.themeToLight') : t('tray.themeToDark')}
             >
               {theme === 'dark' ? <Sun size={14} /> : <Moon size={14} />}
             </button>
 
-            <div className="flex items-center space-x-1 text-white text-sm font-medium bg-blue-700 px-2 py-1 rounded border border-blue-500 shadow-inner hover:bg-blue-600 transition-colors">
+            <div className="flex items-center space-x-1 text-white text-xs sm:text-sm font-medium bg-blue-700 px-1.5 sm:px-2 py-1 rounded border border-blue-500 shadow-inner hover:bg-blue-600 transition-colors">
               <Clock size={12} />
               <span>{time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
             </div>
