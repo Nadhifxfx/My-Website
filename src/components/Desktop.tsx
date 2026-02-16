@@ -352,6 +352,8 @@ const Desktop: React.FC = () => {
     { id: 'faq', label: t('window.faq'), icon: MessageCircle }
   ];
 
+  const getWindowIcon = (windowId: string) => startMenuItems.find((item) => item.id === windowId)?.icon;
+
   // Show loading screen first
   if (isLoading) {
     return <LoadingScreen onLoadingComplete={handleLoadingComplete} />;
@@ -397,6 +399,7 @@ const Desktop: React.FC = () => {
             key={window.id}
             id={window.id}
             title={t(window.titleKey)}
+            icon={getWindowIcon(window.id)}
             position={window.position}
             size={window.size}
             zIndex={window.zIndex}

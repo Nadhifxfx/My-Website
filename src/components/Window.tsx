@@ -1,10 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { X, Minus } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 import { useI18n } from '../config/i18n';
 
 interface WindowProps {
   id: string;
   title: string;
+  icon?: LucideIcon;
   children: React.ReactNode;
   position: { x: number; y: number };
   size: { width: number; height: number };
@@ -19,6 +21,7 @@ interface WindowProps {
 const Window: React.FC<WindowProps> = ({
   id,
   title,
+  icon: Icon,
   children,
   zIndex,
   isAnimating = false,
@@ -65,7 +68,9 @@ const Window: React.FC<WindowProps> = ({
       {/* Title Bar */}
       <div className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-3 py-2 flex items-center justify-between select-none border-b-2 border-blue-400">
         <div className="flex items-center space-x-2">
-          <div className="w-4 h-4 bg-white bg-opacity-20 rounded border border-white border-opacity-30"></div>
+          <div className="w-4 h-4 bg-white bg-opacity-20 rounded border border-white border-opacity-30 flex items-center justify-center">
+            {Icon ? <Icon size={12} className="text-white" /> : null}
+          </div>
           <span className="font-bold text-sm">{title}</span>
         </div>
         <div className="flex items-center space-x-1">

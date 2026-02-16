@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Github, Folder, Youtube, Tag, Instagram, Dribbble, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ExternalLink, Github, Folder, Youtube, Instagram, Dribbble, ChevronLeft, ChevronRight, Video, Palette, Code } from 'lucide-react';
 import { useI18n } from '../config/i18n';
 
 const BehanceIcon: React.FC<{ size?: number; className?: string }> = ({ size = 12, className = '' }) => (
@@ -27,6 +27,19 @@ interface Project {
 
 const PortfolioWindow: React.FC = () => {
   const { t, lang } = useI18n();
+
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'Video Editor':
+        return Video;
+      case 'Graphic Designer':
+        return Palette;
+      case 'Programmer':
+        return Code;
+      default:
+        return Folder;
+    }
+  };
 
   const getProjectTitle = (project: Project) => (lang === 'id' ? project.titleId ?? project.title : project.title);
   const getProjectDescription = (project: Project) =>
@@ -99,15 +112,15 @@ const PortfolioWindow: React.FC = () => {
     category: 'Programmer'
   },
   {
-    id: '7',
-    title: 'Gamified Quran Learning App UI/UX',
-    titleId: 'UI/UX Aplikasi Belajar Al-Qur’an Gamifikasi',
-    description: 'Modern and intuitive UI/UX design concept for a Qur\'an learning application that integrates gamification elements to make learning more engaging and interactive.',
-    descriptionId:'Konsep desain UI/UX yang modern dan intuitif untuk aplikasi belajar Al-Qur’an, menggabungkan elemen gamifikasi agar proses belajar lebih menarik dan interaktif.',
-    technologies: ['Figma', 'Canva'],
-    image: 'TEXT GEN.png',
-    dribbbleUrl: 'https://dribbble.com/shots/25921769-Coffee-Shop-Modern-Login-Menu-Design',
-    category: 'Graphic Designer'
+  id: '7',
+  title: 'HIMATIF contents',
+  description: 'Dynamic highlight video capturing the exceptional football skills, dribbling abilities, and match performances of HIMATIF members with cinematic editing and music synchronization.',
+  titleId: 'Konten HIMATIF',
+  descriptionId: 'Video highlight dinamis yang menampilkan skill sepak bola anggota HIMATIF, kemampuan dribbling, dan performa pertandingan.',
+  technologies: ['Capcut'],
+  image: 'HIMATIF.jpg',
+  instagramUrl: 'https://www.instagram.com/reel/C1T99EavGrc/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+  category: 'Video Editor'
   },
   {
   id: "8",
@@ -757,14 +770,14 @@ const PortfolioWindow: React.FC = () => {
 },
 {
   id: "68",
-  title: 'HIMATIF contents',
-  description: 'Dynamic highlight video capturing the exceptional football skills, dribbling abilities, and match performances of HIMATIF members with cinematic editing and music synchronization.',
-  titleId: 'Konten HIMATIF',
-  descriptionId: 'Video highlight dinamis yang menampilkan skill sepak bola anggota HIMATIF, kemampuan dribbling, dan performa pertandingan.',
-  technologies: ['Capcut'],
-  image: 'HIMATIF.jpg',
-  liveUrl: 'https://www.instagram.com/reel/C1T99EavGrc/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
-  category: 'Video Editor'
+  title: 'Gamified Quran Learning App UI/UX',
+  titleId: 'UI/UX Aplikasi Belajar Al-Qur’an Gamifikasi',
+  description: 'Modern and intuitive UI/UX design concept for a Qur\'an learning application that integrates gamification elements to make learning more engaging and interactive.',
+  descriptionId:'Konsep desain UI/UX yang modern dan intuitif untuk aplikasi belajar Al-Qur’an, menggabungkan elemen gamifikasi agar proses belajar lebih menarik dan interaktif.',
+  technologies: ['Figma', 'Canva'],
+  image: 'TEXT GEN.png',
+  dribbbleUrl: 'https://dribbble.com/shots/25921769-Coffee-Shop-Modern-Login-Menu-Design',
+  category: 'Graphic Designer'
 },
 {
   id: "69",
@@ -906,7 +919,10 @@ const PortfolioWindow: React.FC = () => {
                   height={360}
                 />
                 <div className="absolute top-2 left-2 bg-purple-600 text-white text-xs px-2 py-1 rounded-full flex items-center space-x-1 shadow">
-                  <Tag size={12} />
+                  {(() => {
+                    const Icon = getCategoryIcon(project.category);
+                    return <Icon size={12} />;
+                  })()}
                   <span>{getCategoryLabel(project.category)}</span>
                 </div>
               </div>
