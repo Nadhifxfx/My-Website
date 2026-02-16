@@ -133,9 +133,9 @@ const PortfolioWindow: React.FC = () => {
   },
   {
     id: '10',
-    title: 'Ahmed Abdelkader Football Highlights',
+    title: 'Ahmed Abdelkader Best Saves',
     description: 'A highlight video showcasing Ahmed Abdelkader\'s performances on the pitch.',
-    titleId: 'Sorotan Sepak Bola Ahmed Abdelkader',
+    titleId: 'Saves Terbaik Ahmed Abdelkader',
     descriptionId: 'Video highlight performa Ahmed Abdelkader di lapangan.',
     technologies: ['Adobe Premiere Pro'],
     image: 'Abdelkader.png',
@@ -144,20 +144,20 @@ const PortfolioWindow: React.FC = () => {
   },
   {
     id: '11',
-    title: 'Kokolo Williams Football Highlights',
-    description: 'Dynamic highlight video capturing Kokolo Williams\' exceptional football skills, dribbling abilities, and match performances with cinematic editing and music synchronization.',
-    titleId: 'Sorotan Sepak Bola Kokolo Williams',
-    descriptionId: 'Video highlight dinamis yang menampilkan skill sepak bola Kokolo Williams, kemampuan dribbling, dan performa pertandingan.',
-    technologies: ['Adobe Premiere Pro'],
-    image: 'Kokolo.png',
-    liveUrl: 'https://drive.google.com/file/d/1KFTpgym7UqbwIU20E98JeOev-q59epH_/view?usp=drive_link',
-    category: 'Video Editor'
+    title: "HIMATIF Social Media Design",
+    description: "A visually cohesive social media design for HIMATIF, highlighting events and activities with engaging visual storytelling.",
+    titleId: 'Desain Media Sosial HIMATIF',
+    descriptionId: 'Desain media sosial yang kohesif dan strategis untuk HIMATIF 2025, menampilkan identitas organisasi dengan visual yang konsisten, dinamis, serta informatif. Setiap konten dirancang untuk menyoroti program kerja, event unggulan, kegiatan akademik maupun non-akademik, serta dokumentasi momen kebersamaan anggota.',
+    technologies: ["Adobe Photoshop", "Canva"],
+    image: "HIMATIF.png",
+    dribbbleUrl: "https://dribbble.com/shots/180597019/INACOM-Logo-Concept",
+    category: "Graphic Designer"
   },
   {
     id: '12',
-    title: 'Remy Vita Football Highlights',
+    title: 'Remy Vita Skills and Goals',
     description: 'Professional football showcase video featuring Remy Vita\'s standout moments, including goals, assists, and key plays, edited with smooth transitions and impactful visual effects.',
-    titleId: 'Sorotan Sepak Bola Remy Vita',
+    titleId: 'Kemampuan dan Gol Remy Vita',
     descriptionId: 'Video showcase sepak bola profesional yang menampilkan momen terbaik Remy Vita, termasuk gol, assist, dan aksi di lapangan.',
     technologies: ['Adobe Premiere Pro'],
     image: 'Vita.png',
@@ -273,7 +273,7 @@ const PortfolioWindow: React.FC = () => {
   },
   {
   id: "23",
-  title: "Religious Tourism Banner",
+   title: "Religious Tourism Banner",
   description: "An informative and elegant banner design for the Religious Tourism event at Pondok Pesantren Roudlotul Quran 2, themed 'Pilgrimage to the Saints of East Java.'",
   titleId: 'Banner Wisata Religi',
   descriptionId: "Desain banner informatif dan elegan untuk acara Wisata Religi di Pondok Pesantren Roudlotul Quran 2, bertema 'Ziarah Wali Jawa Timur'.",
@@ -370,14 +370,14 @@ const PortfolioWindow: React.FC = () => {
 },
 {
   id: "32",
-  title: "Web-based Point of Sale System",
-  description: "A web-based point of sale (POS) system designed to simplify transactions and improve sales management efficiency.",
-  titleId: 'Sistem Point of Sale Berbasis Web',
-  descriptionId: 'Sistem point of sale (POS) berbasis web yang dirancang untuk menyederhanakan transaksi dan meningkatkan efisiensi pengelolaan penjualan.',
-  technologies: ["Visual Studio Code"],
-  image: "Web Kasir.jpg",
-  githubUrl: "https://github.com/Nadhifxfx",
-  category: "Programmer"
+ title: "BRI Barça Week with FC Barcelona",
+  description: "A promotional video for BRI Barça Week featuring FC Barcelona, highlighting the collaboration between BRI and the football club.",
+  titleId: 'BRI Barça Week bareng FC Barcelona',
+  descriptionId: 'Video promosi untuk BRI Barça Week yang menampilkan FC Barcelona, menyoroti kolaborasi antara BRI dan klub sepak bola ini.',
+  technologies: ["Adobe Premiere Pro"],
+  image: "BRI.jpg",
+  instagramUrl: "https://www.instagram.com/reel/DUvRBZzEmNV/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+  category: "Video Editor"
 },
 {
   id: "33",
@@ -436,18 +436,18 @@ const PortfolioWindow: React.FC = () => {
 },
 {
   id: "38",
-  title: "HIMATIF Social Media Design",
-  description: "A visually cohesive social media design for HIMATIF, highlighting events and activities with engaging visual storytelling.",
-  titleId: 'Desain Media Sosial HIMATIF',
-  descriptionId: 'Desain media sosial yang kohesif dan strategis untuk HIMATIF 2025, menampilkan identitas organisasi dengan visual yang konsisten, dinamis, serta informatif. Setiap konten dirancang untuk menyoroti program kerja, event unggulan, kegiatan akademik maupun non-akademik, serta dokumentasi momen kebersamaan anggota.',
-  technologies: ["Adobe Photoshop", "Canva"],
-  image: "HIMATIF.png",
-  dribbbleUrl: "https://dribbble.com/shots/180597019/INACOM-Logo-Concept",
-  category: "Graphic Designer"
+  title: "Neymar & Messi ● Perfect 10 | Brazil & Argentina Skills and Goals",
+  description: "Video collaboration edit ndcomps10 with golazorg. Dynamic compilation video showcasing the incredible skills, dribbling, and goals of Neymar and Lionel Messi representing Brazil and Argentina.",
+  titleId: 'Neymar & Messi ● Perfect 10 | Skill & Gol Brasil & Argentina',
+  descriptionId: 'Video kompilasi dinamis hasil kolaborasi edit NDComps10 dengan Golazorg, menampilkan skill luar biasa, dribbling, dan gol Neymar serta Messi saat bermain di negara mereka masing-masing.',
+  technologies: ["Adobe Premiere Pro"],
+  image: "Neymessi Perfect 10.jpg",
+  youtubeUrl: "https://youtu.be/9thiXWA8bAU?si=Cm2NrMDjIrkFCS9y",
+  category: "Video Editor"
 },
 {
   id: "39",
-   title: "Lifestyle at Citra Garden Sidoarjo",
+  title: "Lifestyle at Citra Garden Sidoarjo",
   description: "A lifestyle video highlighting the facilities, community, and atmosphere of Citra Garden Sidoarjo.",
   titleId: 'Gaya Hidup di Citra Garden Sidoarjo',
   descriptionId: 'Video lifestyle yang menampilkan fasilitas, komunitas, dan suasana di Citra Garden Sidoarjo.',
@@ -532,13 +532,13 @@ const PortfolioWindow: React.FC = () => {
 },
 {
   id: "47",
-   title: "Neymar & Messi ● Perfect 10 | Brazil & Argentina Skills and Goals",
-  description: "Video collaboration edit ndcomps10 with golazorg. Dynamic compilation video showcasing the incredible skills, dribbling, and goals of Neymar and Lionel Messi representing Brazil and Argentina.",
-  titleId: 'Neymar & Messi ● Perfect 10 | Skill & Gol Brasil & Argentina',
-  descriptionId: 'Video kompilasi dinamis hasil kolaborasi edit NDComps10 dengan Golazorg, menampilkan skill luar biasa, dribbling, dan gol Neymar serta Messi saat bermain di negara mereka masing-masing.',
+  title: "Murphy winning the Carabao Cup 2025",
+  description: "A dynamic compilation video showcasing Murphy's incredible performance and contribution in winning the Carabao Cup 2025.",
+  titleId: 'Murphy Menang Carabao Cup 2025',
+  descriptionId: 'Video kompilasi dinamis yang menampilkan performa luar biasa dan kontribusi Murphy dalam memenangkan Carabao Cup 2025.',
   technologies: ["Adobe Premiere Pro"],
-  image: "Neymessi Perfect 10.jpg",
-  youtubeUrl: "https://youtu.be/9thiXWA8bAU?si=Cm2NrMDjIrkFCS9y",
+  image: "murphy.jpg",
+  youtubeUrl: "https://www.instagram.com/reel/DHOc42jC-mC/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
   category: "Video Editor"
 },
 {
@@ -732,6 +732,61 @@ const PortfolioWindow: React.FC = () => {
   instagramUrl: "https://www.instagram.com/p/CSrfDq-AZH0/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==",
   image: "HIM 2021.jpg",
   category: "Video Editor"
+},
+{
+  id: "66",
+ title: "Web-based Point of Sale System",
+  description: "A web-based point of sale (POS) system designed to simplify transactions and improve sales management efficiency.",
+  titleId: 'Sistem Point of Sale Berbasis Web',
+  descriptionId: 'Sistem point of sale (POS) berbasis web yang dirancang untuk menyederhanakan transaksi dan meningkatkan efisiensi pengelolaan penjualan.',
+  technologies: ["Visual Studio Code"],
+  image: "Web Kasir.jpg",
+  githubUrl: "https://github.com/Nadhifxfx",
+  category: "Programmer"
+},
+{
+  id: "67",
+  title: 'Kokolo Williams Skills and Goals',
+  description: 'Dynamic highlight video capturing Kokolo Williams\' exceptional football skills, dribbling abilities, and match performances with cinematic editing and music synchronization.',
+  titleId: 'Sorotan Sepak Bola Kokolo Williams',
+  descriptionId: 'Video highlight dinamis yang menampilkan skill sepak bola Kokolo Williams, kemampuan dribbling, dan performa pertandingan.',
+  technologies: ['Adobe Premiere Pro'],
+  image: 'Kokolo.png',
+  liveUrl: 'https://drive.google.com/file/d/1KFTpgym7UqbwIU20E98JeOev-q59epH_/view?usp=drive_link',
+  category: 'Video Editor'
+},
+{
+  id: "68",
+  title: 'HIMATIF contents',
+  description: 'Dynamic highlight video capturing the exceptional football skills, dribbling abilities, and match performances of HIMATIF members with cinematic editing and music synchronization.',
+  titleId: 'Konten HIMATIF',
+  descriptionId: 'Video highlight dinamis yang menampilkan skill sepak bola anggota HIMATIF, kemampuan dribbling, dan performa pertandingan.',
+  technologies: ['Capcut'],
+  image: 'HIMATIF.jpg',
+  liveUrl: 'https://www.instagram.com/reel/C1T99EavGrc/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+  category: 'Video Editor'
+},
+{
+  id: "69",
+  title: 'GEOQUEST',
+  description: 'A web-based game designed to evaluate our understanding of Geography.',
+  titleId: 'GEOQUEST',
+  descriptionId: 'Game berbasis web yang dirancang untuk menmnilai kemampuan pemahaman kita terhadap Geografi.',
+  technologies: ['Visual Studio Code'],
+  image: 'Geoquest.png',
+  githubUrl: 'https://geoquest-peach.vercel.app/',
+  category: 'Programmer'
+},
+{
+  id: "70",
+  title: 'Red Date Redemption',
+  description: 'A web-based game designed to evaluate our understanding of survival skills in this economy.',
+  titleId: 'Red Date Redemption',
+  descriptionId: 'Game berbasis web yang dirancang untuk menmnilai kemampuan kita saat bertahan hidup.',
+  technologies: ['Visual Studio Code'],
+  image: 'RDD.png',
+  githubUrl: 'https://red-date-redemption.vercel.app/',
+  category: 'Programmer'
 },
 
 ];

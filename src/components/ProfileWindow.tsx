@@ -193,7 +193,7 @@ const ProfileWindow: React.FC = () => {
               <div className="text-xs text-gray-600 dark:text-white">{t('profile.stats.projects')}</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-green-600">5+</div>
+              <div className="text-2xl font-bold text-green-600">10+</div>
               <div className="text-xs text-gray-600 dark:text-white">{t('profile.stats.clients')}</div>
             </div>
           </div>
