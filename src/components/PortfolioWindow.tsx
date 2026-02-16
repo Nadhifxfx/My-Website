@@ -62,7 +62,7 @@ const PortfolioWindow: React.FC = () => {
     descriptionId:'Berperan sebagai editor untuk seluruh konten MandyCJ.',
     technologies: ['Adobe Premiere Pro', 'Capcut'],
     image: 'mandycj.png',
-    instagramUrl: 'https://www.instagram.com/mandycj_/reels/',
+    instagramUrl: 'https://www.instagram.com/reel/DUQNKZyk6X0/',
     category: 'Video Editor'
   },
    {
@@ -496,7 +496,7 @@ const PortfolioWindow: React.FC = () => {
   descriptionId: 'Video tribute perpisahan yang emosional untuk Jamie Vardy pada saat bermain di Leicester City.',
   technologies: ["Adobe Premiere Pro"],
   image: "Vardy.jpg",
-  instagramUrl: "https://www.instagram.com/reel/DRnREj3DKgu/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+  instagramUrl: "https://www.instagram.com/reel/DRnREj3DKgu/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==",
   category: "Video Editor"
 },
 {
