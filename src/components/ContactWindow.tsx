@@ -82,7 +82,7 @@ const ContactWindow: React.FC = () => {
     <div className="p-6 h-full overflow-auto bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-950">
       <div className="max-w-lg mx-auto">
         <div className="text-center mb-6">
-          <h2 className="text-xl font-bold text-gray-800 flex items-center justify-center space-x-2">
+          <h2 className="text-xl font-bold text-gray-800 dark:text-white flex items-center justify-center space-x-2">
             <Mail className="text-blue-600" />
             <span>{t('contact.title')}</span>
           </h2>
