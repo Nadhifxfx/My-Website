@@ -110,7 +110,7 @@ const ProfileWindow: React.FC = () => {
         <div className="text-center mb-6">
           <div className="w-32 h-32 mx-auto bg-gradient-to-b from-blue-200 to-blue-300 rounded-full border-4 border-white shadow-lg flex items-center justify-center">
           <img 
-          src="/Profile.png" 
+          src="/Profile (3).png" 
           alt="Profile" 
           className="w-full h-full object-cover rounded-full" 
           />
