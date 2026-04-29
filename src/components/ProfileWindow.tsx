@@ -29,7 +29,7 @@ const ProfileWindow: React.FC = () => {
   const handleDownloadPDF = () => {
     // Simulate PDF download
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/file/d/1RXOyUrih2IjAOFR6jfLkvzodPbynx9n0/view?usp=sharing'; // In real implementation, this would be the actual PDF URL
+    link.href = 'https://drive.google.com/file/d/181xCbH2J--huB_1w9VQMIzymLqPU-Iay/view?usp=sharing'; // In real implementation, this would be the actual PDF URL
     link.download = 'Nadhif_Portofolio.pdf';
     document.body.appendChild(link);
     link.click();
