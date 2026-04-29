@@ -56,7 +56,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
       <div className="w-24 h-24 mx-auto mb-6 rounded-full flex items-center justify-center">
         <div className="w-24 h-24 rounded-full overflow-hidden">
           <img 
-            src="/Profile.png" 
+            src="/Profile (3).png" 
             alt="Profile" 
             className="w-full h-full object-cover rounded-full border-4 border-blue-500 shadow-[0_0_20px_rgba(59,130,246,0.6)]" 
           />

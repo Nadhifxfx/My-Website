@@ -57,7 +57,7 @@ const WelcomeDialog: React.FC<WelcomeDialogProps> = ({ onClose }) => {
             <div className="w-16 h-16 mx-auto bg-gradient-to-b from-blue-200 to-blue-300 rounded-full border-4 border-white shadow-lg flex items-center justify-center mb-3">
               <User size={32} className="text-blue-600" />
               <img 
-          src="/Profile.png" 
+          src="/Profile (3).png" 
           alt="Profile" 
           className="w-full h-full object-cover rounded-full" 
           />

@@ -100,7 +100,7 @@ const StartMenu: React.FC<StartMenuProps> = ({ items, onItemClick, onClose }) =>
           <div className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center border-2 border-white border-opacity-30">
             <div className="w-11 h-11 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center">
               <img 
-          src="/Profile.png" 
+          src="/Profile (3).png" 
           alt="Profile" 
           className="w-full h-full object-cover rounded-full" 
           />
